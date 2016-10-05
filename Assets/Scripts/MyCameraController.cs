@@ -4,15 +4,20 @@ using System.Collections;
 public class MyCameraController : MonoBehaviour {
 
     public GameObject player;
-
-    private Vector3 offset;
-	// Use this for initialization
+    private Vector3 initialOffset;
+    private float minX = 0f;
+    private float minY = 0f;
+    
 	void Start () {
-	    offset = transform.position - player.transform.position;
+//	    initialOffset = transform.position - player.transform.position;
+        Debug.Log("Camera initialOffset: " + initialOffset);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	    transform.position = player.transform.position + offset;
-	}
+
+
+    void Update () {
+        float x = player.transform.position.x < minX ? minX : player.transform.position.x;
+        float y = player.transform.position.y < minY ? minY : player.transform.position.y;
+//        transform.position = new Vector3(x, y, 0f) + initialOffset;
+        transform.position = new Vector3(x, y, -10f);
+    }
 }

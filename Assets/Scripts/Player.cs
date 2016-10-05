@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class MyPlayer : MonoBehaviour {
+public class Player : MonoBehaviour {
 
     public float speed = 1f;
     public float maxSpeed = 5f;
@@ -67,7 +67,7 @@ public class MyPlayer : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.name == "Platform") {
+        if (other.gameObject.layer == LayerMask.NameToLayer("BlockingLayer")) {
 //            Debug.Log("Grounded.");
             grounded = true;
             animator.SetBool("Grounded", true);
@@ -75,7 +75,7 @@ public class MyPlayer : MonoBehaviour {
     }
 
     private void OnCollisionExit2D(Collision2D other) {
-        if (other.gameObject.name == "Platform") {
+        if (other.gameObject.layer == LayerMask.NameToLayer("BlockingLayer")) {
 //            Debug.Log("Not grounded anymore.");
             grounded = false;
             animator.SetBool("Grounded", false);

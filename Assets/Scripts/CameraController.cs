@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MyCameraController : MonoBehaviour {
+public class CameraController : MonoBehaviour {
 
     public GameObject player;
     private Vector3 initialOffset;
     private float minX = 0f;
     private float minY = 0f;
-    
+
 	void Start () {
 //	    initialOffset = transform.position - player.transform.position;
         Debug.Log("Camera initialOffset: " + initialOffset);

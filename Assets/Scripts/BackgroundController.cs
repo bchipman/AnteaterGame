@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BGScroller : MonoBehaviour {
+public class BackgroundController : MonoBehaviour {
 
-    public MyPlayer player;
+    public Player player;
     private GameObject skySprite;
     private SpriteRenderer spriteRenderer;
 
@@ -22,7 +22,7 @@ public class BGScroller : MonoBehaviour {
 //            instance.transform.SetParent(this.transform);
 //        }
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 	    Bounds b = skySprite.GetComponent<SpriteRenderer>().bounds;

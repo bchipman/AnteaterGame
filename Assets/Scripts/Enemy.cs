@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Koopa : MonoBehaviour {
+public class Enemy : MonoBehaviour {
 
     private int direction = 1;
     private float speed = 1f;
@@ -13,10 +13,10 @@ public class Koopa : MonoBehaviour {
     void Start () {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-	
+
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
     void FixedUpdate() {

@@ -8,7 +8,7 @@ public class Player : MonoBehaviour {
     public float maxSpeed = 5f;
 
     public float moveForce = 10f;
-    public float jumpForce = 0.1f;
+    public float jumpForce = 0.01f;
 
     public bool facingRight = true;
     public bool jump = false;
@@ -25,7 +25,8 @@ public class Player : MonoBehaviour {
 
 
     void Update() {
-        if (grounded && Input.GetButtonDown("Jump"))
+//        if (grounded && Input.GetButtonDown("Jump"))
+        if (grounded && Input.GetKey("space"))
             jump = true;
     }
 
@@ -67,18 +68,45 @@ public class Player : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
+        // Player collided with something.  
+        //  Do a raycast from player position straight downward.
+        //  Check if raycast hit the same object
+        //  If so, then you hit the top of a platform, so you can do the grounded stuff.
+        //  Otherwise you hit the side or bottom of something.
+
         if (other.gameObject.layer == LayerMask.NameToLayer("BlockingLayer")) {
-//            Debug.Log("Grounded.");
-            grounded = true;
-            animator.SetBool("Grounded", true);
+            String toPrint = "player hit " + other.collider.gameObject.name;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
+            if (hit) {
+                toPrint += ", raycast hit " + hit.collider.gameObject.name;
+                toPrint += ", " + other.collider.gameObject.name.Equals(hit.collider.gameObject.name);
+
+                if (other.collider.gameObject.name.Equals(hit.collider.gameObject.name)) {
+                    grounded = true;
+                    animator.SetBool("Grounded", true);
+                }
+
+            }
+            Debug.Log(toPrint);
         }
     }
 
     private void OnCollisionExit2D(Collision2D other) {
+
         if (other.gameObject.layer == LayerMask.NameToLayer("BlockingLayer")) {
-//            Debug.Log("Not grounded anymore.");
-            grounded = false;
-            animator.SetBool("Grounded", false);
+            String toPrint = "player exiting " + other.collider.gameObject.name;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
+            if (hit) {
+                toPrint += ", raycast hit " + hit.collider.gameObject.name;
+                toPrint += ", " + other.collider.gameObject.name.Equals(hit.collider.gameObject.name);
+
+                if (other.collider.gameObject.name.Equals(hit.collider.gameObject.name)) {
+                    grounded = false;
+                    animator.SetBool("Grounded", false);
+                }
+
+            }
+            Debug.Log(toPrint);
         }
     }
 }

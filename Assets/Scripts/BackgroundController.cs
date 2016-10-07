@@ -4,11 +4,10 @@ using System.Collections;
 public class BackgroundController : MonoBehaviour {
 
     public Player player;
-    private SpriteRenderer spriteRenderer;
+//    private SpriteRenderer spriteRenderer;
 
-    // Use this for initialization
 	void Start () {
-	    spriteRenderer = GetComponent<SpriteRenderer>();
+//	    spriteRenderer = GetComponent<SpriteRenderer>();
 //        float skyWidth = spriteRenderer.sprite.bounds.size.x;
 //        float skyScale = transform.localScale.x;
 //        Debug.Log("skyWidth: " + skyWidth);
@@ -21,10 +20,8 @@ public class BackgroundController : MonoBehaviour {
 //        }
 	}
 
-	// Update is called once per frame
 	void Update () {
 	    Bounds b = GetComponent<SpriteRenderer>().bounds;
-//        Debug.Log("b.max.x: " + b.max.x);
 	    if (player.transform.position.x > b.max.x) {
             GetComponent<SpriteRenderer>().transform.position = new Vector3(b.max.x, 0, 0);
 	    } else if (player.transform.position.x < b.min.x) {

@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
-    public float speed = 1f;
+    public float speed = 3f;
     public float maxSpeedX = 5f;
 
     public float moveForce = 10f;
-    public float jumpForce = 0.01f;
+    public float jumpForce = 400f;
 
     public bool facingRight = true;
     public bool jump = false;
@@ -20,7 +20,7 @@ public class Player : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Transform groundCheck;
-    private int score = 0;
+    public int score = 0;
 
     void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -76,13 +76,4 @@ public class Player : MonoBehaviour {
 
     }
 
-    void OnCollisionEnter2D(Collision2D coll) {
-//        if (coll.collider.gameObject.name.Equals("CoinSprite")) {
-        if (coll.collider.gameObject.layer == LayerMask.NameToLayer("Collectable")) {
-            Debug.Log("Touched coin!!");
-            coll.collider.gameObject.SetActive(false);
-            score++;
-            scoreText.GetComponent<Text>().text = score.ToString();
-        }
-    }
 }

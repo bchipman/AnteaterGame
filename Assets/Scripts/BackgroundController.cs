@@ -9,8 +9,8 @@ public class BackgroundController : MonoBehaviour {
     // Use this for initialization
 	void Start () {
 	    spriteRenderer = GetComponent<SpriteRenderer>();
-        float skyWidth = spriteRenderer.sprite.bounds.size.x;
-	    float skyScale = transform.localScale.x;
+//        float skyWidth = spriteRenderer.sprite.bounds.size.x;
+//        float skyScale = transform.localScale.x;
 //        Debug.Log("skyWidth: " + skyWidth);
 //        Debug.Log("skyScale: " + skyScale);
 //        Debug.Log("skyWidth * skyScale = " + skyWidth * skyScale);

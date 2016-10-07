@@ -29,8 +29,14 @@ public class Enemy : MonoBehaviour {
         direction *= -1;
         if (direction > 0) {
             spriteRenderer.flipX = false;
+            if (GetComponent<CircleCollider2D>() != null) {
+                GetComponent<CircleCollider2D>().offset = new Vector2(0.02f, 0f);
+            }
         } else if (direction < 0) {
             spriteRenderer.flipX = true;
+            if (GetComponent<CircleCollider2D>() != null) {
+                GetComponent<CircleCollider2D>().offset = new Vector2(-0.02f, 0f);
+            }
         }
     }
 }

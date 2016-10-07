@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
@@ -15,9 +16,11 @@ public class Player : MonoBehaviour {
     public bool grounded = false;
     public Vector2 velocity;
 
+    public GameObject scoreText;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Transform groundCheck;
+    private int score = 0;
 
     void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -71,5 +74,15 @@ public class Player : MonoBehaviour {
             jump = false;
         }
 
+    }
+
+    void OnCollisionEnter2D(Collision2D coll) {
+//        if (coll.collider.gameObject.name.Equals("CoinSprite")) {
+        if (coll.collider.gameObject.layer == LayerMask.NameToLayer("Collectable")) {
+            Debug.Log("Touched coin!!");
+            coll.collider.gameObject.SetActive(false);
+            score++;
+            scoreText.GetComponent<Text>().text = score.ToString();
+        }
     }
 }

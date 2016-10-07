@@ -1,0 +1,4525 @@
+fileFormatVersion: 2
+guid: a9283bf17b518824d911df4f416efb72
+timeCreated: 1475660901
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: supermarioworld2yoshisisland_shyguys_sheet_0
+    21300002: supermarioworld2yoshisisland_shyguys_sheet_1
+    21300004: supermarioworld2yoshisisland_shyguys_sheet_2
+    21300006: supermarioworld2yoshisisland_shyguys_sheet_3
+    21300008: supermarioworld2yoshisisland_shyguys_sheet_4
+    21300010: supermarioworld2yoshisisland_shyguys_sheet_5
+    21300012: supermarioworld2yoshisisland_shyguys_sheet_6
+    21300014: supermarioworld2yoshisisland_shyguys_sheet_7
+    21300016: supermarioworld2yoshisisland_shyguys_sheet_8
+    21300018: supermarioworld2yoshisisland_shyguys_sheet_9
+    21300020: supermarioworld2yoshisisland_shyguys_sheet_10
+    21300022: supermarioworld2yoshisisland_shyguys_sheet_11
+    21300024: supermarioworld2yoshisisland_shyguys_sheet_12
+    21300026: supermarioworld2yoshisisland_shyguys_sheet_13
+    21300028: supermarioworld2yoshisisland_shyguys_sheet_14
+    21300030: supermarioworld2yoshisisland_shyguys_sheet_15
+    21300032: supermarioworld2yoshisisland_shyguys_sheet_16
+    21300034: supermarioworld2yoshisisland_shyguys_sheet_17
+    21300036: supermarioworld2yoshisisland_shyguys_sheet_18
+    21300038: supermarioworld2yoshisisland_shyguys_sheet_19
+    21300040: supermarioworld2yoshisisland_shyguys_sheet_20
+    21300042: supermarioworld2yoshisisland_shyguys_sheet_21
+    21300044: supermarioworld2yoshisisland_shyguys_sheet_22
+    21300046: supermarioworld2yoshisisland_shyguys_sheet_23
+    21300048: supermarioworld2yoshisisland_shyguys_sheet_24
+    21300050: supermarioworld2yoshisisland_shyguys_sheet_25
+    21300052: supermarioworld2yoshisisland_shyguys_sheet_26
+    21300054: supermarioworld2yoshisisland_shyguys_sheet_27
+    21300056: supermarioworld2yoshisisland_shyguys_sheet_28
+    21300058: supermarioworld2yoshisisland_shyguys_sheet_29
+    21300060: supermarioworld2yoshisisland_shyguys_sheet_30
+    21300062: supermarioworld2yoshisisland_shyguys_sheet_31
+    21300064: supermarioworld2yoshisisland_shyguys_sheet_32
+    21300066: supermarioworld2yoshisisland_shyguys_sheet_33
+    21300068: supermarioworld2yoshisisland_shyguys_sheet_34
+    21300070: supermarioworld2yoshisisland_shyguys_sheet_35
+    21300072: supermarioworld2yoshisisland_shyguys_sheet_36
+    21300074: supermarioworld2yoshisisland_shyguys_sheet_37
+    21300076: supermarioworld2yoshisisland_shyguys_sheet_38
+    21300078: supermarioworld2yoshisisland_shyguys_sheet_39
+    21300080: supermarioworld2yoshisisland_shyguys_sheet_40
+    21300082: supermarioworld2yoshisisland_shyguys_sheet_41
+    21300084: supermarioworld2yoshisisland_shyguys_sheet_42
+    21300086: supermarioworld2yoshisisland_shyguys_sheet_43
+    21300088: supermarioworld2yoshisisland_shyguys_sheet_44
+    21300090: supermarioworld2yoshisisland_shyguys_sheet_45
+    21300092: supermarioworld2yoshisisland_shyguys_sheet_46
+    21300094: supermarioworld2yoshisisland_shyguys_sheet_47
+    21300096: supermarioworld2yoshisisland_shyguys_sheet_48
+    21300098: supermarioworld2yoshisisland_shyguys_sheet_49
+    21300100: supermarioworld2yoshisisland_shyguys_sheet_50
+    21300102: supermarioworld2yoshisisland_shyguys_sheet_51
+    21300104: supermarioworld2yoshisisland_shyguys_sheet_52
+    21300106: supermarioworld2yoshisisland_shyguys_sheet_53
+    21300108: supermarioworld2yoshisisland_shyguys_sheet_54
+    21300110: supermarioworld2yoshisisland_shyguys_sheet_55
+    21300112: supermarioworld2yoshisisland_shyguys_sheet_56
+    21300114: supermarioworld2yoshisisland_shyguys_sheet_57
+    21300116: supermarioworld2yoshisisland_shyguys_sheet_58
+    21300118: supermarioworld2yoshisisland_shyguys_sheet_59
+    21300120: supermarioworld2yoshisisland_shyguys_sheet_60
+    21300122: supermarioworld2yoshisisland_shyguys_sheet_61
+    21300124: supermarioworld2yoshisisland_shyguys_sheet_62
+    21300126: supermarioworld2yoshisisland_shyguys_sheet_63
+    21300128: supermarioworld2yoshisisland_shyguys_sheet_64
+    21300130: supermarioworld2yoshisisland_shyguys_sheet_65
+    21300132: supermarioworld2yoshisisland_shyguys_sheet_66
+    21300134: supermarioworld2yoshisisland_shyguys_sheet_67
+    21300136: supermarioworld2yoshisisland_shyguys_sheet_68
+    21300138: supermarioworld2yoshisisland_shyguys_sheet_69
+    21300140: supermarioworld2yoshisisland_shyguys_sheet_70
+    21300142: supermarioworld2yoshisisland_shyguys_sheet_71
+    21300144: supermarioworld2yoshisisland_shyguys_sheet_72
+    21300146: supermarioworld2yoshisisland_shyguys_sheet_73
+    21300148: supermarioworld2yoshisisland_shyguys_sheet_74
+    21300150: supermarioworld2yoshisisland_shyguys_sheet_75
+    21300152: supermarioworld2yoshisisland_shyguys_sheet_76
+    21300154: supermarioworld2yoshisisland_shyguys_sheet_77
+    21300156: supermarioworld2yoshisisland_shyguys_sheet_78
+    21300158: supermarioworld2yoshisisland_shyguys_sheet_79
+    21300160: supermarioworld2yoshisisland_shyguys_sheet_80
+    21300162: supermarioworld2yoshisisland_shyguys_sheet_81
+    21300164: supermarioworld2yoshisisland_shyguys_sheet_82
+    21300166: supermarioworld2yoshisisland_shyguys_sheet_83
+    21300168: supermarioworld2yoshisisland_shyguys_sheet_84
+    21300170: supermarioworld2yoshisisland_shyguys_sheet_85
+    21300172: supermarioworld2yoshisisland_shyguys_sheet_86
+    21300174: supermarioworld2yoshisisland_shyguys_sheet_87
+    21300176: supermarioworld2yoshisisland_shyguys_sheet_88
+    21300178: supermarioworld2yoshisisland_shyguys_sheet_89
+    21300180: supermarioworld2yoshisisland_shyguys_sheet_90
+    21300182: supermarioworld2yoshisisland_shyguys_sheet_91
+    21300184: supermarioworld2yoshisisland_shyguys_sheet_92
+    21300186: supermarioworld2yoshisisland_shyguys_sheet_93
+    21300188: supermarioworld2yoshisisland_shyguys_sheet_94
+    21300190: supermarioworld2yoshisisland_shyguys_sheet_95
+    21300192: supermarioworld2yoshisisland_shyguys_sheet_96
+    21300194: supermarioworld2yoshisisland_shyguys_sheet_97
+    21300196: supermarioworld2yoshisisland_shyguys_sheet_98
+    21300198: supermarioworld2yoshisisland_shyguys_sheet_99
+    21300200: supermarioworld2yoshisisland_shyguys_sheet_100
+    21300202: supermarioworld2yoshisisland_shyguys_sheet_101
+    21300204: supermarioworld2yoshisisland_shyguys_sheet_102
+    21300206: supermarioworld2yoshisisland_shyguys_sheet_103
+    21300208: supermarioworld2yoshisisland_shyguys_sheet_104
+    21300210: supermarioworld2yoshisisland_shyguys_sheet_105
+    21300212: supermarioworld2yoshisisland_shyguys_sheet_106
+    21300214: supermarioworld2yoshisisland_shyguys_sheet_107
+    21300216: supermarioworld2yoshisisland_shyguys_sheet_108
+    21300218: supermarioworld2yoshisisland_shyguys_sheet_109
+    21300220: supermarioworld2yoshisisland_shyguys_sheet_110
+    21300222: supermarioworld2yoshisisland_shyguys_sheet_111
+    21300224: supermarioworld2yoshisisland_shyguys_sheet_112
+    21300226: supermarioworld2yoshisisland_shyguys_sheet_113
+    21300228: supermarioworld2yoshisisland_shyguys_sheet_114
+    21300230: supermarioworld2yoshisisland_shyguys_sheet_115
+    21300232: supermarioworld2yoshisisland_shyguys_sheet_116
+    21300234: supermarioworld2yoshisisland_shyguys_sheet_117
+    21300236: supermarioworld2yoshisisland_shyguys_sheet_118
+    21300238: supermarioworld2yoshisisland_shyguys_sheet_119
+    21300240: supermarioworld2yoshisisland_shyguys_sheet_120
+    21300242: supermarioworld2yoshisisland_shyguys_sheet_121
+    21300244: supermarioworld2yoshisisland_shyguys_sheet_122
+    21300246: supermarioworld2yoshisisland_shyguys_sheet_123
+    21300248: supermarioworld2yoshisisland_shyguys_sheet_124
+    21300250: supermarioworld2yoshisisland_shyguys_sheet_125
+    21300252: supermarioworld2yoshisisland_shyguys_sheet_126
+    21300254: supermarioworld2yoshisisland_shyguys_sheet_127
+    21300256: supermarioworld2yoshisisland_shyguys_sheet_128
+    21300258: supermarioworld2yoshisisland_shyguys_sheet_129
+    21300260: supermarioworld2yoshisisland_shyguys_sheet_130
+    21300262: supermarioworld2yoshisisland_shyguys_sheet_131
+    21300264: supermarioworld2yoshisisland_shyguys_sheet_132
+    21300266: supermarioworld2yoshisisland_shyguys_sheet_133
+    21300268: supermarioworld2yoshisisland_shyguys_sheet_134
+    21300270: supermarioworld2yoshisisland_shyguys_sheet_135
+    21300272: supermarioworld2yoshisisland_shyguys_sheet_136
+    21300274: supermarioworld2yoshisisland_shyguys_sheet_137
+    21300276: supermarioworld2yoshisisland_shyguys_sheet_138
+    21300278: supermarioworld2yoshisisland_shyguys_sheet_139
+    21300280: supermarioworld2yoshisisland_shyguys_sheet_140
+    21300282: supermarioworld2yoshisisland_shyguys_sheet_141
+    21300284: supermarioworld2yoshisisland_shyguys_sheet_142
+    21300286: supermarioworld2yoshisisland_shyguys_sheet_143
+    21300288: supermarioworld2yoshisisland_shyguys_sheet_144
+    21300290: supermarioworld2yoshisisland_shyguys_sheet_145
+    21300292: supermarioworld2yoshisisland_shyguys_sheet_146
+    21300294: supermarioworld2yoshisisland_shyguys_sheet_147
+    21300296: supermarioworld2yoshisisland_shyguys_sheet_148
+    21300298: supermarioworld2yoshisisland_shyguys_sheet_149
+    21300300: supermarioworld2yoshisisland_shyguys_sheet_150
+    21300302: supermarioworld2yoshisisland_shyguys_sheet_151
+    21300304: supermarioworld2yoshisisland_shyguys_sheet_152
+    21300306: supermarioworld2yoshisisland_shyguys_sheet_153
+    21300308: supermarioworld2yoshisisland_shyguys_sheet_154
+    21300310: supermarioworld2yoshisisland_shyguys_sheet_155
+    21300312: supermarioworld2yoshisisland_shyguys_sheet_156
+    21300314: supermarioworld2yoshisisland_shyguys_sheet_157
+    21300316: supermarioworld2yoshisisland_shyguys_sheet_158
+    21300318: supermarioworld2yoshisisland_shyguys_sheet_159
+    21300320: supermarioworld2yoshisisland_shyguys_sheet_160
+    21300322: supermarioworld2yoshisisland_shyguys_sheet_161
+    21300324: supermarioworld2yoshisisland_shyguys_sheet_162
+    21300326: supermarioworld2yoshisisland_shyguys_sheet_163
+    21300328: supermarioworld2yoshisisland_shyguys_sheet_164
+    21300330: supermarioworld2yoshisisland_shyguys_sheet_165
+    21300332: supermarioworld2yoshisisland_shyguys_sheet_166
+    21300334: supermarioworld2yoshisisland_shyguys_sheet_167
+    21300336: supermarioworld2yoshisisland_shyguys_sheet_168
+    21300338: supermarioworld2yoshisisland_shyguys_sheet_169
+    21300340: supermarioworld2yoshisisland_shyguys_sheet_170
+    21300342: supermarioworld2yoshisisland_shyguys_sheet_171
+    21300344: supermarioworld2yoshisisland_shyguys_sheet_172
+    21300346: supermarioworld2yoshisisland_shyguys_sheet_173
+    21300348: supermarioworld2yoshisisland_shyguys_sheet_174
+    21300350: supermarioworld2yoshisisland_shyguys_sheet_175
+    21300352: supermarioworld2yoshisisland_shyguys_sheet_176
+    21300354: supermarioworld2yoshisisland_shyguys_sheet_177
+    21300356: supermarioworld2yoshisisland_shyguys_sheet_178
+    21300358: supermarioworld2yoshisisland_shyguys_sheet_179
+    21300360: supermarioworld2yoshisisland_shyguys_sheet_180
+    21300362: supermarioworld2yoshisisland_shyguys_sheet_181
+    21300364: supermarioworld2yoshisisland_shyguys_sheet_182
+    21300366: supermarioworld2yoshisisland_shyguys_sheet_183
+    21300368: supermarioworld2yoshisisland_shyguys_sheet_184
+    21300370: supermarioworld2yoshisisland_shyguys_sheet_185
+    21300372: supermarioworld2yoshisisland_shyguys_sheet_186
+    21300374: supermarioworld2yoshisisland_shyguys_sheet_187
+    21300376: supermarioworld2yoshisisland_shyguys_sheet_188
+    21300378: supermarioworld2yoshisisland_shyguys_sheet_189
+    21300380: supermarioworld2yoshisisland_shyguys_sheet_190
+    21300382: supermarioworld2yoshisisland_shyguys_sheet_191
+    21300384: supermarioworld2yoshisisland_shyguys_sheet_192
+    21300386: supermarioworld2yoshisisland_shyguys_sheet_193
+    21300388: supermarioworld2yoshisisland_shyguys_sheet_194
+    21300390: supermarioworld2yoshisisland_shyguys_sheet_195
+    21300392: supermarioworld2yoshisisland_shyguys_sheet_196
+    21300394: supermarioworld2yoshisisland_shyguys_sheet_197
+    21300396: supermarioworld2yoshisisland_shyguys_sheet_198
+    21300398: supermarioworld2yoshisisland_shyguys_sheet_199
+    21300400: supermarioworld2yoshisisland_shyguys_sheet_200
+    21300402: supermarioworld2yoshisisland_shyguys_sheet_201
+    21300404: supermarioworld2yoshisisland_shyguys_sheet_202
+    21300406: supermarioworld2yoshisisland_shyguys_sheet_203
+    21300408: supermarioworld2yoshisisland_shyguys_sheet_204
+    21300410: supermarioworld2yoshisisland_shyguys_sheet_205
+    21300412: supermarioworld2yoshisisland_shyguys_sheet_206
+    21300414: supermarioworld2yoshisisland_shyguys_sheet_207
+    21300416: supermarioworld2yoshisisland_shyguys_sheet_208
+    21300418: supermarioworld2yoshisisland_shyguys_sheet_209
+    21300420: supermarioworld2yoshisisland_shyguys_sheet_210
+    21300422: supermarioworld2yoshisisland_shyguys_sheet_211
+    21300424: supermarioworld2yoshisisland_shyguys_sheet_212
+    21300426: supermarioworld2yoshisisland_shyguys_sheet_213
+    21300428: supermarioworld2yoshisisland_shyguys_sheet_214
+    21300430: supermarioworld2yoshisisland_shyguys_sheet_215
+    21300432: supermarioworld2yoshisisland_shyguys_sheet_216
+    21300434: supermarioworld2yoshisisland_shyguys_sheet_217
+    21300436: supermarioworld2yoshisisland_shyguys_sheet_218
+    21300438: supermarioworld2yoshisisland_shyguys_sheet_219
+    21300440: supermarioworld2yoshisisland_shyguys_sheet_220
+    21300442: supermarioworld2yoshisisland_shyguys_sheet_221
+    21300444: supermarioworld2yoshisisland_shyguys_sheet_222
+    21300446: supermarioworld2yoshisisland_shyguys_sheet_223
+    21300448: supermarioworld2yoshisisland_shyguys_sheet_224
+    21300450: supermarioworld2yoshisisland_shyguys_sheet_225
+    21300452: supermarioworld2yoshisisland_shyguys_sheet_226
+    21300454: supermarioworld2yoshisisland_shyguys_sheet_227
+    21300456: supermarioworld2yoshisisland_shyguys_sheet_228
+    21300458: supermarioworld2yoshisisland_shyguys_sheet_229
+    21300460: supermarioworld2yoshisisland_shyguys_sheet_230
+    21300462: supermarioworld2yoshisisland_shyguys_sheet_231
+    21300464: supermarioworld2yoshisisland_shyguys_sheet_232
+    21300466: supermarioworld2yoshisisland_shyguys_sheet_233
+    21300468: supermarioworld2yoshisisland_shyguys_sheet_234
+    21300470: supermarioworld2yoshisisland_shyguys_sheet_235
+    21300472: supermarioworld2yoshisisland_shyguys_sheet_236
+    21300474: supermarioworld2yoshisisland_shyguys_sheet_237
+    21300476: supermarioworld2yoshisisland_shyguys_sheet_238
+    21300478: supermarioworld2yoshisisland_shyguys_sheet_239
+    21300480: supermarioworld2yoshisisland_shyguys_sheet_240
+    21300482: supermarioworld2yoshisisland_shyguys_sheet_241
+    21300484: supermarioworld2yoshisisland_shyguys_sheet_242
+    21300486: supermarioworld2yoshisisland_shyguys_sheet_243
+    21300488: supermarioworld2yoshisisland_shyguys_sheet_244
+    21300490: supermarioworld2yoshisisland_shyguys_sheet_245
+    21300492: supermarioworld2yoshisisland_shyguys_sheet_246
+    21300494: supermarioworld2yoshisisland_shyguys_sheet_247
+    21300496: supermarioworld2yoshisisland_shyguys_sheet_248
+    21300498: supermarioworld2yoshisisland_shyguys_sheet_249
+    21300500: supermarioworld2yoshisisland_shyguys_sheet_250
+    21300502: supermarioworld2yoshisisland_shyguys_sheet_251
+    21300504: supermarioworld2yoshisisland_shyguys_sheet_252
+    21300506: supermarioworld2yoshisisland_shyguys_sheet_253
+    21300508: supermarioworld2yoshisisland_shyguys_sheet_254
+    21300510: supermarioworld2yoshisisland_shyguys_sheet_255
+    21300512: supermarioworld2yoshisisland_shyguys_sheet_256
+    21300514: supermarioworld2yoshisisland_shyguys_sheet_257
+    21300516: supermarioworld2yoshisisland_shyguys_sheet_258
+    21300518: supermarioworld2yoshisisland_shyguys_sheet_259
+    21300520: supermarioworld2yoshisisland_shyguys_sheet_260
+    21300522: supermarioworld2yoshisisland_shyguys_sheet_261
+    21300524: supermarioworld2yoshisisland_shyguys_sheet_262
+    21300526: supermarioworld2yoshisisland_shyguys_sheet_263
+    21300528: supermarioworld2yoshisisland_shyguys_sheet_264
+    21300530: supermarioworld2yoshisisland_shyguys_sheet_265
+    21300532: supermarioworld2yoshisisland_shyguys_sheet_266
+    21300534: supermarioworld2yoshisisland_shyguys_sheet_267
+    21300536: supermarioworld2yoshisisland_shyguys_sheet_268
+    21300538: supermarioworld2yoshisisland_shyguys_sheet_269
+    21300540: supermarioworld2yoshisisland_shyguys_sheet_270
+    21300542: supermarioworld2yoshisisland_shyguys_sheet_271
+    21300544: supermarioworld2yoshisisland_shyguys_sheet_272
+    21300546: supermarioworld2yoshisisland_shyguys_sheet_273
+    21300548: supermarioworld2yoshisisland_shyguys_sheet_274
+    21300550: supermarioworld2yoshisisland_shyguys_sheet_275
+    21300552: supermarioworld2yoshisisland_shyguys_sheet_276
+    21300554: supermarioworld2yoshisisland_shyguys_sheet_277
+    21300556: supermarioworld2yoshisisland_shyguys_sheet_278
+    21300558: supermarioworld2yoshisisland_shyguys_sheet_279
+    21300560: supermarioworld2yoshisisland_shyguys_sheet_280
+    21300562: supermarioworld2yoshisisland_shyguys_sheet_281
+    21300564: supermarioworld2yoshisisland_shyguys_sheet_282
+    21300566: supermarioworld2yoshisisland_shyguys_sheet_283
+    21300568: supermarioworld2yoshisisland_shyguys_sheet_284
+    21300570: supermarioworld2yoshisisland_shyguys_sheet_285
+    21300572: supermarioworld2yoshisisland_shyguys_sheet_286
+    21300574: supermarioworld2yoshisisland_shyguys_sheet_287
+    21300576: supermarioworld2yoshisisland_shyguys_sheet_288
+    21300578: supermarioworld2yoshisisland_shyguys_sheet_289
+    21300580: supermarioworld2yoshisisland_shyguys_sheet_290
+    21300582: supermarioworld2yoshisisland_shyguys_sheet_291
+    21300584: supermarioworld2yoshisisland_shyguys_sheet_292
+    21300586: supermarioworld2yoshisisland_shyguys_sheet_293
+    21300588: supermarioworld2yoshisisland_shyguys_sheet_294
+    21300590: supermarioworld2yoshisisland_shyguys_sheet_295
+    21300592: supermarioworld2yoshisisland_shyguys_sheet_296
+    21300594: supermarioworld2yoshisisland_shyguys_sheet_297
+    21300596: supermarioworld2yoshisisland_shyguys_sheet_298
+    21300598: supermarioworld2yoshisisland_shyguys_sheet_299
+    21300600: supermarioworld2yoshisisland_shyguys_sheet_300
+    21300602: supermarioworld2yoshisisland_shyguys_sheet_301
+    21300604: supermarioworld2yoshisisland_shyguys_sheet_302
+    21300606: supermarioworld2yoshisisland_shyguys_sheet_303
+    21300608: supermarioworld2yoshisisland_shyguys_sheet_304
+    21300610: supermarioworld2yoshisisland_shyguys_sheet_305
+    21300612: supermarioworld2yoshisisland_shyguys_sheet_306
+    21300614: supermarioworld2yoshisisland_shyguys_sheet_307
+    21300616: supermarioworld2yoshisisland_shyguys_sheet_308
+    21300618: supermarioworld2yoshisisland_shyguys_sheet_309
+    21300620: supermarioworld2yoshisisland_shyguys_sheet_310
+    21300622: supermarioworld2yoshisisland_shyguys_sheet_311
+    21300624: supermarioworld2yoshisisland_shyguys_sheet_312
+    21300626: supermarioworld2yoshisisland_shyguys_sheet_313
+    21300628: supermarioworld2yoshisisland_shyguys_sheet_314
+    21300630: supermarioworld2yoshisisland_shyguys_sheet_315
+    21300632: supermarioworld2yoshisisland_shyguys_sheet_316
+    21300634: supermarioworld2yoshisisland_shyguys_sheet_317
+    21300636: supermarioworld2yoshisisland_shyguys_sheet_318
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1556
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1556
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1557
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1557
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1556
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1556
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 1556
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 1552
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1552
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 1552
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 1552
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1516
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1516
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1517
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1517
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1516
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1516
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 1516
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 1517
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1517
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 1517
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1476
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1476
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1477
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1477
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1476
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1476
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 1476
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1469
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1470
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1478
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 1477
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1436
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1436
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1437
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1437
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1436
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1436
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 1436
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 1437
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1438
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1438
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1437
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 1437
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1438
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1392
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1393
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1393
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1392
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1392
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1392
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1392
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1417
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1394
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1394
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1397
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_56
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 1396
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_57
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1394
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_58
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1407
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_59
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1396
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_60
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1388
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_61
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1352
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_62
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1353
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_63
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1353
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_64
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1352
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_65
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1352
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_66
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1352
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_67
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1352
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_68
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1377
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_69
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1354
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_70
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1354
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_71
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1357
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_72
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 1356
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_73
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1354
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_74
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1367
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_75
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1356
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_76
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1348
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_77
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1312
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_78
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1313
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_79
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1313
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_80
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1312
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_81
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1312
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_82
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1312
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_83
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1312
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_84
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1337
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_85
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1314
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_86
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1314
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_87
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1317
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_88
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 1316
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_89
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1314
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_90
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1327
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_91
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1316
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_92
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1308
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_93
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1248
+        width: 19
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_94
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1245
+        width: 19
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_95
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1245
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_96
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1245
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_97
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1245
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_98
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1246
+        width: 21
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_99
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1247
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_100
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1247
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_101
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1248
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_102
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1248
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_103
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1247
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_104
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1176
+        width: 21
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_105
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1175
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_106
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1175
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_107
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1175
+        width: 19
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_108
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1175
+        width: 19
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_109
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 1175
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_110
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 1175
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_111
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1176
+        width: 21
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_112
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1177
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_113
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1178
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_114
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 1178
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_115
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1107
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_116
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1106
+        width: 21
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_117
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1105
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_118
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1105
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_119
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1038
+        width: 19
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_120
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1035
+        width: 19
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_121
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1035
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_122
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1035
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_123
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1035
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_124
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1036
+        width: 21
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_125
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1037
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_126
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1037
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_127
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1038
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_128
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1038
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_129
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1037
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_130
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 966
+        width: 21
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_131
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 965
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_132
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 965
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_133
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 965
+        width: 19
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_134
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 965
+        width: 19
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_135
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 965
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_136
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 965
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_137
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 966
+        width: 21
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_138
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 967
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_139
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 968
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_140
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 968
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_141
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 897
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_142
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 896
+        width: 21
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_143
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 895
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_144
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 895
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_145
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 828
+        width: 19
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_146
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 825
+        width: 19
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_147
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 825
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_148
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 825
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_149
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 825
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_150
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 826
+        width: 21
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_151
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 827
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_152
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 827
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_153
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 828
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_154
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 828
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_155
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 827
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_156
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 756
+        width: 21
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_157
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 755
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_158
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 755
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_159
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 755
+        width: 19
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_160
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 755
+        width: 19
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_161
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 755
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_162
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 755
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_163
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 756
+        width: 21
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_164
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 757
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_165
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 758
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_166
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 758
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_167
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 687
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_168
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 686
+        width: 21
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_169
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 685
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_170
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 685
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_171
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 618
+        width: 19
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_172
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 615
+        width: 19
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_173
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 615
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_174
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 615
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_175
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 615
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_176
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 616
+        width: 21
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_177
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 617
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_178
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 617
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_179
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 618
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_180
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 618
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_181
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 617
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_182
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 546
+        width: 21
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_183
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 545
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_184
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 545
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_185
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 545
+        width: 19
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_186
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 545
+        width: 19
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_187
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 545
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_188
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 545
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_189
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 546
+        width: 21
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_190
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 547
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_191
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 548
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_192
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 548
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_193
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 477
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_194
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 476
+        width: 21
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_195
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 475
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_196
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 475
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_197
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 441
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_198
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 440
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_199
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 439
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_200
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 438
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_201
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 437
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_202
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 438
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_203
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 438
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_204
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 438
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_205
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 437
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_206
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 439
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_207
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 437
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_208
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 437
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_209
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 398
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_210
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 398
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_211
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 397
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_212
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 397
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_213
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 397
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_214
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 401
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_215
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 400
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_216
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 399
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_217
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 398
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_218
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 398
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_219
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 397
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_220
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 364
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_221
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 364
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_222
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 363
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_223
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 360
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_224
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 364
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_225
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 364
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_226
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 363
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_227
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 363
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_228
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 362
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_229
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 361
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_230
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 359
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_231
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 360
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_232
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 321
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_233
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 322
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_234
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 323
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_235
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 323
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_236
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 322
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_237
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 321
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_238
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 322
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_239
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 321
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_240
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 284
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_241
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 284
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_242
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 283
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_243
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 280
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_244
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 284
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_245
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 284
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_246
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 283
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_247
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 283
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_248
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 282
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_249
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 281
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_250
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 279
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_251
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 280
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_252
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 241
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_253
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 242
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_254
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 243
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_255
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 243
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_256
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 242
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_257
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 241
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_258
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 242
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_259
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 241
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_260
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 201
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_261
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 202
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_262
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 201
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_263
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 200
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_264
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 200
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_265
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 202
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_266
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 199
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_267
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 197
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_268
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 200
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_269
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 197
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_270
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 198
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_271
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 199
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_272
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 196
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_273
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 196
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_274
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 161
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_275
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 162
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_276
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 162
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_277
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 162
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_278
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 162
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_279
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 161
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_280
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 167
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_281
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 164
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_282
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 162
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_283
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 163
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_284
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 162
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_285
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 160
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_286
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 160
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_287
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 160
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_288
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 120
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_289
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 123
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_290
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 121
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_291
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 121
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_292
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 121
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_293
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 82
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_294
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 77
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_295
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 108
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_296
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 75
+        width: 24
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_297
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 89
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_298
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 71
+        width: 21
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_299
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 84
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_300
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 83
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_301
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 83
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_302
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 77
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_303
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 43
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_304
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 42
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_305
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 42
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_306
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 42
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_307
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 51
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_308
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 40
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_309
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 40
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_310
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 42
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_311
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 2
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_312
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 8
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_313
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_314
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_315
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 24
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_316
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 2
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_317
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 7
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: supermarioworld2yoshisisland_shyguys_sheet_318
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 0
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

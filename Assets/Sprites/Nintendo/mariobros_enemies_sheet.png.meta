@@ -1,0 +1,1641 @@
+fileFormatVersion: 2
+guid: 7726b68fc0601f246886f4880699a35e
+timeCreated: 1475659407
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: mariobros_enemies_sheet_0
+    21300002: mariobros_enemies_sheet_1
+    21300004: mariobros_enemies_sheet_2
+    21300006: mariobros_enemies_sheet_3
+    21300008: mariobros_enemies_sheet_4
+    21300010: mariobros_enemies_sheet_5
+    21300012: mariobros_enemies_sheet_6
+    21300014: mariobros_enemies_sheet_7
+    21300016: mariobros_enemies_sheet_8
+    21300018: mariobros_enemies_sheet_9
+    21300020: mariobros_enemies_sheet_10
+    21300022: mariobros_enemies_sheet_11
+    21300024: mariobros_enemies_sheet_12
+    21300026: mariobros_enemies_sheet_13
+    21300028: mariobros_enemies_sheet_14
+    21300030: mariobros_enemies_sheet_15
+    21300032: mariobros_enemies_sheet_16
+    21300034: mariobros_enemies_sheet_17
+    21300036: mariobros_enemies_sheet_18
+    21300038: mariobros_enemies_sheet_19
+    21300040: mariobros_enemies_sheet_20
+    21300042: mariobros_enemies_sheet_21
+    21300044: mariobros_enemies_sheet_22
+    21300046: mariobros_enemies_sheet_23
+    21300048: mariobros_enemies_sheet_24
+    21300050: mariobros_enemies_sheet_25
+    21300052: mariobros_enemies_sheet_26
+    21300054: mariobros_enemies_sheet_27
+    21300056: mariobros_enemies_sheet_28
+    21300058: mariobros_enemies_sheet_29
+    21300060: mariobros_enemies_sheet_30
+    21300062: mariobros_enemies_sheet_31
+    21300064: mariobros_enemies_sheet_32
+    21300066: mariobros_enemies_sheet_33
+    21300068: mariobros_enemies_sheet_34
+    21300070: mariobros_enemies_sheet_35
+    21300072: mariobros_enemies_sheet_36
+    21300074: mariobros_enemies_sheet_37
+    21300076: mariobros_enemies_sheet_38
+    21300078: mariobros_enemies_sheet_39
+    21300080: mariobros_enemies_sheet_40
+    21300082: mariobros_enemies_sheet_41
+    21300084: mariobros_enemies_sheet_42
+    21300086: mariobros_enemies_sheet_43
+    21300088: mariobros_enemies_sheet_44
+    21300090: mariobros_enemies_sheet_45
+    21300092: mariobros_enemies_sheet_46
+    21300094: mariobros_enemies_sheet_47
+    21300096: mariobros_enemies_sheet_48
+    21300098: mariobros_enemies_sheet_49
+    21300100: mariobros_enemies_sheet_50
+    21300102: mariobros_enemies_sheet_51
+    21300104: mariobros_enemies_sheet_52
+    21300106: mariobros_enemies_sheet_53
+    21300108: mariobros_enemies_sheet_54
+    21300110: mariobros_enemies_sheet_55
+    21300112: mariobros_enemies_sheet_56
+    21300114: mariobros_enemies_sheet_57
+    21300116: mariobros_enemies_sheet_58
+    21300118: mariobros_enemies_sheet_59
+    21300120: mariobros_enemies_sheet_60
+    21300122: mariobros_enemies_sheet_61
+    21300124: mariobros_enemies_sheet_62
+    21300126: mariobros_enemies_sheet_63
+    21300128: mariobros_enemies_sheet_64
+    21300130: mariobros_enemies_sheet_65
+    21300132: mariobros_enemies_sheet_66
+    21300134: mariobros_enemies_sheet_67
+    21300136: mariobros_enemies_sheet_68
+    21300138: mariobros_enemies_sheet_69
+    21300140: mariobros_enemies_sheet_70
+    21300142: mariobros_enemies_sheet_71
+    21300144: mariobros_enemies_sheet_72
+    21300146: mariobros_enemies_sheet_73
+    21300148: mariobros_enemies_sheet_74
+    21300150: mariobros_enemies_sheet_75
+    21300152: mariobros_enemies_sheet_76
+    21300154: mariobros_enemies_sheet_77
+    21300156: mariobros_enemies_sheet_78
+    21300158: mariobros_enemies_sheet_79
+    21300160: mariobros_enemies_sheet_80
+    21300162: mariobros_enemies_sheet_81
+    21300164: mariobros_enemies_sheet_82
+    21300166: mariobros_enemies_sheet_83
+    21300168: mariobros_enemies_sheet_84
+    21300170: mariobros_enemies_sheet_85
+    21300172: mariobros_enemies_sheet_86
+    21300174: mariobros_enemies_sheet_87
+    21300176: mariobros_enemies_sheet_88
+    21300178: mariobros_enemies_sheet_89
+    21300180: mariobros_enemies_sheet_90
+    21300182: mariobros_enemies_sheet_91
+    21300184: mariobros_enemies_sheet_92
+    21300186: mariobros_enemies_sheet_93
+    21300188: mariobros_enemies_sheet_94
+    21300190: mariobros_enemies_sheet_95
+    21300192: mariobros_enemies_sheet_96
+    21300194: mariobros_enemies_sheet_97
+    21300196: mariobros_enemies_sheet_98
+    21300198: mariobros_enemies_sheet_99
+    21300200: mariobros_enemies_sheet_100
+    21300202: mariobros_enemies_sheet_101
+    21300204: mariobros_enemies_sheet_102
+    21300206: mariobros_enemies_sheet_103
+    21300208: mariobros_enemies_sheet_104
+    21300210: mariobros_enemies_sheet_105
+    21300212: mariobros_enemies_sheet_106
+    21300214: mariobros_enemies_sheet_107
+    21300216: mariobros_enemies_sheet_108
+    21300218: mariobros_enemies_sheet_109
+    21300220: mariobros_enemies_sheet_110
+    21300222: mariobros_enemies_sheet_111
+    21300224: mariobros_enemies_sheet_112
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 568
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 568
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 568
+        width: 63
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 534
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 535
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 535
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 534
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 534
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 534
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 534
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 534
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 534
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 487
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 487
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 486
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 484
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 485
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 484
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 484
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 485
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 484
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 434
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 435
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 435
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 434
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 434
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 434
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 434
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 434
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 434
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 387
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 387
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 386
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 384
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 385
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 384
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 384
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 385
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 384
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 334
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 335
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 335
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 334
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 334
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 334
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 334
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 334
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 334
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 287
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 287
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 286
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 284
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 285
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 284
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 284
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 285
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_56
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 284
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 258
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_58
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 258
+        width: 31
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_59
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 258
+        width: 47
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_60
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 226
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_61
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 226
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_62
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_63
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_64
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 224
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_65
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 225
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_66
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 226
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_67
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 224
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_68
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 224
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_69
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 176
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_70
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 176
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_71
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 174
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_72
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 174
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_73
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 174
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_74
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 175
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_75
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 176
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_76
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 174
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_77
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 174
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_78
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 126
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_79
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 126
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_80
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 124
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_81
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 124
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_82
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 124
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_83
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 125
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_84
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 126
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_85
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 124
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_86
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 124
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_87
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_88
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 98
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_89
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 98
+        width: 31
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_90
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 98
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_91
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 98
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_92
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 66
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_93
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 65
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_94
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 65
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_95
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 65
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_96
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 65
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_97
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 65
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_98
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 66
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_99
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 65
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_100
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 67
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_101
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 38
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_102
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 38
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_103
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 38
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_104
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 38
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_105
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 4
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_106
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 4
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_107
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 4
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_108
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 4
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_109
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 0
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_110
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 4
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_111
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 4
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mariobros_enemies_sheet_112
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 4
+        width: 64
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

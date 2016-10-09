@@ -1,72 +1,90 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
     public float speed = 3f;
     public float maxSpeedX = 5f;
-
     public float moveForce = 10f;
     public float jumpForce = 400f;
-
-    public bool facingRight = true;
-    public bool jump = false;
-    public bool grounded = false;
-    public Vector2 velocity;
-
+    public int score = 0;
     public GameObject scoreText;
+    public GameObject bullet;
+
+    private bool jump = false;
+    private bool grounded = false;
+    private float shotDelay = 0.10f;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Transform groundCheck;
-    public int score = 0;
 
-    void Start() {
+
+    private void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         groundCheck = transform.Find("GroundCheck");
+        StartCoroutine("ShootTimer");
     }
 
 
-    void Update() {
-        grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("BlockingLayer"));
+    private void Update() {
+        // Can jump off of enemies, platforms, or objects
+        bool grounded1 = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("PlatformLayer"));
+        bool grounded2 = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("ObjectLayer"));
+        bool grounded3 = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("EnemyLayer"));
+        grounded = grounded1 || grounded2 || grounded3;
         animator.SetBool("Grounded", grounded);
 
-        velocity = GetComponent<Rigidbody2D>().velocity;
-
-        if (grounded && Input.GetButtonDown("Jump"))
-//        if (grounded && Input.GetKey("space"))
+        if (grounded && Input.GetButtonDown("Jump")) {
             jump = true;
+        }
     }
 
+    private IEnumerator ShootTimer() {
+        while (true) {
+            Debug.Log("ShootTimer!!!");
+            if (Input.GetButton("Fire1")) {
+                Fire();
+                yield return new WaitForSeconds(shotDelay);
+            }
+            else {
+                yield return null;
+            }
+            
+        }
+    }
 
-    void FixedUpdate() {
+    private void Fire() {
+        Debug.Log("Fire!!!!");
+
+        // Create bullet instance near player's current position.
+        var newBulletPosition = transform.position + new Vector3(0.5f, 0, 0);
+        var bulletInstance = Instantiate(bullet, newBulletPosition, Quaternion.AngleAxis(270, Vector3.forward)) as GameObject;
+        bulletInstance.gameObject.SetActive(true);
+        Debug.Log(bulletInstance);
+        bulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(10f, 0f);
+    }
+
+    private void FixedUpdate() {
 
         // Get horizontal input
-        int h = (int) Input.GetAxisRaw("Horizontal");
+        var h = (int) Input.GetAxisRaw("Horizontal");
 
         // Set Speed animator parameter
         animator.SetInteger("Speed", Mathf.Abs(h));
 
         // If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeedX yet...
-        if (h * GetComponent<Rigidbody2D>().velocity.x < maxSpeedX) {
-            GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * moveForce);
-        }
+        if (h * GetComponent<Rigidbody2D>().velocity.x < maxSpeedX) GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * moveForce);
 
         // If the player's horizontal velocity is greater than the maxSpeedX...
-        if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeedX) {
-            // ... set the player's velocity to the maxSpeedX in the x axis.
-            GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * maxSpeedX, GetComponent<Rigidbody2D>().velocity.y);
-        }
+        if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeedX) GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * maxSpeedX, GetComponent<Rigidbody2D>().velocity.y);
 
         // Handle flipping sprite if change directions
-        if (h > 0) {
-            spriteRenderer.flipX = false;
-        }
-        else if (h < 0) {
-            spriteRenderer.flipX = true;
-        }
+        if (h > 0) spriteRenderer.flipX = false;
+        else if (h < 0) spriteRenderer.flipX = true;
 
         if (jump) {
             animator.SetTrigger("Jump");

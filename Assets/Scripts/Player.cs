@@ -55,6 +55,15 @@ public class Player : MonoBehaviour {
         }
 
         velocity = GetComponent<Rigidbody2D>().velocity;
+
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 diff = mouseWorldPos - transform.position;
+        if (diff.x > 0) {
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(25, 0));
+        } else {
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(-25, 0));
+        }
+        //Debug.Log("mouseWorldPos: " + mouseWorldPos + ",  diff: " + diff);
     }
 
 
@@ -141,6 +150,7 @@ public class Player : MonoBehaviour {
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVelocity;
         bulletInstance.transform.SetParent(this.transform);
     }
+
 
     void OnCollisionEnter2D(Collision2D coll) {
         Debug.Log("Player collided with " + coll.gameObject.name);

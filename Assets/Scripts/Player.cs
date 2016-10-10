@@ -20,12 +20,14 @@ public class Player : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Transform groundCheck;
+    private Vector3 spawnPoint;
 
 
     private void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         groundCheck = transform.Find("GroundCheck");
+        spawnPoint = transform.position;
         StartCoroutine("ShootTimer");
     }
 
@@ -41,11 +43,17 @@ public class Player : MonoBehaviour {
         if (grounded && Input.GetButtonDown("Jump")) {
             jump = true;
         }
+
+        // Respawn if fallen off the world
+        if (transform.position.y <= -10) {
+            transform.position = spawnPoint;
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            spriteRenderer.flipX = false;
+        }
     }
 
     private IEnumerator ShootTimer() {
         while (true) {
-            Debug.Log("ShootTimer!!!");
             if (Input.GetButton("Fire1")) {
                 Fire();
                 yield return new WaitForSeconds(shotDelay);
@@ -53,25 +61,23 @@ public class Player : MonoBehaviour {
             else {
                 yield return null;
             }
-            
         }
     }
 
     private void Fire() {
-        Debug.Log("Fire!!!!");
-
         // Create bullet instance near player's current position.
-        var newBulletPosition = transform.position + new Vector3(0.5f, 0, 0);
-        var bulletInstance = Instantiate(bullet, newBulletPosition, Quaternion.AngleAxis(270, Vector3.forward)) as GameObject;
+
+
+        Vector3 newBulletPosition = transform.position + new Vector3(0.5f, 0, 0);
+        GameObject bulletInstance = Instantiate(bullet, newBulletPosition, Quaternion.AngleAxis(270, Vector3.forward)) as GameObject;
         bulletInstance.gameObject.SetActive(true);
-        Debug.Log(bulletInstance);
         bulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(10f, 0f);
     }
 
     private void FixedUpdate() {
 
         // Get horizontal input
-        var h = (int) Input.GetAxisRaw("Horizontal");
+        int h = (int) Input.GetAxisRaw("Horizontal");
 
         // Set Speed animator parameter
         animator.SetInteger("Speed", Mathf.Abs(h));
@@ -83,8 +89,8 @@ public class Player : MonoBehaviour {
         if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeedX) GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * maxSpeedX, GetComponent<Rigidbody2D>().velocity.y);
 
         // Handle flipping sprite if change directions
-        if (h > 0) spriteRenderer.flipX = false;
-        else if (h < 0) spriteRenderer.flipX = true;
+        if (h > 0) { spriteRenderer.flipX = false; }
+        else if (h < 0) { spriteRenderer.flipX = true; }
 
         if (jump) {
             animator.SetTrigger("Jump");

@@ -5,17 +5,10 @@ public class Bullet : MonoBehaviour {
 
     public GameObject explosion;
 
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
 
     void OnTriggerEnter2D(Collider2D coll) {
-
-        if (coll.GetComponent<Collider2D>().gameObject.layer == LayerMask.NameToLayer("EnemyLayer")) {
+        if (coll.GetComponent<Collider2D>().gameObject.layer == LayerMask.NameToLayer("EnemyLayer") ||
+            coll.GetComponent<Collider2D>().gameObject.layer == LayerMask.NameToLayer("ObjectLayer")) {
             Debug.Log("Collided with " + coll.gameObject.name);
             Destroy(coll.gameObject);
             GameObject explosionInstance = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;

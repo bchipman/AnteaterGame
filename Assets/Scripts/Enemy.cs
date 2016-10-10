@@ -10,9 +10,10 @@ public class Enemy : MonoBehaviour {
     public Vector3 spawnPoint;
 
 
-    void Start () {
+    void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spawnPoint = transform.position;
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("EnemyLayer"), LayerMask.NameToLayer("EnemyLayer"), true);
     }
 
     void FixedUpdate() {
@@ -21,17 +22,19 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        direction *= -1;
-        if (direction > 0) {
-            spriteRenderer.flipX = false;
-            if (GetComponent<CircleCollider2D>() != null) {
-                GetComponent<CircleCollider2D>().offset = new Vector2(0.02f, 0f);
-            }
-        } else if (direction < 0) {
-            spriteRenderer.flipX = true;
-            if (GetComponent<CircleCollider2D>() != null) {
-                GetComponent<CircleCollider2D>().offset = new Vector2(-0.02f, 0f);
+    private void OnCollisionEnter2D(Collision2D coll) {
+        if (coll.gameObject.layer != LayerMask.NameToLayer("EnemyLayer")) {
+            direction *= -1;
+            if (direction > 0) {
+                spriteRenderer.flipX = false;
+                if (GetComponent<CircleCollider2D>() != null) {
+                    GetComponent<CircleCollider2D>().offset = new Vector2(0.02f, 0f);
+                }
+            } else if (direction < 0) {
+                spriteRenderer.flipX = true;
+                if (GetComponent<CircleCollider2D>() != null) {
+                    GetComponent<CircleCollider2D>().offset = new Vector2(-0.02f, 0f);
+                }
             }
         }
     }

@@ -4,20 +4,16 @@ using System.Collections;
 public class Enemy : MonoBehaviour {
 
     private int direction = 1;
-    private float speed = 1f;
     private float maxSpeed = 2f;
     public float moveForce = 10f;
     private SpriteRenderer spriteRenderer;
+    public Vector3 spawnPoint;
 
-    // Use this for initialization
+
     void Start () {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        spawnPoint = transform.position;
     }
-
-	// Update is called once per frame
-	void Update () {
-
-	}
 
     void FixedUpdate() {
         if (direction * GetComponent<Rigidbody2D>().velocity.x < maxSpeed) {
@@ -39,4 +35,5 @@ public class Enemy : MonoBehaviour {
             }
         }
     }
+
 }

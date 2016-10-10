@@ -6,9 +6,10 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
-    private float maxSpeedX = 8f;
+    private float maxSpeedX = 10f;
     private float moveForce = 15f;
     private float bulletForce = 20f;
+    private float shotDelay = 0.08f;
     private float jumpForce = 300f;
     public int score = 0;
     public GameObject scoreText;
@@ -18,7 +19,6 @@ public class Player : MonoBehaviour {
     private bool jump = false;
     private bool grounded = false;
     private bool facingRight = true;
-    private float shotDelay = 0.10f;
     private bool fireUp = false;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -140,6 +140,10 @@ public class Player : MonoBehaviour {
         bulletInstance.gameObject.SetActive(true);
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVelocity;
         bulletInstance.transform.SetParent(this.transform);
+    }
+
+    void OnCollisionEnter2D(Collision2D coll) {
+        Debug.Log("Player collided with " + coll.gameObject.name);
     }
 
 }

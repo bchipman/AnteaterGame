@@ -19,6 +19,7 @@ public class Player : MonoBehaviour {
     private bool grounded = false;
     private bool facingRight = true;
     private float shotDelay = 0.10f;
+    private bool fireUp = false;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Transform groundCheck;
@@ -99,6 +100,7 @@ public class Player : MonoBehaviour {
     private IEnumerator ShootTimer() {
         while (true) {
             if (Input.GetButton("Fire1")) {
+                fireUp = (int) Input.GetAxisRaw("Vertical") == 1;
                 Fire();
                 yield return new WaitForSeconds(shotDelay);
             }
@@ -115,15 +117,22 @@ public class Player : MonoBehaviour {
         Vector2 bulletVelocity;
         Quaternion bulletQuaternion;
 
-        if (facingRight) {
-            bulletOffset = new Vector3(0.5f, 0, 0);
-            bulletVelocity = new Vector2(bulletForce, 0);
-            bulletQuaternion = Quaternion.AngleAxis(270, Vector3.forward);
+        if (fireUp) {
+            bulletOffset = new Vector3(0, 1f, 0);
+            bulletVelocity = new Vector2(0, bulletForce);
+            bulletQuaternion = Quaternion.identity;
         }
         else {
-            bulletOffset = new Vector3(-0.5f, 0, 0);
-            bulletVelocity = new Vector2(bulletForce * -1, 0);
-            bulletQuaternion = Quaternion.AngleAxis(90, Vector3.forward);
+            if (facingRight) {
+                bulletOffset = new Vector3(0.5f, 0, 0);
+                bulletVelocity = new Vector2(bulletForce, 0);
+                bulletQuaternion = Quaternion.AngleAxis(270, Vector3.forward);
+            }
+            else {
+                bulletOffset = new Vector3(-0.5f, 0, 0);
+                bulletVelocity = new Vector2(bulletForce * -1, 0);
+                bulletQuaternion = Quaternion.AngleAxis(90, Vector3.forward);
+            }
         }
 
         Vector3 newBulletPosition = transform.position + bulletOffset;

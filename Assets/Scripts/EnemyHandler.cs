@@ -26,7 +26,13 @@ public class EnemyHandler : MonoBehaviour {
 
     IEnumerator NewRespawn(GameObject toRespawn, float delayTime) {
         yield return new WaitForSeconds(delayTime);
-        GameObject newEnemy = Instantiate(toRespawn, Vector3.zero, Quaternion.identity) as GameObject;
+        GameObject newEnemy = Instantiate(toRespawn, randomLocation(), Quaternion.identity) as GameObject;
+    }
+
+    private Vector2 randomLocation() {
+        float xPos = Random.Range(-5f, 3f);
+        float yPos = Random.Range(0f, 3f);
+        return new Vector2(xPos, yPos);
     }
 
 

@@ -14,17 +14,18 @@ public class Player : MonoBehaviour {
     public int score = 0;
     public GameObject scoreText;
     public GameObject bullet;
-    public Vector2 velocity;  // temporary, for debugging
+    public Vector2 velocity; // temporary, for debugging
 
     private bool jump = false;
     private bool grounded = false;
     private bool facingRight = true;
     private bool fireUp = false;
-    private bool mouseDown = false;
+    private bool clickDraggingPlayer = false;
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Transform groundCheck;
+    private Transform clickCheck;
     private Vector3 spawnPoint;
 
 
@@ -32,24 +33,22 @@ public class Player : MonoBehaviour {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         groundCheck = transform.Find("GroundCheck");
+        clickCheck = transform.Find("ClickCheck");
         spawnPoint = transform.position;
         StartCoroutine("ShootTimer");
     }
 
-
     private void Update() {
+
         // Can jump off of platforms, enemies, or objects
         bool grounded1 = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("PlatformLayer"));
         bool grounded2 = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("ObjectLayer"));
         bool grounded3 = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("EnemyLayer"));
         grounded = grounded1 || grounded2 || grounded3;
         animator.SetBool("Grounded", grounded);
-
         if (grounded && Input.GetButtonDown("Jump")) {
             jump = true;
         }
-
-        mouseDown = Input.GetMouseButton(0);
 
         // Respawn if fallen off the world
         if (transform.position.y <= -10) {
@@ -60,8 +59,16 @@ public class Player : MonoBehaviour {
 
         // Just to set the public velocity variable to view in Unity inspector
         velocity = GetComponent<Rigidbody2D>().velocity;
-    }
 
+        // Visualize ClickCheck box collider when clicked
+        Bounds clickBoxBounds = clickCheck.GetComponent<BoxCollider2D>().bounds;
+        if (clickBoxBounds.Contains(getMouseWorldPosition())) {
+            clickCheck.GetComponent<SpriteRenderer>().enabled = true;
+        } else {
+            clickCheck.GetComponent<SpriteRenderer>().enabled = false;
+        }
+
+    }
 
     private void FixedUpdate() {
 
@@ -69,17 +76,13 @@ public class Player : MonoBehaviour {
         int h = (int) Input.GetAxisRaw("Horizontal");
         Move(h);
 
-        if (mouseDown) {
-            Debug.Log("Left mouse button is down!");
-            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 diff = mouseWorldPos - transform.position;
-            if (diff.x > 0) {
-                Move(1);
-            } else if (diff.x < 0) {
-                Move(-1);
-            } else {
-                Move(0);
-            }
+        // Player follows mouse if first click on player and continue holding down
+        if (clickDraggingPlayer) {
+            Vector3 diff = getMouseWorldPosition() - transform.position;
+            Debug.Log("diff: " + diff);
+            if      (diff.x > 0) { Move(1); }
+            else if (diff.x < 0) { Move(-1); }
+            else                 { Move(0); }
         }
 
         // Handle jumping
@@ -90,10 +93,21 @@ public class Player : MonoBehaviour {
         }
     }
 
+    private void OnMouseDown() {
+        clickDraggingPlayer = true;
+        spriteRenderer.color = Color.red;
+    }
+
+    private void OnMouseUp() {
+        clickDraggingPlayer = false;
+        spriteRenderer.color = Color.white;
+    }
+
     private void Move(int h) {
 
         // Set Speed animator parameter
-        animator.SetInteger("Speed", (int) Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+//        animator.SetInteger("Speed", (int) Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+        animator.SetInteger("Speed", Mathf.Abs(h));
 
         // If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeedX yet...
         if (h * GetComponent<Rigidbody2D>().velocity.x < maxSpeedX) {
@@ -111,11 +125,13 @@ public class Player : MonoBehaviour {
         }
 
         // Handle flipping sprite if change directions
-        if (h > 0) { facingRight = true; }
-        else if (h < 0) { facingRight = false; }
+        if (h > 0) {
+            facingRight = true;
+        } else if (h < 0) {
+            facingRight = false;
+        }
         spriteRenderer.flipX = !facingRight;
     }
-
 
     private IEnumerator ShootTimer() {
         while (true) {
@@ -123,13 +139,11 @@ public class Player : MonoBehaviour {
                 fireUp = (int) Input.GetAxisRaw("Vertical") == 1;
                 Fire();
                 yield return new WaitForSeconds(shotDelay);
-            }
-            else {
+            } else {
                 yield return null;
             }
         }
     }
-
 
     private void Fire() {
         // Create bullet instance near player's current position.
@@ -162,9 +176,14 @@ public class Player : MonoBehaviour {
         bulletInstance.transform.SetParent(this.transform);
     }
 
-
     void OnCollisionEnter2D(Collision2D coll) {
-        Debug.Log("Player collided with " + coll.gameObject.name);
+//        Debug.Log("Player collided with " + coll.gameObject.name);
+    }
+
+    private Vector3 getMouseWorldPosition() {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0f;
+        return mousePos;
     }
 
 }

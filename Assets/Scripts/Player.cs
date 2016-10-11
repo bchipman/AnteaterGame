@@ -21,6 +21,7 @@ public class Player : MonoBehaviour {
     private bool facingRight = true;
     private bool fireUp = false;
     private bool clickDraggingPlayer = false;
+    private bool mouseInsideClickCheckBox = false;
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -63,11 +64,12 @@ public class Player : MonoBehaviour {
         // Visualize ClickCheck box collider when clicked
         Bounds clickBoxBounds = clickCheck.GetComponent<BoxCollider2D>().bounds;
         if (clickBoxBounds.Contains(getMouseWorldPosition())) {
+            mouseInsideClickCheckBox = true;
             clickCheck.GetComponent<SpriteRenderer>().enabled = true;
         } else {
+            mouseInsideClickCheckBox = false;
             clickCheck.GetComponent<SpriteRenderer>().enabled = false;
         }
-
     }
 
     private void FixedUpdate() {
@@ -77,7 +79,7 @@ public class Player : MonoBehaviour {
         Move(h);
 
         // Player follows mouse if first click on player and continue holding down
-        if (clickDraggingPlayer) {
+        if (clickDraggingPlayer && !mouseInsideClickCheckBox) {
             Vector3 diff = getMouseWorldPosition() - transform.position;
             Debug.Log("diff: " + diff);
             if      (diff.x > 0) { Move(1); }

@@ -10,7 +10,7 @@ public class Player : MonoBehaviour {
     private float moveForce = 15f;
     private float bulletForce = 20f;
     private float shotDelay = 0.08f;
-    private float jumpForce = 300f;
+    private float jumpForce = 400f;
     public int score = 0;
     public GameObject scoreText;
     public GameObject bullet;
@@ -20,6 +20,8 @@ public class Player : MonoBehaviour {
     private bool grounded = false;
     private bool facingRight = true;
     private bool fireUp = false;
+    private bool mouseDown = false;
+
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Transform groundCheck;
@@ -47,6 +49,8 @@ public class Player : MonoBehaviour {
             jump = true;
         }
 
+        mouseDown = Input.GetMouseButton(0);
+
         // Respawn if fallen off the world
         if (transform.position.y <= -10) {
             transform.position = spawnPoint;
@@ -54,16 +58,8 @@ public class Player : MonoBehaviour {
             facingRight = true;
         }
 
+        // Just to set the public velocity variable to view in Unity inspector
         velocity = GetComponent<Rigidbody2D>().velocity;
-
-        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 diff = mouseWorldPos - transform.position;
-        if (diff.x > 0) {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(25, 0));
-        } else {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(-25, 0));
-        }
-        //Debug.Log("mouseWorldPos: " + mouseWorldPos + ",  diff: " + diff);
     }
 
 
@@ -71,15 +67,40 @@ public class Player : MonoBehaviour {
 
         // Get horizontal input
         int h = (int) Input.GetAxisRaw("Horizontal");
+        Move(h);
+
+        if (mouseDown) {
+            Debug.Log("Left mouse button is down!");
+            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 diff = mouseWorldPos - transform.position;
+            if (diff.x > 0) {
+                Move(1);
+            } else if (diff.x < 0) {
+                Move(-1);
+            } else {
+                Move(0);
+            }
+        }
+
+        // Handle jumping
+        if (jump) {
+            animator.SetTrigger("Jump");
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
+            jump = false;
+        }
+    }
+
+    private void Move(int h) {
 
         // Set Speed animator parameter
-        animator.SetInteger("Speed", Mathf.Abs(h));
+        animator.SetInteger("Speed", (int) Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
 
         // If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeedX yet...
         if (h * GetComponent<Rigidbody2D>().velocity.x < maxSpeedX) {
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * moveForce);
         }
 
+        // Slows down player slightly faster
         if (h == 0) {
             GetComponent<Rigidbody2D>().velocity *= 0.975f;
         }
@@ -89,20 +110,10 @@ public class Player : MonoBehaviour {
             GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * maxSpeedX, GetComponent<Rigidbody2D>().velocity.y);
         }
 
-
         // Handle flipping sprite if change directions
         if (h > 0) { facingRight = true; }
         else if (h < 0) { facingRight = false; }
         spriteRenderer.flipX = !facingRight;
-
-
-        // Handle jumping
-        if (jump) {
-            animator.SetTrigger("Jump");
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
-            jump = false;
-        }
-
     }
 
 

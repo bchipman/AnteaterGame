@@ -1,7 +1,5 @@
-﻿using System;
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
@@ -13,15 +11,21 @@ public class Player : MonoBehaviour {
     private float jumpForce = 400f;
     public int score = 0;
     public GameObject scoreText;
+    public GameObject frameCount;
     public GameObject bullet;
     public Vector2 velocity; // temporary, for debugging
+    public float mouseAngleFromPlayer;
 
     private bool jump = false;
     private bool grounded = false;
     private bool facingRight = true;
     private bool fireUp = false;
-    private bool clickDraggingPlayer = false;
+    public bool clickDraggingPlayer = false;
     private bool mouseInsideClickCheckBox = false;
+    public float timeSinceClickedPlayer = 0;
+
+    private float mouseAngleFromPlayerJumpThresholdLow = 90 - 40;
+    private float mouseAngleFromPlayerJumpThresholdHigh = 90 + 40;
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -29,6 +33,12 @@ public class Player : MonoBehaviour {
     private Transform clickCheck;
     private Vector3 spawnPoint;
 
+    public int xDirection = 0;
+    public int xDirectionTemp1 = 0;
+    public int xDirectionTemp2 = 0;
+
+    public int numUpdateCalls = 0;
+    public int numFixedUpdateCalls = 0;
 
     private void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -39,17 +49,77 @@ public class Player : MonoBehaviour {
         StartCoroutine("ShootTimer");
     }
 
+    // Check input in Update and set flags to be acted on in FixedUpdate
     private void Update() {
+        numUpdateCalls++;
 
-        // Can jump off of platforms, enemies, or objects
+        // Just setting some public variables to view in Unity inspector
+        velocity = GetComponent<Rigidbody2D>().velocity;
+        mouseAngleFromPlayer = GetMouseAngleFromPlayer();
+        
+        // Update timers
+        timeSinceClickedPlayer += Time.deltaTime;
+        frameCount.GetComponent<Text>().text = Time.realtimeSinceStartup.ToString("F3");
+
+
+        // Set grounded flag - can jump off of platforms, enemies, or objects
         bool grounded1 = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("PlatformLayer"));
         bool grounded2 = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("ObjectLayer"));
         bool grounded3 = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("EnemyLayer"));
         grounded = grounded1 || grounded2 || grounded3;
-        animator.SetBool("Grounded", grounded);
-        if (grounded && Input.GetButtonDown("Jump")) {
-            jump = true;
+
+        // Set mouseInsideClickCheckBox flag
+        mouseInsideClickCheckBox = clickCheck.GetComponent<BoxCollider2D>().bounds.Contains(GetMouseWorldPosition());
+        
+        // Display white clickCheck box around player when mouse is inside click check box
+        clickCheck.GetComponent<SpriteRenderer>().enabled = mouseInsideClickCheckBox;
+
+
+        // Horizontal movement
+        xDirectionTemp1 = (int) Input.GetAxisRaw("Horizontal");
+        xDirectionTemp2 = 0;
+        if (grounded && clickDraggingPlayer && !mouseInsideClickCheckBox) {
+            if (!MouseAngleFromPlayerWithinJumpThreshold()) {
+                Vector3 diff = GetMouseWorldPosition() - transform.position;
+                if      (diff.x > 0) { xDirectionTemp2 = 1;  }
+                else if (diff.x < 0) { xDirectionTemp2 = -1; }
+                else                 { xDirectionTemp2 = 0;  }
+            }
         }
+        xDirection = xDirectionTemp2 == 0 ? xDirectionTemp1 : xDirectionTemp2;  // use direction from kb input if direction not set from mouse
+
+
+        // Jumping
+        bool tempJump1 = grounded && Input.GetButtonDown("Jump");
+        bool tempJump2 = false;
+        if (grounded && clickDraggingPlayer && !mouseInsideClickCheckBox) {
+            if (MouseAngleFromPlayerWithinJumpThreshold()) {
+                tempJump2 = true;
+//                Debug.Log("setting jump to true  grounded:" + grounded + "  jump:" + jump + "  realtimeSinceStartup:" + Time.realtimeSinceStartup);
+            }
+        }
+        jump = tempJump1 || tempJump2;  // set jump flag if detect jump from either kb or from mouse position
+        
+    }
+
+    private void FixedUpdate() {
+        numFixedUpdateCalls++;
+
+        // Animation parameters
+        animator.SetBool("Grounded", grounded);
+        animator.SetInteger("Speed", Mathf.Abs(xDirection));
+
+        // Horizontal movement
+        Move(xDirection);
+
+        // Jumping
+        if (jump) {
+            jump = false;
+            animator.SetTrigger("Jump");
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
+//            Debug.Log("added jump force!  grounded:" + grounded + "  jump:" + jump + "  realtimeSinceStartup:" + Time.realtimeSinceStartup);
+        }
+
 
         // Respawn if fallen off the world
         if (transform.position.y <= -10) {
@@ -57,47 +127,12 @@ public class Player : MonoBehaviour {
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             facingRight = true;
         }
-
-        // Just to set the public velocity variable to view in Unity inspector
-        velocity = GetComponent<Rigidbody2D>().velocity;
-
-        // Visualize ClickCheck box collider when clicked
-        Bounds clickBoxBounds = clickCheck.GetComponent<BoxCollider2D>().bounds;
-        if (clickBoxBounds.Contains(getMouseWorldPosition())) {
-            mouseInsideClickCheckBox = true;
-            clickCheck.GetComponent<SpriteRenderer>().enabled = true;
-        } else {
-            mouseInsideClickCheckBox = false;
-            clickCheck.GetComponent<SpriteRenderer>().enabled = false;
-        }
-    }
-
-    private void FixedUpdate() {
-
-        // Get horizontal input
-        int h = (int) Input.GetAxisRaw("Horizontal");
-        Move(h);
-
-        // Player follows mouse if first click on player and continue holding down
-        if (clickDraggingPlayer && !mouseInsideClickCheckBox) {
-            Vector3 diff = getMouseWorldPosition() - transform.position;
-            Debug.Log("diff: " + diff);
-            if      (diff.x > 0) { Move(1); }
-            else if (diff.x < 0) { Move(-1); }
-            else                 { Move(0); }
-        }
-
-        // Handle jumping
-        if (jump) {
-            animator.SetTrigger("Jump");
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
-            jump = false;
-        }
     }
 
     private void OnMouseDown() {
         clickDraggingPlayer = true;
         spriteRenderer.color = Color.red;
+        timeSinceClickedPlayer = 0;  // reset this timer
     }
 
     private void OnMouseUp() {
@@ -107,10 +142,6 @@ public class Player : MonoBehaviour {
 
     private void Move(int h) {
 
-        // Set Speed animator parameter
-//        animator.SetInteger("Speed", (int) Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
-        animator.SetInteger("Speed", Mathf.Abs(h));
-
         // If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeedX yet...
         if (h * GetComponent<Rigidbody2D>().velocity.x < maxSpeedX) {
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * moveForce);
@@ -118,7 +149,7 @@ public class Player : MonoBehaviour {
 
         // Slows down player slightly faster
         if (h == 0) {
-            GetComponent<Rigidbody2D>().velocity *= 0.975f;
+//            GetComponent<Rigidbody2D>().velocity *= 0.975f;
         }
 
         // If the player's horizontal velocity is greater than the maxSpeedX...
@@ -178,14 +209,52 @@ public class Player : MonoBehaviour {
         bulletInstance.transform.SetParent(this.transform);
     }
 
-    void OnCollisionEnter2D(Collision2D coll) {
+    private void OnCollisionEnter2D(Collision2D coll) {
 //        Debug.Log("Player collided with " + coll.gameObject.name);
     }
 
-    private Vector3 getMouseWorldPosition() {
+    private Vector3 GetMouseWorldPosition() {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0f;
         return mousePos;
+    }
+
+    private float GetMouseAngleFromPlayer() {
+        Vector2 topCenter = new Vector2(transform.position.x, transform.position.y + GetComponent<BoxCollider2D>().bounds.extents.y);
+        float yDist = Mathf.Abs(topCenter.y - GetMouseWorldPosition().y);
+        float xDist = Mathf.Abs(topCenter.x - GetMouseWorldPosition().x);
+        float rads = Mathf.Atan(yDist / xDist);
+        float degs = rads * Mathf.Rad2Deg;
+
+        bool mouseLeftOfPlayer = GetMouseWorldPosition().x < topCenter.x;
+        bool mouseBelowPlayer = GetMouseWorldPosition().y < topCenter.y;
+
+        // Quadrant I
+        if (!mouseLeftOfPlayer && !mouseBelowPlayer) {
+            // do nothing
+        }
+
+        // Qudrant II
+        else if (mouseLeftOfPlayer && !mouseBelowPlayer) {
+            degs = 180 - degs;
+        }
+
+        // Quadrant III
+        else if (mouseLeftOfPlayer && mouseBelowPlayer) {
+            degs = 180 + degs;
+        }
+
+        // Quadrant IV
+        else if (!mouseLeftOfPlayer && mouseBelowPlayer) {
+            degs = 360 - degs;
+        }
+        
+        return degs;
+    }
+
+    private bool MouseAngleFromPlayerWithinJumpThreshold() {
+        return (GetMouseAngleFromPlayer() > mouseAngleFromPlayerJumpThresholdLow && 
+                GetMouseAngleFromPlayer() < mouseAngleFromPlayerJumpThresholdHigh);
     }
 
 }

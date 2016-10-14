@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
@@ -9,9 +10,7 @@ public class Player : MonoBehaviour {
     private float bulletForce = 20f;
     private float shotDelay = 0.08f;
     private float jumpForce = 400f;
-    public int score = 0;
-    public GameObject scoreText;
-    public GameObject frameCount;
+    public GameManager gameManager;
     public GameObject bullet;
     public Vector2 velocity; // temporary, for debugging
     public float mouseAngleFromPlayer;
@@ -22,7 +21,6 @@ public class Player : MonoBehaviour {
     private bool fireUp = false;
     public bool clickDraggingPlayer = false;
     private bool mouseInsideClickCheckBox = false;
-    public float timeSinceClickedPlayer = 0;
 
     private float mouseAngleFromPlayerJumpThresholdLow = 90 - 40;
     private float mouseAngleFromPlayerJumpThresholdHigh = 90 + 40;
@@ -32,13 +30,18 @@ public class Player : MonoBehaviour {
     private Transform groundCheck;
     private Transform clickCheck;
     private Vector3 spawnPoint;
+    public Vector3 mousePositionWhenClickedPlayer;
+    public Vector3 mousePositionNow;
+    public float mousePositionDiffVertical;
 
     public int xDirection = 0;
     public int xDirectionTemp1 = 0;
     public int xDirectionTemp2 = 0;
-
-    public int numUpdateCalls = 0;
     public int numFixedUpdateCalls = 0;
+
+    public float yMouseVelocityInLastSec = 0;
+
+    private Queue<List<float>> mousePositionQueue;
 
     private void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -47,21 +50,19 @@ public class Player : MonoBehaviour {
         clickCheck = transform.Find("ClickCheck");
         spawnPoint = transform.position;
         StartCoroutine("ShootTimer");
+        mousePositionQueue = new Queue<List<float>>();
     }
 
     // Check input in Update and set flags to be acted on in FixedUpdate
     private void Update() {
-        numUpdateCalls++;
+
+        // Save mouse position to be used in FixedUpdate
+        mousePositionNow = Input.mousePosition;
 
         // Just setting some public variables to view in Unity inspector
         velocity = GetComponent<Rigidbody2D>().velocity;
         mouseAngleFromPlayer = GetMouseAngleFromPlayer();
         
-        // Update timers
-        timeSinceClickedPlayer += Time.deltaTime;
-        frameCount.GetComponent<Text>().text = Time.realtimeSinceStartup.ToString("F3");
-
-
         // Set grounded flag - can jump off of platforms, enemies, or objects
         bool grounded1 = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("PlatformLayer"));
         bool grounded2 = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("ObjectLayer"));
@@ -90,20 +91,23 @@ public class Player : MonoBehaviour {
 
 
         // Jumping
-        bool tempJump1 = grounded && Input.GetButtonDown("Jump");
-        bool tempJump2 = false;
-        if (grounded && clickDraggingPlayer && !mouseInsideClickCheckBox) {
-            if (MouseAngleFromPlayerWithinJumpThreshold()) {
-                tempJump2 = true;
-//                Debug.Log("setting jump to true  grounded:" + grounded + "  jump:" + jump + "  realtimeSinceStartup:" + Time.realtimeSinceStartup);
-            }
-        }
-        jump = tempJump1 || tempJump2;  // set jump flag if detect jump from either kb or from mouse position
-        
+        jump = grounded && Input.GetButton("Jump");  // set jump flag from kb input.  this may get overriden in FixedUpdate
     }
 
     private void FixedUpdate() {
-        numFixedUpdateCalls++;
+
+        // Add data pt to mousePositionQueue, check to see how far mouse has moved in last 0.5sec, if above some threshold (125), set jump flag
+        float time = Time.time;
+        float yMousePosNow = mousePositionNow.y;
+        if (time.ToString("F2").EndsWith("0")) {  // only save data pts every 100ms instead of every 20ms
+            mousePositionQueue.Enqueue(new List<float> { time, yMousePosNow });
+            if (mousePositionQueue.Count >= 5) {  // 5 = 500ms,  10 = 1sec
+                yMouseVelocityInLastSec = yMousePosNow - mousePositionQueue.Dequeue()[1];
+                if (grounded && clickDraggingPlayer && yMouseVelocityInLastSec > 125) {  // some arbitrary threshold
+                        jump = true;
+                }
+            }
+        }
 
         // Animation parameters
         animator.SetBool("Grounded", grounded);
@@ -132,7 +136,7 @@ public class Player : MonoBehaviour {
     private void OnMouseDown() {
         clickDraggingPlayer = true;
         spriteRenderer.color = Color.red;
-        timeSinceClickedPlayer = 0;  // reset this timer
+        mousePositionWhenClickedPlayer = Input.mousePosition;
     }
 
     private void OnMouseUp() {

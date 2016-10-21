@@ -22,9 +22,6 @@ public class Player : MonoBehaviour {
     public bool clickDraggingPlayer = false;
     private bool mouseInsideClickCheckBox = false;
 
-    private float mouseAngleFromPlayerJumpThresholdLow = 90 - 40;
-    private float mouseAngleFromPlayerJumpThresholdHigh = 90 + 40;
-
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Transform groundCheck;
@@ -61,7 +58,6 @@ public class Player : MonoBehaviour {
 
         // Just setting some public variables to view in Unity inspector
         velocity = GetComponent<Rigidbody2D>().velocity;
-        mouseAngleFromPlayer = GetMouseAngleFromPlayer();
         
         // Set grounded flag - can jump off of platforms, enemies, or objects
         bool grounded1 = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("PlatformLayer"));
@@ -80,12 +76,10 @@ public class Player : MonoBehaviour {
         xDirectionTemp1 = (int) Input.GetAxisRaw("Horizontal");
         xDirectionTemp2 = 0;
         if (grounded && clickDraggingPlayer && !mouseInsideClickCheckBox) {
-            if (!MouseAngleFromPlayerWithinJumpThreshold()) {
-                Vector3 diff = GetMouseWorldPosition() - transform.position;
-                if      (diff.x > 0) { xDirectionTemp2 = 1;  }
-                else if (diff.x < 0) { xDirectionTemp2 = -1; }
-                else                 { xDirectionTemp2 = 0;  }
-            }
+            Vector3 diff = GetMouseWorldPosition() - transform.position;
+            if      (diff.x > 0) { xDirectionTemp2 = 1;  }
+            else if (diff.x < 0) { xDirectionTemp2 = -1; }
+            else                 { xDirectionTemp2 = 0;  }
         }
         xDirection = xDirectionTemp2 == 0 ? xDirectionTemp1 : xDirectionTemp2;  // use direction from kb input if direction not set from mouse
 
@@ -221,44 +215,6 @@ public class Player : MonoBehaviour {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0f;
         return mousePos;
-    }
-
-    private float GetMouseAngleFromPlayer() {
-        Vector2 topCenter = new Vector2(transform.position.x, transform.position.y + GetComponent<BoxCollider2D>().bounds.extents.y);
-        float yDist = Mathf.Abs(topCenter.y - GetMouseWorldPosition().y);
-        float xDist = Mathf.Abs(topCenter.x - GetMouseWorldPosition().x);
-        float rads = Mathf.Atan(yDist / xDist);
-        float degs = rads * Mathf.Rad2Deg;
-
-        bool mouseLeftOfPlayer = GetMouseWorldPosition().x < topCenter.x;
-        bool mouseBelowPlayer = GetMouseWorldPosition().y < topCenter.y;
-
-        // Quadrant I
-        if (!mouseLeftOfPlayer && !mouseBelowPlayer) {
-            // do nothing
-        }
-
-        // Qudrant II
-        else if (mouseLeftOfPlayer && !mouseBelowPlayer) {
-            degs = 180 - degs;
-        }
-
-        // Quadrant III
-        else if (mouseLeftOfPlayer && mouseBelowPlayer) {
-            degs = 180 + degs;
-        }
-
-        // Quadrant IV
-        else if (!mouseLeftOfPlayer && mouseBelowPlayer) {
-            degs = 360 - degs;
-        }
-        
-        return degs;
-    }
-
-    private bool MouseAngleFromPlayerWithinJumpThreshold() {
-        return (GetMouseAngleFromPlayer() > mouseAngleFromPlayerJumpThresholdLow && 
-                GetMouseAngleFromPlayer() < mouseAngleFromPlayerJumpThresholdHigh);
     }
 
 }

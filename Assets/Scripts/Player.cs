@@ -167,7 +167,7 @@ public class Player : MonoBehaviour {
     private IEnumerator ShootTimer() {
         while (true) {
             if (Input.GetMouseButton(0) && !clickDraggingPlayer) {
-                FireNEW();
+                FireTowardMouse();
                 yield return new WaitForSeconds(shotDelay);
             }
             if (Input.GetButton("Fire1")) {
@@ -211,7 +211,7 @@ public class Player : MonoBehaviour {
         bulletInstance.transform.SetParent(this.transform);
     }
 
-    private void FireNEW() {
+    private void FireTowardMouse() {
         // Create bullet instance near player's current position.
         Vector3 bulletOffset;
         Vector2 bulletVelocity;
@@ -262,7 +262,7 @@ public class Player : MonoBehaviour {
         bulletInstance.gameObject.SetActive(true);
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVelocity;
         bulletInstance.transform.SetParent(this.transform);
-//        Debug.Log("FireNEW bulletVelocity: " + bulletVelocity + ",  degs: " + degs);
+//        Debug.Log("FireTowardMouse bulletVelocity: " + bulletVelocity + ",  degs: " + degs);
     }
 
     private void OnCollisionEnter2D(Collision2D coll) {

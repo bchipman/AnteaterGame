@@ -166,6 +166,10 @@ public class Player : MonoBehaviour {
 
     private IEnumerator ShootTimer() {
         while (true) {
+            if (Input.GetMouseButton(0) && !clickDraggingPlayer) {
+                FireNEW();
+                yield return new WaitForSeconds(shotDelay);
+            }
             if (Input.GetButton("Fire1")) {
                 fireUp = (int) Input.GetAxisRaw("Vertical") == 1;
                 Fire();
@@ -205,6 +209,60 @@ public class Player : MonoBehaviour {
         bulletInstance.gameObject.SetActive(true);
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVelocity;
         bulletInstance.transform.SetParent(this.transform);
+    }
+
+    private void FireNEW() {
+        // Create bullet instance near player's current position.
+        Vector3 bulletOffset;
+        Vector2 bulletVelocity;
+        Quaternion bulletQuaternion;
+        Vector3 playerPos = new Vector3(transform.position.x, transform.position.y + GetComponent<BoxCollider2D>().bounds.extents.y, 0);
+
+        float xDist = Mathf.Abs(playerPos.x - GetMouseWorldPosition().x);
+        float yDist = Mathf.Abs(playerPos.y - GetMouseWorldPosition().y);
+        float rads = Mathf.Atan(yDist / xDist);
+        float degs = rads * Mathf.Rad2Deg;
+        float xVectorScale = Mathf.Cos(rads);
+        float yVectorScale = Mathf.Sin(rads);
+
+        bool mouseLeftOfPlayer = GetMouseWorldPosition().x < playerPos.x;
+        bool mouseBelowPlayer = GetMouseWorldPosition().y < playerPos.y;
+
+        // Quadrant I
+        if (!mouseLeftOfPlayer && !mouseBelowPlayer) {
+            // do nothing
+        }
+
+        // Quadrant II
+        else if (mouseLeftOfPlayer && !mouseBelowPlayer) {
+            degs = 180 - degs;
+            xVectorScale *= -1;
+        }
+
+        // Quadrant III
+        else if (mouseLeftOfPlayer && mouseBelowPlayer) {
+            degs = 180 + degs;
+            xVectorScale *= -1;
+            yVectorScale *= -1;
+        }
+
+        // Quadrant IV
+        else if (!mouseLeftOfPlayer && mouseBelowPlayer) {
+            degs = 360 - degs;
+            yVectorScale *= -1;
+        }
+
+        bulletVelocity = new Vector2(xVectorScale * bulletForce, yVectorScale * bulletForce);
+        bulletOffset = new Vector3(0.5f, 0, 0);
+        bulletQuaternion = Quaternion.AngleAxis(270 + degs, Vector3.forward);
+
+        Vector3 newBulletPosition = playerPos;
+//        Vector3 newBulletPosition = playerPos + bulletOffset;
+        GameObject bulletInstance = Instantiate(bullet, newBulletPosition, bulletQuaternion) as GameObject;
+        bulletInstance.gameObject.SetActive(true);
+        bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVelocity;
+        bulletInstance.transform.SetParent(this.transform);
+//        Debug.Log("FireNEW bulletVelocity: " + bulletVelocity + ",  degs: " + degs);
     }
 
     private void OnCollisionEnter2D(Collision2D coll) {

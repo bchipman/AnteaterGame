@@ -5,21 +5,15 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
-    private float maxSpeedX = 10f;
-    private float moveForce = 15f;
-    private float jumpForce = 400f;
-    public GameObject dropdown;
-    public GameObject currentProjectileType;
-    public GameObject bulletPrefab;
-    public GameObject zotBubblePrefab;
-    public Vector2 velocity; // temporary, for debugging
-    public float mouseAngleFromPlayer;
+    private const float MaxSpeedX = 10f;
+    private const float MoveForce = 15f;
+    private const float JumpForce = 400f;
 
     private bool jump = false;
     private bool grounded = false;
     private bool facingRight = true;
     private bool fireUp = false;
-    public bool clickDraggingPlayer = false;
+    private bool clickDraggingPlayer = false;
     private bool mouseInsideClickCheckBox = false;
 
     private SpriteRenderer spriteRenderer;
@@ -27,18 +21,18 @@ public class Player : MonoBehaviour {
     private Transform groundCheck;
     private Transform clickCheck;
     private Vector3 spawnPoint;
+    private GameObject projectileTypeDropdown;
+    private GameObject currentProjectileType;
+    public GameObject bulletPrefab;
+    public GameObject zotBubblePrefab;
+
     public Vector3 mousePositionWhenClickedPlayer;
     public Vector3 mousePositionNow;
-    public float mousePositionDiffVertical;
-
+    public Vector2 velocity; // temporary, for debugging
     public int xDirection = 0;
-    public int xDirectionTemp1 = 0;
-    public int xDirectionTemp2 = 0;
-    public int numFixedUpdateCalls = 0;
-
     public float yMouseVelocityInLastSec = 0;
-
     private Queue<List<float>> mousePositionQueue;
+
 
     private void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -48,18 +42,14 @@ public class Player : MonoBehaviour {
         spawnPoint = transform.position;
         StartCoroutine("ShootTimer");
         mousePositionQueue = new Queue<List<float>>();
-        dropdown = GameObject.Find("Dropdown");
+        projectileTypeDropdown = GameObject.Find("ProjectileTypeDropdown");
     }
 
     // Check input in Update and set flags to be acted on in FixedUpdate
     private void Update() {
 
-        if (dropdown.GetComponent<Dropdown>().value == 0) {
-            currentProjectileType = bulletPrefab;
-        }
-        else {
-            currentProjectileType = zotBubblePrefab;
-        }
+        // Set projectile type based on current dropdown selection
+        currentProjectileType = projectileTypeDropdown.GetComponent<Dropdown>().value == 0 ? bulletPrefab : zotBubblePrefab;
 
         // Save mouse position to be used in FixedUpdate
         mousePositionNow = Input.mousePosition;
@@ -81,8 +71,8 @@ public class Player : MonoBehaviour {
 
 
         // Horizontal movement
-        xDirectionTemp1 = (int) Input.GetAxisRaw("Horizontal");
-        xDirectionTemp2 = 0;
+        int xDirectionTemp1 = (int) Input.GetAxisRaw("Horizontal");
+        int xDirectionTemp2 = 0;
         if (grounded && clickDraggingPlayer && !mouseInsideClickCheckBox) {
             Vector3 diff = GetMouseWorldPosition() - transform.position;
             if      (diff.x > 0) { xDirectionTemp2 = 1;  }
@@ -122,7 +112,7 @@ public class Player : MonoBehaviour {
         if (jump) {
             jump = false;
             animator.SetTrigger("Jump");
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce));
 //            Debug.Log("added jump force!  grounded:" + grounded + "  jump:" + jump + "  realtimeSinceStartup:" + Time.realtimeSinceStartup);
         }
 
@@ -149,8 +139,8 @@ public class Player : MonoBehaviour {
     private void Move(int h) {
 
         // If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeedX yet...
-        if (h * GetComponent<Rigidbody2D>().velocity.x < maxSpeedX) {
-            GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * moveForce);
+        if (h * GetComponent<Rigidbody2D>().velocity.x < MaxSpeedX) {
+            GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * MoveForce);
         }
 
         // Slows down player slightly faster
@@ -159,8 +149,8 @@ public class Player : MonoBehaviour {
         }
 
         // If the player's horizontal velocity is greater than the maxSpeedX...
-        if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeedX) {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * maxSpeedX, GetComponent<Rigidbody2D>().velocity.y);
+        if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > MaxSpeedX) {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * MaxSpeedX, GetComponent<Rigidbody2D>().velocity.y);
         }
 
         // Handle flipping sprite if change directions
@@ -177,8 +167,7 @@ public class Player : MonoBehaviour {
             if (Input.GetMouseButton(0) && !clickDraggingPlayer) {
                 FireTowardMouse();
                 yield return new WaitForSeconds(currentProjectileType.GetComponent<Projectile>().shotDelay);
-            }
-            if (Input.GetButton("Fire1")) {
+            } else if (Input.GetButton("Fire1")) {
                 fireUp = (int) Input.GetAxisRaw("Vertical") == 1;
                 Fire();
                 yield return new WaitForSeconds(currentProjectileType.GetComponent<Projectile>().shotDelay);
@@ -189,7 +178,6 @@ public class Player : MonoBehaviour {
     }
 
     private void Fire() {
-        // Create bulletPrefab instance near player's current position.
         Vector3 bulletOffset;
         Vector2 bulletVelocity;
         Quaternion bulletQuaternion;
@@ -277,10 +265,6 @@ public class Player : MonoBehaviour {
 
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVelocity;
         bulletInstance.transform.SetParent(this.transform);
-    }
-
-    private void OnCollisionEnter2D(Collision2D coll) {
-//        Debug.Log("Player collided with " + coll.gameObject.name);
     }
 
     private Vector3 GetMouseWorldPosition() {

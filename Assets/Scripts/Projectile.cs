@@ -14,14 +14,11 @@ public class Projectile : MonoBehaviour {
 
 
     private void Start() {
-        Debug.Log(gameObject.name);
         if (gameObject.name.StartsWith("Bullet")) {
-            Debug.Log("starts w Bullet!");
             projectileForce = 20f;
             shotDelay = 0.08f;
             angleOffset = 270;
         } else if (gameObject.name.StartsWith("ZotBubble")) {
-            Debug.Log("starts w ZotBubble!");
             projectileForce = 5f;
             shotDelay = 0.2f;
             angleOffset = 0;

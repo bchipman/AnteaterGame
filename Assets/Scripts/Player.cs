@@ -7,10 +7,6 @@ public class Player : MonoBehaviour {
 
     private float maxSpeedX = 10f;
     private float moveForce = 15f;
-//    private float bulletForce = 20f;
-//    private float shotDelay = 0.08f;
-//    private float bulletForce = 5f;
-//    private float shotDelay = 0.2f;
     private float jumpForce = 400f;
     public GameObject dropdown;
     public GameObject currentProjectileType;
@@ -60,11 +56,9 @@ public class Player : MonoBehaviour {
 
         if (dropdown.GetComponent<Dropdown>().value == 0) {
             currentProjectileType = bulletPrefab;
-//            currentProjectileType.SetActive(true);
         }
         else {
             currentProjectileType = zotBubblePrefab;
-//            currentProjectileType.SetActive(true);
         }
 
         // Save mouse position to be used in FixedUpdate
@@ -182,13 +176,11 @@ public class Player : MonoBehaviour {
         while (true) {
             if (Input.GetMouseButton(0) && !clickDraggingPlayer) {
                 FireTowardMouse();
-//                yield return new WaitForSeconds(shotDelay);
                 yield return new WaitForSeconds(currentProjectileType.GetComponent<Projectile>().shotDelay);
             }
             if (Input.GetButton("Fire1")) {
                 fireUp = (int) Input.GetAxisRaw("Vertical") == 1;
                 Fire();
-//                yield return new WaitForSeconds(shotDelay);
                 yield return new WaitForSeconds(currentProjectileType.GetComponent<Projectile>().shotDelay);
             } else {
                 yield return null;
@@ -202,7 +194,6 @@ public class Player : MonoBehaviour {
         Vector2 bulletVelocity;
         Quaternion bulletQuaternion;
         float bulletForce = currentProjectileType.GetComponent<Projectile>().projectileForce;
-//        float bulletForce = Projectile.di[currentProjectileType.gameObject.name];
 
         if (fireUp) {
             bulletOffset = new Vector3(0, 1f, 0);

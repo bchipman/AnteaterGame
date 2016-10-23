@@ -7,8 +7,10 @@ public class Player : MonoBehaviour {
 
     private float maxSpeedX = 10f;
     private float moveForce = 15f;
-    private float bulletForce = 20f;
-    private float shotDelay = 0.08f;
+//    private float bulletForce = 20f;
+//    private float shotDelay = 0.08f;
+    private float bulletForce = 5f;
+    private float shotDelay = 0.2f;
     private float jumpForce = 400f;
     public GameManager gameManager;
     public GameObject bullet;
@@ -254,7 +256,8 @@ public class Player : MonoBehaviour {
 
         bulletVelocity = new Vector2(xVectorScale * bulletForce, yVectorScale * bulletForce);
         bulletOffset = new Vector3(0.5f, 0, 0);
-        bulletQuaternion = Quaternion.AngleAxis(270 + degs, Vector3.forward);
+//        bulletQuaternion = Quaternion.AngleAxis(270 + degs, Vector3.forward);
+        bulletQuaternion = Quaternion.AngleAxis(degs, Vector3.forward);
 
         Vector3 newBulletPosition = playerPos;
 //        Vector3 newBulletPosition = playerPos + bulletOffset;

@@ -178,93 +178,81 @@ public class Player : MonoBehaviour {
     }
 
     private void Fire() {
+        GameObject bulletInstance = Instantiate(currentProjectileType) as GameObject;
+
         Vector3 bulletOffset;
-        Vector2 bulletVelocity;
-        Quaternion bulletQuaternion;
-        float bulletForce = currentProjectileType.GetComponent<Projectile>().projectileForce;
+
+        Vector3 playerPos = new Vector3(transform.position.x, transform.position.y + GetComponent<BoxCollider2D>().bounds.extents.y, 0);
+        Vector2 xyVectorScale = new Vector2(1, 1);
+        float degs = 0;
 
         if (fireUp) {
             bulletOffset = new Vector3(0, 1f, 0);
-            bulletVelocity = new Vector2(0, bulletForce);
-            bulletQuaternion = Quaternion.identity;
+            degs = 90;
+            xyVectorScale = new Vector2(0, 1);
         }
         else {
             if (facingRight) {
                 bulletOffset = new Vector3(0.5f, 0, 0);
-                bulletVelocity = new Vector2(bulletForce, 0);
-                bulletQuaternion = Quaternion.AngleAxis(270, Vector3.forward);
+                degs = 0;
+                xyVectorScale = new Vector2(1, 0);
             }
             else {
                 bulletOffset = new Vector3(-0.5f, 0, 0);
-                bulletVelocity = new Vector2(bulletForce * -1, 0);
-                bulletQuaternion = Quaternion.AngleAxis(90, Vector3.forward);
+                degs = 180;
+                xyVectorScale = new Vector2(-1, 0);
             }
         }
 
-        Vector3 newBulletPosition = transform.position + bulletOffset;
-        GameObject bulletInstance = Instantiate(currentProjectileType, newBulletPosition, bulletQuaternion) as GameObject;
-        bulletInstance.gameObject.SetActive(true);
+        float bulletForce = bulletInstance.GetComponent<Projectile>().projectileForce;
+        int angleOffset = bulletInstance.GetComponent<Projectile>().angleOffset;
+        Vector2 bulletVelocity = xyVectorScale * bulletForce;
+        Quaternion bulletQuaternion = Quaternion.AngleAxis(angleOffset + degs, Vector3.forward);
+
+        bulletInstance.transform.position = playerPos + bulletOffset;
+        bulletInstance.transform.rotation = bulletQuaternion;
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVelocity;
-        bulletInstance.transform.SetParent(this.transform);
+        bulletInstance.transform.SetParent(transform);
     }
 
     private void FireTowardMouse() {
         GameObject bulletInstance = Instantiate(currentProjectileType) as GameObject;
 
-        Vector3 bulletOffset;
-        Vector2 bulletVelocity;
-        Quaternion bulletQuaternion;
-        float bulletForce = bulletInstance.GetComponent<Projectile>().projectileForce;
-        int angleOffset = bulletInstance.GetComponent<Projectile>().angleOffset;
+        Vector3 bulletOffset = Vector3.zero;
 
         Vector3 playerPos = new Vector3(transform.position.x, transform.position.y + GetComponent<BoxCollider2D>().bounds.extents.y, 0);
-
-        float xDist = Mathf.Abs(playerPos.x - GetMouseWorldPosition().x);
-        float yDist = Mathf.Abs(playerPos.y - GetMouseWorldPosition().y);
-        float rads = Mathf.Atan(yDist / xDist);
-        float degs = rads * Mathf.Rad2Deg;
-        float xVectorScale = Mathf.Cos(rads);
-        float yVectorScale = Mathf.Sin(rads);
-
-        bool mouseLeftOfPlayer = GetMouseWorldPosition().x < playerPos.x;
-        bool mouseBelowPlayer = GetMouseWorldPosition().y < playerPos.y;
+        Vector2 xyVectorScale = (GetMouseWorldPosition() - playerPos).normalized;
+        float degs = Mathf.Atan(xyVectorScale.y / xyVectorScale.x) * Mathf.Rad2Deg;
 
         // Quadrant I
-        if (!mouseLeftOfPlayer && !mouseBelowPlayer) {
+        if (xyVectorScale.x > 0 && xyVectorScale.y > 0) {
             // do nothing
         }
 
         // Quadrant II
-        else if (mouseLeftOfPlayer && !mouseBelowPlayer) {
-            degs = 180 - degs;
-            xVectorScale *= -1;
+        else if (xyVectorScale.x < 0 && xyVectorScale.y > 0) {
+            degs = 180 + degs;
         }
 
         // Quadrant III
-        else if (mouseLeftOfPlayer && mouseBelowPlayer) {
+        else if (xyVectorScale.x < 0 && xyVectorScale.y < 0) {
             degs = 180 + degs;
-            xVectorScale *= -1;
-            yVectorScale *= -1;
         }
 
         // Quadrant IV
-        else if (!mouseLeftOfPlayer && mouseBelowPlayer) {
-            degs = 360 - degs;
-            yVectorScale *= -1;
+        else if (xyVectorScale.x > 0 && xyVectorScale.y < 0) {
+            degs = 360 + degs;
         }
 
-        bulletVelocity = new Vector2(xVectorScale * bulletForce, yVectorScale * bulletForce);
-        bulletOffset = new Vector3(0.5f, 0, 0);
-        bulletQuaternion = Quaternion.AngleAxis(angleOffset + degs, Vector3.forward);
+        float bulletForce = bulletInstance.GetComponent<Projectile>().projectileForce;
+        int angleOffset = bulletInstance.GetComponent<Projectile>().angleOffset;
+        Vector2 bulletVelocity = xyVectorScale * bulletForce;
+        Quaternion bulletQuaternion = Quaternion.AngleAxis(angleOffset + degs, Vector3.forward);
 
-        Vector3 newBulletPosition = playerPos;
-//        Vector3 newBulletPosition = playerPos + bulletOffset;
-
-        bulletInstance.transform.position = newBulletPosition;
+        bulletInstance.transform.position = playerPos + bulletOffset;
         bulletInstance.transform.rotation = bulletQuaternion;
-
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVelocity;
-        bulletInstance.transform.SetParent(this.transform);
+        bulletInstance.transform.SetParent(transform);
     }
 
     private Vector3 GetMouseWorldPosition() {

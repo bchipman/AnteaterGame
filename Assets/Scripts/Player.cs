@@ -9,11 +9,13 @@ public class Player : MonoBehaviour {
     private float moveForce = 15f;
 //    private float bulletForce = 20f;
 //    private float shotDelay = 0.08f;
-    private float bulletForce = 5f;
-    private float shotDelay = 0.2f;
+//    private float bulletForce = 5f;
+//    private float shotDelay = 0.2f;
     private float jumpForce = 400f;
-    public GameManager gameManager;
-    public GameObject bullet;
+    public GameObject dropdown;
+    public GameObject currentProjectileType;
+    public GameObject bulletPrefab;
+    public GameObject zotBubblePrefab;
     public Vector2 velocity; // temporary, for debugging
     public float mouseAngleFromPlayer;
 
@@ -50,10 +52,20 @@ public class Player : MonoBehaviour {
         spawnPoint = transform.position;
         StartCoroutine("ShootTimer");
         mousePositionQueue = new Queue<List<float>>();
+        dropdown = GameObject.Find("Dropdown");
     }
 
     // Check input in Update and set flags to be acted on in FixedUpdate
     private void Update() {
+
+        if (dropdown.GetComponent<Dropdown>().value == 0) {
+            currentProjectileType = bulletPrefab;
+//            currentProjectileType.SetActive(true);
+        }
+        else {
+            currentProjectileType = zotBubblePrefab;
+//            currentProjectileType.SetActive(true);
+        }
 
         // Save mouse position to be used in FixedUpdate
         mousePositionNow = Input.mousePosition;
@@ -170,12 +182,14 @@ public class Player : MonoBehaviour {
         while (true) {
             if (Input.GetMouseButton(0) && !clickDraggingPlayer) {
                 FireTowardMouse();
-                yield return new WaitForSeconds(shotDelay);
+//                yield return new WaitForSeconds(shotDelay);
+                yield return new WaitForSeconds(currentProjectileType.GetComponent<Projectile>().shotDelay);
             }
             if (Input.GetButton("Fire1")) {
                 fireUp = (int) Input.GetAxisRaw("Vertical") == 1;
                 Fire();
-                yield return new WaitForSeconds(shotDelay);
+//                yield return new WaitForSeconds(shotDelay);
+                yield return new WaitForSeconds(currentProjectileType.GetComponent<Projectile>().shotDelay);
             } else {
                 yield return null;
             }
@@ -183,10 +197,12 @@ public class Player : MonoBehaviour {
     }
 
     private void Fire() {
-        // Create bullet instance near player's current position.
+        // Create bulletPrefab instance near player's current position.
         Vector3 bulletOffset;
         Vector2 bulletVelocity;
         Quaternion bulletQuaternion;
+        float bulletForce = currentProjectileType.GetComponent<Projectile>().projectileForce;
+//        float bulletForce = Projectile.di[currentProjectileType.gameObject.name];
 
         if (fireUp) {
             bulletOffset = new Vector3(0, 1f, 0);
@@ -207,17 +223,21 @@ public class Player : MonoBehaviour {
         }
 
         Vector3 newBulletPosition = transform.position + bulletOffset;
-        GameObject bulletInstance = Instantiate(bullet, newBulletPosition, bulletQuaternion) as GameObject;
+        GameObject bulletInstance = Instantiate(currentProjectileType, newBulletPosition, bulletQuaternion) as GameObject;
         bulletInstance.gameObject.SetActive(true);
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVelocity;
         bulletInstance.transform.SetParent(this.transform);
     }
 
     private void FireTowardMouse() {
-        // Create bullet instance near player's current position.
+        GameObject bulletInstance = Instantiate(currentProjectileType) as GameObject;
+
         Vector3 bulletOffset;
         Vector2 bulletVelocity;
         Quaternion bulletQuaternion;
+        float bulletForce = bulletInstance.GetComponent<Projectile>().projectileForce;
+        int angleOffset = bulletInstance.GetComponent<Projectile>().angleOffset;
+
         Vector3 playerPos = new Vector3(transform.position.x, transform.position.y + GetComponent<BoxCollider2D>().bounds.extents.y, 0);
 
         float xDist = Mathf.Abs(playerPos.x - GetMouseWorldPosition().x);
@@ -256,16 +276,16 @@ public class Player : MonoBehaviour {
 
         bulletVelocity = new Vector2(xVectorScale * bulletForce, yVectorScale * bulletForce);
         bulletOffset = new Vector3(0.5f, 0, 0);
-//        bulletQuaternion = Quaternion.AngleAxis(270 + degs, Vector3.forward);
-        bulletQuaternion = Quaternion.AngleAxis(degs, Vector3.forward);
+        bulletQuaternion = Quaternion.AngleAxis(angleOffset + degs, Vector3.forward);
 
         Vector3 newBulletPosition = playerPos;
 //        Vector3 newBulletPosition = playerPos + bulletOffset;
-        GameObject bulletInstance = Instantiate(bullet, newBulletPosition, bulletQuaternion) as GameObject;
-        bulletInstance.gameObject.SetActive(true);
+
+        bulletInstance.transform.position = newBulletPosition;
+        bulletInstance.transform.rotation = bulletQuaternion;
+
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVelocity;
         bulletInstance.transform.SetParent(this.transform);
-//        Debug.Log("FireTowardMouse bulletVelocity: " + bulletVelocity + ",  degs: " + degs);
     }
 
     private void OnCollisionEnter2D(Collision2D coll) {

@@ -33,7 +33,7 @@ public class Player : MonoBehaviour {
     public float yMouseVelocityInLastSec = 0;
     private Queue<List<float>> mousePositionQueue;
 	private int currentHealth = 10;
-	private int maxHealth = 5;
+	private int maxHealth = 10;
 
 
     private void Start() {
@@ -268,7 +268,7 @@ public class Player : MonoBehaviour {
 		if (currentHealth > 0) {
 			if (coll.gameObject.layer == LayerMask.NameToLayer ("EnemyLayer")) {
 				currentHealth--;
-				transform.Find ("HealthBar").localScale -= new Vector3 (1f/maxHealth, 0, 0);
+				transform.Find ("HealthBar").localScale = new Vector3 ((float)currentHealth / maxHealth, 1f, 0);
 			}
 		}
 

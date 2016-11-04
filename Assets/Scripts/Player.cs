@@ -267,7 +267,7 @@ public class Player : MonoBehaviour {
 		if (currentHealth > 0) {
 			if (coll.gameObject.layer == LayerMask.NameToLayer ("EnemyLayer")) {
 				currentHealth--;
-				transform.Find ("HealthBar").localScale = new Vector3 ((float)currentHealth / maxHealth, 1f, 0);
+				transform.Find ("/Player/HealthBar/GreenHealthBarBox").localScale = new Vector3 ((float)currentHealth / maxHealth, 0.55f, 0);
 			    if (currentHealth <= 0) {
                     Respawn();
 			    }
@@ -281,7 +281,8 @@ public class Player : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         facingRight = true;
         currentHealth = maxHealth;
-        transform.Find("HealthBar").localScale = new Vector3((float)currentHealth / maxHealth, 1f, 0);
+		transform.Find("/Player/HealthBar/GreenHealthBarBox").localScale = new Vector3(0.868968f, 0.55f, 0);
+		//transform.Find("HealthBar").localScale = new Vector3((float)maxHealth / maxHealth, 1f, 0);
     }
 
 }

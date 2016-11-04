@@ -269,7 +269,6 @@ public class Player : MonoBehaviour {
 				currentHealth--;
 				transform.Find ("HealthBar").localScale = new Vector3 ((float)currentHealth / maxHealth, 1f, 0);
 			    if (currentHealth <= 0) {
-                    gameManager.DisplayDeathText();
                     Respawn();
 			    }
 			}
@@ -277,6 +276,7 @@ public class Player : MonoBehaviour {
 	}
 
     private void Respawn() {
+        gameManager.DisplayDeathText();
         transform.position = spawnPoint;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         facingRight = true;

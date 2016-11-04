@@ -267,7 +267,7 @@ public class Player : MonoBehaviour {
 		if (currentHealth > 0) {
 			if (coll.gameObject.layer == LayerMask.NameToLayer ("EnemyLayer")) {
 				currentHealth--;
-				transform.Find ("GreenBox").localScale = new Vector3 ((float)currentHealth / maxHealth, 1f, 0);
+				transform.Find ("HealthBar").localScale = new Vector3 ((float)currentHealth / maxHealth, 1f, 0);
 			    if (currentHealth <= 0) {
                     Respawn();
 			    }

@@ -32,6 +32,8 @@ public class Player : MonoBehaviour {
     public int xDirection = 0;
     public float yMouseVelocityInLastSec = 0;
     private Queue<List<float>> mousePositionQueue;
+	private int currentHealth = 10;
+	private int maxHealth = 5;
 
 
     private void Start() {
@@ -261,4 +263,15 @@ public class Player : MonoBehaviour {
         return mousePos;
     }
 
+	private void OnCollisionEnter2D(Collision2D coll) {
+
+		if (currentHealth > 0) {
+			if (coll.gameObject.layer == LayerMask.NameToLayer ("EnemyLayer")) {
+				currentHealth--;
+				transform.Find ("HealthBar").localScale -= new Vector3 (1f/maxHealth, 0, 0);
+			}
+		}
+
+
+	}
 }

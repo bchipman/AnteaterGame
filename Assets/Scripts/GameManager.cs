@@ -7,10 +7,12 @@ public class GameManager : MonoBehaviour {
     private int score;
     private GameObject scoreText;
     private GameObject frameCountText;
+    private GameObject deathText;
 
     private void Start () {
         scoreText = GameObject.Find("ScoreText");
         frameCountText = GameObject.Find("FrameCountText");
+        deathText = GameObject.Find("DeathText");
     }
 	
 	private void Update () {
@@ -21,4 +23,15 @@ public class GameManager : MonoBehaviour {
         score++;
         scoreText.GetComponent<Text>().text = score.ToString();
     }
+
+    public void DisplayDeathText() {
+        StartCoroutine(DisplayDeathTextTimer());
+    }
+
+    private IEnumerator DisplayDeathTextTimer() {
+        deathText.GetComponent<Text>().enabled = true;
+        yield return new WaitForSeconds(3);
+        deathText.GetComponent<Text>().enabled = false;
+    }
+
 }

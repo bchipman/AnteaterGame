@@ -25,6 +25,7 @@ public class Player : MonoBehaviour {
     private GameObject currentProjectileType;
     public GameObject bulletPrefab;
     public GameObject zotBubblePrefab;
+    public GameManager gameManager;
 
     public Vector3 mousePositionWhenClickedPlayer;
     public Vector3 mousePositionNow;
@@ -121,9 +122,7 @@ public class Player : MonoBehaviour {
 
         // Respawn if fallen off the world
         if (transform.position.y <= -10) {
-            transform.position = spawnPoint;
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            facingRight = true;
+            Respawn();
         }
     }
 
@@ -269,9 +268,20 @@ public class Player : MonoBehaviour {
 			if (coll.gameObject.layer == LayerMask.NameToLayer ("EnemyLayer")) {
 				currentHealth--;
 				transform.Find ("HealthBar").localScale = new Vector3 ((float)currentHealth / maxHealth, 1f, 0);
+			    if (currentHealth <= 0) {
+                    gameManager.DisplayDeathText();
+                    Respawn();
+			    }
 			}
 		}
-
-
 	}
+
+    private void Respawn() {
+        transform.position = spawnPoint;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        facingRight = true;
+        currentHealth = maxHealth;
+        transform.Find("HealthBar").localScale = new Vector3((float)currentHealth / maxHealth, 1f, 0);
+    }
+
 }

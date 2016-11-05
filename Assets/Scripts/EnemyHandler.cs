@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -21,7 +21,7 @@ public class EnemyHandler : MonoBehaviour {
         } else if (enemy.name.StartsWith("ShyGuy")) {
             StartCoroutine(NewRespawn(shyGuyPrefab, respawnDelay));
         }
-        Destroy(enemy);
+        Destroy(enemy.GetComponent<BoxCollider2D>());
     }
 
     IEnumerator NewRespawn(GameObject toRespawn, float delayTime) {

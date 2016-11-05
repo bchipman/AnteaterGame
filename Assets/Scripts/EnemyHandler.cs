@@ -22,6 +22,7 @@ public class EnemyHandler : MonoBehaviour {
             StartCoroutine(NewRespawn(shyGuyPrefab, respawnDelay));
         }
         Destroy(enemy.GetComponent<BoxCollider2D>());
+        Destroy(enemy.GetComponent<CircleCollider2D>());
     }
 
     IEnumerator NewRespawn(GameObject toRespawn, float delayTime) {

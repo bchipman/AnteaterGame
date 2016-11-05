@@ -18,11 +18,11 @@ public class EnemyHandler : MonoBehaviour {
 	}
 
     public void KillEnemy(GameObject enemy) {
-        if (enemy.name.StartsWith("Koopa")) {
-            StartCoroutine(NewRespawn(koopaPrefab, respawnDelay));
-        } else if (enemy.name.StartsWith("ShyGuy")) {
-            StartCoroutine(NewRespawn(shyGuyPrefab, respawnDelay));
-        }
+//        if (enemy.name.StartsWith("Koopa")) {
+//            StartCoroutine(NewRespawn(koopaPrefab, respawnDelay));
+//        } else if (enemy.name.StartsWith("ShyGuy")) {
+//            StartCoroutine(NewRespawn(shyGuyPrefab, respawnDelay));
+//        }
         Destroy(enemy.GetComponent<BoxCollider2D>());
         Destroy(enemy.GetComponent<CircleCollider2D>());
         enemiesToDestroy.Add(enemy);

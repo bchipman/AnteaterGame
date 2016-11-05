@@ -6,6 +6,7 @@ public class EnemyHandler : MonoBehaviour {
 
     public GameObject koopaPrefab;
     public GameObject shyGuyPrefab;
+    public GameObject bookPrefab;
     private float respawnDelay;
     private List<GameObject> enemiesToDestroy;
 
@@ -26,6 +27,7 @@ public class EnemyHandler : MonoBehaviour {
         Destroy(enemy.GetComponent<BoxCollider2D>());
         Destroy(enemy.GetComponent<CircleCollider2D>());
         enemiesToDestroy.Add(enemy);
+        GameObject book = Instantiate(bookPrefab, enemy.transform.position, Quaternion.identity) as GameObject;
         StartCoroutine(DestroyEnemyTimer());
     }
 

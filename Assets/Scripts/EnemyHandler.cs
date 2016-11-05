@@ -7,9 +7,11 @@ public class EnemyHandler : MonoBehaviour {
     public GameObject koopaPrefab;
     public GameObject shyGuyPrefab;
     private float respawnDelay;
+    private List<GameObject> enemiesToDestroy;
 
 	void Start () {
 	    respawnDelay = 5f;
+        enemiesToDestroy = new List<GameObject>();
 	}
 	
 	void Update () {
@@ -23,11 +25,15 @@ public class EnemyHandler : MonoBehaviour {
         }
         Destroy(enemy.GetComponent<BoxCollider2D>());
         Destroy(enemy.GetComponent<CircleCollider2D>());
+        enemiesToDestroy.Add(enemy);
+        StartCoroutine(DestroyEnemyTimer());
     }
 
     IEnumerator NewRespawn(GameObject toRespawn, float delayTime) {
         yield return new WaitForSeconds(delayTime);
         GameObject newEnemy = Instantiate(toRespawn, randomLocation(), Quaternion.identity) as GameObject;
+
+        newEnemy.transform.SetParent(transform.Find("/Enemies"));
     }
 
     private Vector2 randomLocation() {
@@ -36,6 +42,11 @@ public class EnemyHandler : MonoBehaviour {
         return new Vector2(xPos, yPos);
     }
 
+    private IEnumerator DestroyEnemyTimer() {
+        yield return new WaitForSeconds(3);
+        foreach (GameObject enemy in enemiesToDestroy) {
+            Destroy(enemy);
+        }
+    }
 
-    
 }

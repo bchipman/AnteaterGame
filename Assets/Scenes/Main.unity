@@ -748,7 +748,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011391133534, guid: 810d4d8e5b71b9844b699a7b0a82a84c, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000013491702770, guid: 810d4d8e5b71b9844b699a7b0a82a84c,
         type: 2}
@@ -932,7 +932,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 998952509}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &389319339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,6 +1992,7 @@ Transform:
   m_LocalScale: {x: 1.4182273, y: 1.4182273, z: 1.4182273}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1315330601}
   - {fileID: 1158308755}
   - {fileID: 1109081865}
   - {fileID: 368210585}
@@ -2013,6 +2014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1158308750}
   zotBubblePrefab: {fileID: 1109081864}
+  dirtPrefab: {fileID: 1315330598}
   gameManager: {fileID: 2097388144}
   mousePositionWhenClickedPlayer: {x: 0, y: 0, z: 0}
   mousePositionNow: {x: 0, y: 0, z: 0}
@@ -2865,7 +2867,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013096349730, guid: 144904e88701f5847a142a6bb72c707b, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114000012130844308, guid: 144904e88701f5847a142a6bb72c707b,
         type: 2}
@@ -3025,6 +3027,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 464860391}
   m_RootOrder: 2
+--- !u!1 &1315330598 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012902788102, guid: 261b880c08610c74c8fb16018e52b7fb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1638754071}
+--- !u!4 &1315330601 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000013093961446, guid: 261b880c08610c74c8fb16018e52b7fb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1638754071}
 --- !u!1 &1372402363
 GameObject:
   m_ObjectHideFlags: 0
@@ -3467,7 +3479,7 @@ Transform:
   - {fileID: 55872627}
   - {fileID: 1214725981}
   m_Father: {fileID: 998952509}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &1479581688
 GameObject:
   m_ObjectHideFlags: 0
@@ -3856,6 +3868,53 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.24, y: 0.22}
+--- !u!1001 &1638754071
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 998952509}
+    m_Modifications:
+    - target: {fileID: 4000013093961446, guid: 261b880c08610c74c8fb16018e52b7fb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013093961446, guid: 261b880c08610c74c8fb16018e52b7fb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013093961446, guid: 261b880c08610c74c8fb16018e52b7fb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013093961446, guid: 261b880c08610c74c8fb16018e52b7fb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013093961446, guid: 261b880c08610c74c8fb16018e52b7fb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013093961446, guid: 261b880c08610c74c8fb16018e52b7fb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013093961446, guid: 261b880c08610c74c8fb16018e52b7fb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013093961446, guid: 261b880c08610c74c8fb16018e52b7fb, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011669312210, guid: 261b880c08610c74c8fb16018e52b7fb,
+        type: 2}
+      propertyPath: enemyHandler
+      value: 
+      objectReference: {fileID: 1165904069}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 261b880c08610c74c8fb16018e52b7fb, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1670954141
 GameObject:
   m_ObjectHideFlags: 0
@@ -4135,7 +4194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ZotBubble
+  m_Text: Dirt
 --- !u!222 &1697945988
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4541,7 +4600,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 998952509}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!212 &1831072254
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4784,12 +4843,14 @@ MonoBehaviour:
   m_CaptionImage: {fileID: 0}
   m_ItemText: {fileID: 862960243}
   m_ItemImage: {fileID: 0}
-  m_Value: 1
+  m_Value: 2
   m_Options:
     m_Options:
     - m_Text: Bullet
       m_Image: {fileID: 0}
     - m_Text: ZotBubble
+      m_Image: {fileID: 0}
+    - m_Text: Dirt
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

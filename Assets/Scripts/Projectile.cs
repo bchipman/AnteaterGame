@@ -22,6 +22,10 @@ public class Projectile : MonoBehaviour {
             projectileForce = 5f;
             shotDelay = 0.2f;
             angleOffset = 0;
+        } else if (gameObject.name.StartsWith("Dirt")) {
+            projectileForce = 5f;
+            shotDelay = 0.2f;
+            angleOffset = 0;
         }
     }
 

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour {
     private GameObject currentProjectileType;
     public GameObject bulletPrefab;
     public GameObject zotBubblePrefab;
+    public GameObject dirtPrefab;
     public GameManager gameManager;
 
     public Vector3 mousePositionWhenClickedPlayer;
@@ -53,6 +55,13 @@ public class Player : MonoBehaviour {
 
         // Set projectile type based on current dropdown selection
         currentProjectileType = projectileTypeDropdown.GetComponent<Dropdown>().value == 0 ? bulletPrefab : zotBubblePrefab;
+        if (projectileTypeDropdown.GetComponent<Dropdown>().value == 0) {
+            currentProjectileType = bulletPrefab;
+        } else if (projectileTypeDropdown.GetComponent<Dropdown>().value == 1) {
+            currentProjectileType = zotBubblePrefab;
+        } else {
+            currentProjectileType = dirtPrefab;
+        }
 
         // Save mouse position to be used in FixedUpdate
         mousePositionNow = Input.mousePosition;
@@ -166,7 +175,12 @@ public class Player : MonoBehaviour {
     private IEnumerator ShootTimer() {
         while (true) {
             if (Input.GetMouseButton(0) && !clickDraggingPlayer) {
-                FireTowardMouse();
+                Debug.Log(currentProjectileType.gameObject.name);
+                if (currentProjectileType.gameObject.name.Equals("Dirt")) {
+                    FireTowardMouseInArc();
+                } else {
+                    FireTowardMouse();
+                }
                 yield return new WaitForSeconds(currentProjectileType.GetComponent<Projectile>().shotDelay);
             } else if (Input.GetButton("Fire1")) {
                 fireUp = (int) Input.GetAxisRaw("Vertical") == 1;
@@ -254,6 +268,20 @@ public class Player : MonoBehaviour {
         bulletInstance.transform.rotation = bulletQuaternion;
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVelocity;
         bulletInstance.transform.SetParent(transform);
+    }
+
+    private void FireTowardMouseInArc() {
+        Vector3 originPos = new Vector3(transform.position.x, transform.position.y + GetComponent<BoxCollider2D>().bounds.extents.y, 0);
+        Vector3 targetPos = GetMouseWorldPosition();
+        float flightTime = 1.5f;  // in seconds
+        float g = Mathf.Abs(Physics2D.gravity.y);  // gravity
+        float xVel = (targetPos.x - originPos.x) / flightTime;
+        float yVel = (targetPos.y + 0.5f * g * flightTime * flightTime - originPos.y) / flightTime;
+
+        GameObject dirtInstance = Instantiate(currentProjectileType) as GameObject;
+        dirtInstance.transform.position = originPos;
+        dirtInstance.GetComponent<Rigidbody2D>().velocity = new Vector3(xVel, yVel, 0f);
+        dirtInstance.transform.SetParent(transform);
     }
 
     private Vector3 GetMouseWorldPosition() {

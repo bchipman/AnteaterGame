@@ -175,26 +175,25 @@ public class Player : MonoBehaviour {
     private IEnumerator ShootTimer() {
         while (true) {
             if (Input.GetMouseButton(0) && !clickDraggingPlayer) {
-                Debug.Log(currentProjectileType.gameObject.name);
+                GameObject projectileInstance = Instantiate(currentProjectileType) as GameObject;
                 if (currentProjectileType.gameObject.name.Equals("Dirt")) {
-                    FireTowardMouseInArc();
+                    FireTowardMouseInArc(projectileInstance);
                 } else {
-                    FireTowardMouse();
+                    FireTowardMouse(projectileInstance);
                 }
-                yield return new WaitForSeconds(currentProjectileType.GetComponent<Projectile>().shotDelay);
+                yield return new WaitForSeconds(projectileInstance.GetComponent<Projectile>().shotDelay);
             } else if (Input.GetButton("Fire1")) {
+                GameObject projectileInstance = Instantiate(currentProjectileType) as GameObject;
                 fireUp = (int) Input.GetAxisRaw("Vertical") == 1;
-                Fire();
-                yield return new WaitForSeconds(currentProjectileType.GetComponent<Projectile>().shotDelay);
+                Fire(projectileInstance);
+                yield return new WaitForSeconds(projectileInstance.GetComponent<Projectile>().shotDelay);
             } else {
                 yield return null;
             }
         }
     }
 
-    private void Fire() {
-        GameObject bulletInstance = Instantiate(currentProjectileType) as GameObject;
-
+    private void Fire(GameObject bulletInstance) {
         Vector3 bulletOffset;
 
         Vector3 playerPos = new Vector3(transform.position.x, transform.position.y + GetComponent<BoxCollider2D>().bounds.extents.y, 0);
@@ -227,12 +226,10 @@ public class Player : MonoBehaviour {
         bulletInstance.transform.position = playerPos + bulletOffset;
         bulletInstance.transform.rotation = bulletQuaternion;
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVelocity;
-        bulletInstance.transform.SetParent(transform);
+        bulletInstance.transform.SetParent(transform.Find("/Projectiles"));
     }
 
-    private void FireTowardMouse() {
-        GameObject bulletInstance = Instantiate(currentProjectileType) as GameObject;
-
+    private void FireTowardMouse(GameObject bulletInstance) {
         Vector3 bulletOffset = Vector3.zero;
 
         Vector3 playerPos = new Vector3(transform.position.x, transform.position.y + GetComponent<BoxCollider2D>().bounds.extents.y, 0);
@@ -267,10 +264,10 @@ public class Player : MonoBehaviour {
         bulletInstance.transform.position = playerPos + bulletOffset;
         bulletInstance.transform.rotation = bulletQuaternion;
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVelocity;
-        bulletInstance.transform.SetParent(transform);
+        bulletInstance.transform.SetParent(transform.Find("/Projectiles"));
     }
 
-    private void FireTowardMouseInArc() {
+    private void FireTowardMouseInArc(GameObject dirtInstance) {
         Vector3 originPos = new Vector3(transform.position.x, transform.position.y + GetComponent<BoxCollider2D>().bounds.extents.y, 0);
         Vector3 targetPos = GetMouseWorldPosition();
         float flightTime = 1.5f;  // in seconds
@@ -278,10 +275,9 @@ public class Player : MonoBehaviour {
         float xVel = (targetPos.x - originPos.x) / flightTime;
         float yVel = (targetPos.y + 0.5f * g * flightTime * flightTime - originPos.y) / flightTime;
 
-        GameObject dirtInstance = Instantiate(currentProjectileType) as GameObject;
         dirtInstance.transform.position = originPos;
         dirtInstance.GetComponent<Rigidbody2D>().velocity = new Vector3(xVel, yVel, 0f);
-        dirtInstance.transform.SetParent(transform);
+        dirtInstance.transform.SetParent(transform.Find("/Projectiles"));
     }
 
     private Vector3 GetMouseWorldPosition() {

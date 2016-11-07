@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
         scoreText = GameObject.Find("ScoreText");
         frameCountText = GameObject.Find("FrameCountText");
         deathText = GameObject.Find("DeathText");
+        StartCoroutine(CheckProjectileTimer());
     }
 	
 	private void Update () {
@@ -32,6 +33,18 @@ public class GameManager : MonoBehaviour {
         deathText.GetComponent<Text>().enabled = true;
         yield return new WaitForSeconds(3);
         deathText.GetComponent<Text>().enabled = false;
+    }
+
+    private IEnumerator CheckProjectileTimer() {
+        Transform parentTransform = transform.Find("/Projectiles");
+        while (true) {
+            foreach (Transform child in parentTransform) {
+                if (!child.gameObject.GetComponent<Renderer>().isVisible) {
+                    Destroy(child.gameObject);
+                }
+            }
+            yield return new WaitForSeconds(1);
+        }
     }
 
 }

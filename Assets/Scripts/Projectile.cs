@@ -13,7 +13,9 @@ public class Projectile : MonoBehaviour {
     public int angleOffset;
 
 
-    private void Start() {
+    private void Awake() {
+        enemyHandler = GameObject.Find("EnemyHandler").GetComponent<EnemyHandler>();
+
         if (gameObject.name.StartsWith("Bullet")) {
             projectileForce = 20f;
             shotDelay = 0.08f;

@@ -24,6 +24,7 @@ GameObject:
   - 61: {fileID: 61000012576892068}
   - 61: {fileID: 61000013833593314}
   - 114: {fileID: 114000014253777214}
+  - 95: {fileID: 95000012401866128}
   m_Layer: 9
   m_Name: Book
   m_TagString: Untagged
@@ -89,6 +90,23 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.17, y: 0.26}
+--- !u!95 &95000012401866128
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010786041874}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cc6819f337f3bd243af6f73a2c67da87, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114000014253777214
 MonoBehaviour:
   m_ObjectHideFlags: 1

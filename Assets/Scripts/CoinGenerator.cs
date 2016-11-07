@@ -14,7 +14,7 @@ public class CoinGenerator : MonoBehaviour {
         for (int col = 0; col < 10; col++) {
 	        for (int row = 0; row < 5; row++) {
 	            GameObject instance = Instantiate(coin, new Vector3(col * xSep + initialPos.x, row * ySep +initialPos.y, 0f), Quaternion.identity) as GameObject;
-                instance.transform.SetParent(this.transform);
+                instance.transform.SetParent(transform.Find("/Collectables"));
             }
         }
 	}

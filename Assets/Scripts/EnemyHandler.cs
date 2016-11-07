@@ -28,6 +28,7 @@ public class EnemyHandler : MonoBehaviour {
         Destroy(enemy.GetComponent<CircleCollider2D>());
         enemiesToDestroy.Add(enemy);
         GameObject book = Instantiate(bookPrefab, enemy.transform.position, Quaternion.identity) as GameObject;
+        book.transform.SetParent(transform.Find("/Collectables"));
         StartCoroutine(DestroyEnemyTimer());
     }
 

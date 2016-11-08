@@ -1,28 +1,49 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
     private int score;
-    private GameObject scoreText;
-    private GameObject frameCountText;
-    private GameObject deathText;
+    private float deltaTime;
+    private Text scoreText;
+    private Text timeText;
+    private Text deathText;
+    private Text fpsText;
+    private Button closeButton;
 
     private void Start () {
-        scoreText = GameObject.Find("ScoreText");
-        frameCountText = GameObject.Find("FrameCountText");
-        deathText = GameObject.Find("DeathText");
+        scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+        timeText = GameObject.Find("TimeText").GetComponent<Text>();
+        deathText = GameObject.Find("DeathText").GetComponent<Text>();
+        fpsText = GameObject.Find("FPSText").GetComponent<Text>();
+        closeButton = GameObject.Find("CloseButton").GetComponent<Button>();
+        closeButton.onClick.AddListener(LoadTitleScreen);
         StartCoroutine(CheckProjectileTimer());
     }
 	
 	private void Update () {
-        frameCountText.GetComponent<Text>().text = "Time: " + Time.realtimeSinceStartup.ToString("000.");
-	}
+        timeText.text = "Time: " + Time.realtimeSinceStartup.ToString("000.");
+        deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+    }
+
+    private void OnGUI() {
+        int w = Screen.width, h = Screen.height;
+        fpsText.fontSize = h * 5 / 100;  // 5% of screen height
+        scoreText.fontSize = h * 5 / 100;  // 5% of screen height
+        timeText.fontSize = h * 5 / 100;  // 5% of screen height
+
+        float msec = deltaTime * 1000.0f;
+        float fps = 1.0f / deltaTime;
+
+        //        string text = string.Format("{0:0.0} ms ({1:0.} fps)", msec, fps);
+        fpsText.text = string.Format("FPS: {0:0.}", fps);
+    }
 
     public void IncrementScore() {
         score++;
-        scoreText.GetComponent<Text>().text = "Score: " + score.ToString("000");
+        scoreText.text = "Score: " + score.ToString("000");
     }
 
     public void DisplayDeathText() {
@@ -30,9 +51,9 @@ public class GameManager : MonoBehaviour {
     }
 
     private IEnumerator DisplayDeathTextTimer() {
-        deathText.GetComponent<Text>().enabled = true;
+        deathText.enabled = true;
         yield return new WaitForSeconds(3);
-        deathText.GetComponent<Text>().enabled = false;
+        deathText.enabled = false;
     }
 
     private IEnumerator CheckProjectileTimer() {
@@ -47,4 +68,7 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    private void LoadTitleScreen() {
+        SceneManager.LoadScene("TitleScreen");
+    }
 }

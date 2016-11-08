@@ -5,11 +5,10 @@ using UnityEngine.UI;
 public class TitleScreenButton : MonoBehaviour {
 
 	private void Start () {
-        GetComponent<Button>().onClick.AddListener(test);
+        GetComponent<Button>().onClick.AddListener(Play);
     }
 	
-    private void test() {
-        Debug.Log("Test!!");
+    private void Play() {
         SceneManager.LoadScene("Level1");
     }
 }

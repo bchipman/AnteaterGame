@@ -17,12 +17,12 @@ public class GameManager : MonoBehaviour {
     }
 	
 	private void Update () {
-        frameCountText.GetComponent<Text>().text = Time.realtimeSinceStartup.ToString("F3");
-    }
+        frameCountText.GetComponent<Text>().text = "Time: " + Time.realtimeSinceStartup.ToString("000.");
+	}
 
     public void IncrementScore() {
         score++;
-        scoreText.GetComponent<Text>().text = score.ToString();
+        scoreText.GetComponent<Text>().text = "Score: " + score.ToString("000");
     }
 
     public void DisplayDeathText() {

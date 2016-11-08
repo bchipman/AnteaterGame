@@ -7,9 +7,13 @@ public class FPSDisplay : MonoBehaviour {
 
     private float deltaTime = 0.0f;
     private Text fpsText;
+    private Text scoreText;
+    private Text timeText;
 
     private void Start () {
         fpsText = GetComponent<Text>();
+        scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+        timeText = GameObject.Find("FrameCountText").GetComponent<Text>();
     }
 
     private void Update() {
@@ -19,6 +23,8 @@ public class FPSDisplay : MonoBehaviour {
     private void OnGUI() {
         int w = Screen.width, h = Screen.height;
         fpsText.fontSize = h * 5 / 100;  // 5% of screen height
+        scoreText.fontSize = h * 5 / 100;  // 5% of screen height
+        timeText.fontSize = h * 5 / 100;  // 5% of screen height
 
         float msec = deltaTime * 1000.0f;
         float fps = 1.0f / deltaTime;

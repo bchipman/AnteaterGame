@@ -12,6 +12,11 @@ public class GameManager : MonoBehaviour {
     private Text deathText;
     private Text fpsText;
     private Button closeButton;
+    private Dropdown projectileTypeDropdown;
+    public GameObject bulletPrefab;
+    public GameObject zotBubblePrefab;
+    public GameObject dirtPrefab;
+
 
     private void Start () {
         scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
@@ -19,6 +24,7 @@ public class GameManager : MonoBehaviour {
         deathText = GameObject.Find("DeathText").GetComponent<Text>();
         fpsText = GameObject.Find("FPSText").GetComponent<Text>();
         closeButton = GameObject.Find("CloseButton").GetComponent<Button>();
+        projectileTypeDropdown = GameObject.Find("ProjectileTypeDropdown").GetComponent<Dropdown>();
         closeButton.onClick.AddListener(LoadTitleScreen);
         StartCoroutine(CheckProjectileTimer());
     }
@@ -70,5 +76,13 @@ public class GameManager : MonoBehaviour {
 
     private void LoadTitleScreen() {
         SceneManager.LoadScene("TitleScreen");
+    }
+
+    public GameObject GetCurrentProjectileType() {
+        switch (projectileTypeDropdown.value) {
+            case 0: return bulletPrefab;
+            case 1: return zotBubblePrefab;
+            default: return dirtPrefab;
+        }
     }
 }

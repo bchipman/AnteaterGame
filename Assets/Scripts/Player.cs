@@ -22,11 +22,6 @@ public class Player : MonoBehaviour {
     private Transform groundCheck;
     private Transform clickCheck;
     private Vector3 spawnPoint;
-    private GameObject projectileTypeDropdown;
-    private GameObject currentProjectileType;
-    public GameObject bulletPrefab;
-    public GameObject zotBubblePrefab;
-    public GameObject dirtPrefab;
     public GameManager gameManager;
 
     public Vector3 mousePositionWhenClickedPlayer;
@@ -47,21 +42,10 @@ public class Player : MonoBehaviour {
         spawnPoint = transform.position;
         StartCoroutine("ShootTimer");
         mousePositionQueue = new Queue<List<float>>();
-        projectileTypeDropdown = GameObject.Find("ProjectileTypeDropdown");
     }
 
     // Check input in Update and set flags to be acted on in FixedUpdate
     private void Update() {
-
-        // Set projectile type based on current dropdown selection
-        currentProjectileType = projectileTypeDropdown.GetComponent<Dropdown>().value == 0 ? bulletPrefab : zotBubblePrefab;
-        if (projectileTypeDropdown.GetComponent<Dropdown>().value == 0) {
-            currentProjectileType = bulletPrefab;
-        } else if (projectileTypeDropdown.GetComponent<Dropdown>().value == 1) {
-            currentProjectileType = zotBubblePrefab;
-        } else {
-            currentProjectileType = dirtPrefab;
-        }
 
         // Save mouse position to be used in FixedUpdate
         mousePositionNow = Input.mousePosition;
@@ -175,15 +159,15 @@ public class Player : MonoBehaviour {
     private IEnumerator ShootTimer() {
         while (true) {
             if (Input.GetMouseButton(0) && !clickDraggingPlayer) {
-                GameObject projectileInstance = Instantiate(currentProjectileType) as GameObject;
-                if (currentProjectileType.gameObject.name.Equals("Dirt")) {
+                GameObject projectileInstance = Instantiate(gameManager.GetCurrentProjectileType());
+                if (projectileInstance.gameObject.name.StartsWith("Dirt")) {
                     FireTowardMouseInArc(projectileInstance);
                 } else {
                     FireTowardMouse(projectileInstance);
                 }
                 yield return new WaitForSeconds(projectileInstance.GetComponent<Projectile>().shotDelay);
             } else if (Input.GetButton("Fire1")) {
-                GameObject projectileInstance = Instantiate(currentProjectileType) as GameObject;
+                GameObject projectileInstance = Instantiate(gameManager.GetCurrentProjectileType());
                 fireUp = (int) Input.GetAxisRaw("Vertical") == 1;
                 Fire(projectileInstance);
                 yield return new WaitForSeconds(projectileInstance.GetComponent<Projectile>().shotDelay);

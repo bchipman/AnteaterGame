@@ -11,7 +11,7 @@ public class Collectable : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D coll) {
-        if (coll.name == "Player") {
+        if (coll.name == "Player" || coll.name == "SideCollisionCheck") {
             Destroy(gameObject);
             gameManager.IncrementScore();
         }

@@ -11,6 +11,7 @@ public class Player : MonoBehaviour {
     private const float JumpForce = 400f;
 
     private bool jump = false;
+    private bool jumpedRecently = false;
     private bool grounded = false;
     private bool facingRight = true;
     private bool fireUp = false;
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour {
     private Transform clickCheck;
     private Vector3 spawnPoint;
     public GameManager gameManager;
+    private EdgeCollider2D edgeCollider;
 
     public Vector3 mousePositionWhenClickedPlayer;
     public Vector3 mousePositionNow;
@@ -42,6 +44,7 @@ public class Player : MonoBehaviour {
         spawnPoint = transform.position;
         StartCoroutine("ShootTimer");
         mousePositionQueue = new Queue<List<float>>();
+        edgeCollider = GetComponent<EdgeCollider2D>();
     }
 
     // Check input in Update and set flags to be acted on in FixedUpdate
@@ -54,16 +57,16 @@ public class Player : MonoBehaviour {
         velocity = GetComponent<Rigidbody2D>().velocity;
         
         // Set grounded flag - can jump off of platforms, enemies, or objects
-        bool grounded1 = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("PlatformLayer"));
-        bool grounded2 = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("ObjectLayer"));
-        bool grounded3 = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("EnemyLayer"));
+        bool grounded1 = edgeCollider.IsTouchingLayers(1 << LayerMask.NameToLayer("PlatformLayer"));
+        bool grounded2 = edgeCollider.IsTouchingLayers(1 << LayerMask.NameToLayer("ObjectLayer"));
+        bool grounded3 = edgeCollider.IsTouchingLayers(1 << LayerMask.NameToLayer("EnemyLayer"));
         grounded = grounded1 || grounded2 || grounded3;
 
         // Set mouseInsideClickCheckBox flag
         mouseInsideClickCheckBox = clickCheck.GetComponent<BoxCollider2D>().bounds.Contains(GetMouseWorldPosition());
         
         // Display white clickCheck box around player when mouse is inside click check box
-        clickCheck.GetComponent<SpriteRenderer>().enabled = mouseInsideClickCheckBox;
+//        clickCheck.GetComponent<SpriteRenderer>().enabled = mouseInsideClickCheckBox;
 
 
         // Horizontal movement
@@ -105,7 +108,8 @@ public class Player : MonoBehaviour {
         Move(xDirection);
 
         // Jumping
-        if (jump) {
+        if (jump && !jumpedRecently) {
+            StartCoroutine(JumpedRecentlyTimer());
             jump = false;
             animator.SetTrigger("Jump");
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce));
@@ -117,6 +121,12 @@ public class Player : MonoBehaviour {
         if (transform.position.y <= -10) {
             Respawn();
         }
+    }
+
+    private IEnumerator JumpedRecentlyTimer() {
+        jumpedRecently = true;
+        yield return new WaitForSeconds(0.25f);
+        jumpedRecently = false;
     }
 
     private void OnMouseDown() {
@@ -271,7 +281,6 @@ public class Player : MonoBehaviour {
     }
 
 	private void OnCollisionEnter2D(Collision2D coll) {
-
 		if (currentHealth > 0) {
 			if (coll.gameObject.layer == LayerMask.NameToLayer ("EnemyLayer")) {
 				currentHealth--;

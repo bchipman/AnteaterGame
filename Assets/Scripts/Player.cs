@@ -20,11 +20,10 @@ public class Player : MonoBehaviour {
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
-    private Transform groundCheck;
     private Transform clickCheck;
     private Vector3 spawnPoint;
     public GameManager gameManager;
-    private EdgeCollider2D edgeCollider;
+    private EdgeCollider2D bottomEdgeCollider;
 
     public Vector3 mousePositionWhenClickedPlayer;
     public Vector3 mousePositionNow;
@@ -39,12 +38,11 @@ public class Player : MonoBehaviour {
     private void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        groundCheck = transform.Find("GroundCheck");
         clickCheck = transform.Find("ClickCheck");
         spawnPoint = transform.position;
-        StartCoroutine("ShootTimer");
+        StartCoroutine(ShootTimer());
         mousePositionQueue = new Queue<List<float>>();
-        edgeCollider = GetComponent<EdgeCollider2D>();
+        bottomEdgeCollider = GetComponent<EdgeCollider2D>();
     }
 
     // Check input in Update and set flags to be acted on in FixedUpdate
@@ -57,9 +55,9 @@ public class Player : MonoBehaviour {
         velocity = GetComponent<Rigidbody2D>().velocity;
         
         // Set grounded flag - can jump off of platforms, enemies, or objects
-        bool grounded1 = edgeCollider.IsTouchingLayers(1 << LayerMask.NameToLayer("PlatformLayer"));
-        bool grounded2 = edgeCollider.IsTouchingLayers(1 << LayerMask.NameToLayer("ObjectLayer"));
-        bool grounded3 = edgeCollider.IsTouchingLayers(1 << LayerMask.NameToLayer("EnemyLayer"));
+        bool grounded1 = bottomEdgeCollider.IsTouchingLayers(1 << LayerMask.NameToLayer("PlatformLayer"));
+        bool grounded2 = bottomEdgeCollider.IsTouchingLayers(1 << LayerMask.NameToLayer("ObjectLayer"));
+        bool grounded3 = bottomEdgeCollider.IsTouchingLayers(1 << LayerMask.NameToLayer("EnemyLayer"));
         grounded = grounded1 || grounded2 || grounded3;
 
         // Set mouseInsideClickCheckBox flag

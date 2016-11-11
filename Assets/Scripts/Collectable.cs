@@ -26,8 +26,14 @@ public class Collectable : MonoBehaviour {
 				playerAS.Play ();
 			}
 			GetComponent<SpriteRenderer>().enabled = false;
+			StartCoroutine (DestroyTimer ());
             gameManager.IncrementScore();
         }
     }
+
+	private IEnumerator DestroyTimer(){
+		yield return new WaitForSeconds (0.5f);
+		Destroy (gameObject);
+	}
 
 }

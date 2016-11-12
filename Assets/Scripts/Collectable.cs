@@ -9,6 +9,7 @@ public class Collectable : MonoBehaviour {
 	public AudioClip Pickup_Coin3;
 	public AudioClip Xylo_13;
 	private AudioSource playerAS;
+    private bool collected = false;
 
     private void Awake() {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -27,7 +28,10 @@ public class Collectable : MonoBehaviour {
 			}
 			GetComponent<SpriteRenderer>().enabled = false;
 			StartCoroutine (DestroyTimer ());
-            gameManager.IncrementScore();
+            if (!collected) {
+                gameManager.IncrementScore();
+                collected = true;
+            }
         }
     }
 

@@ -70,11 +70,13 @@ public class Player : MonoBehaviour {
         // Horizontal movement
         int xDirectionTemp1 = (int) Input.GetAxisRaw("Horizontal");
         int xDirectionTemp2 = 0;
-        if (grounded && clickDraggingPlayer && !mouseInsideClickCheckBox) {
-            Vector3 diff = GetMouseWorldPosition() - transform.position;
-            if      (diff.x > 0) { xDirectionTemp2 = 1;  }
-            else if (diff.x < 0) { xDirectionTemp2 = -1; }
-            else                 { xDirectionTemp2 = 0;  }
+        if (clickDraggingPlayer && !mouseInsideClickCheckBox) {
+            float minX = transform.position.x - spriteRenderer.bounds.extents.x;
+            float maxX = transform.position.x + spriteRenderer.bounds.extents.x;
+            float currentX = GetMouseWorldPosition().x;
+            if      (currentX > maxX) { xDirectionTemp2 = 1;  }
+            else if (currentX < minX) { xDirectionTemp2 = -1; }
+            else                      { xDirectionTemp2 = 0;  }
         }
         xDirection = xDirectionTemp2 == 0 ? xDirectionTemp1 : xDirectionTemp2;  // use direction from kb input if direction not set from mouse
 

@@ -21,7 +21,6 @@ GameObject:
   - 4: {fileID: 4000014213819310}
   - 212: {fileID: 212000013896614754}
   - 50: {fileID: 50000012153121892}
-  - 61: {fileID: 61000012576892068}
   - 61: {fileID: 61000013833593314}
   - 114: {fileID: 114000014253777214}
   - 95: {fileID: 95000012401866128}
@@ -33,6 +32,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000012377295588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012971037932}
+  - 61: {fileID: 61000011977036590}
+  m_Layer: 14
+  m_Name: PhysicsCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000012971037932
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012377295588}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000014213819310}
+  m_RootOrder: 0
 --- !u!4 &4000014213819310
 Transform:
   m_ObjectHideFlags: 1
@@ -40,10 +68,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010786041874}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.69, y: -0.91, z: 0}
+  m_LocalPosition: {x: -4.46, y: -1.25, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 4000012971037932}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!50 &50000012153121892
@@ -63,12 +92,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61000012576892068
+--- !u!61 &61000011977036590
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010786041874}
+  m_GameObject: {fileID: 1000012377295588}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}

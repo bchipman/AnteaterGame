@@ -10,6 +10,9 @@ public class EnemyHandler : MonoBehaviour {
     private float respawnDelay;
     private List<GameObject> enemiesToDestroy;
 
+	public AudioClip enemyDead;
+	private AudioSource playerAS;
+
 	void Start () {
 	    respawnDelay = 5f;
         enemiesToDestroy = new List<GameObject>();
@@ -24,6 +27,10 @@ public class EnemyHandler : MonoBehaviour {
 //        } else if (enemy.name.StartsWith("ShyGuy")) {
 //            StartCoroutine(NewRespawn(shyGuyPrefab, respawnDelay));
 //        }
+
+		playerAS = GetComponent<AudioSource> ();
+		playerAS.Play ();
+
         Destroy(enemy.GetComponent<BoxCollider2D>());
         Destroy(enemy.GetComponent<CircleCollider2D>());
         enemiesToDestroy.Add(enemy);

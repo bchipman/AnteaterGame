@@ -118,12 +118,14 @@ public class Player : MonoBehaviour {
             Vector3 originPos = transform.position;
             Vector3 targetPos = GetMouseWorldPosition();
             yJumpTarget = GetMouseWorldPosition().y;
-            float flightTime = 1.5f;  // in seconds
+//            float flightTime = 2.5f;  // in seconds
             float g = Mathf.Abs(Physics2D.gravity.y);  // gravity
 //            float xVel = (targetPos.x - originPos.x) / flightTime;
 //            float xVel = 0f;
             float xVel = GetComponent<Rigidbody2D>().velocity.x; // keep x velocity the same
-            float yVel = (targetPos.y + 0.5f * g * flightTime * flightTime - originPos.y) / flightTime;
+//            float yVel = (targetPos.y + 0.5f * g * flightTime * flightTime - originPos.y) / flightTime;
+            float yVel = (float) Math.Sqrt(2 * g * (targetPos.y - originPos.y));
+
             GetComponent<Rigidbody2D>().velocity = new Vector3(xVel, yVel, 0f);
         }
 
@@ -275,7 +277,7 @@ public class Player : MonoBehaviour {
     private void FireTowardMouseInArc(GameObject dirtInstance) {
         Vector3 originPos = new Vector3(transform.position.x, transform.position.y + GetComponent<BoxCollider2D>().bounds.extents.y, 0);
         Vector3 targetPos = GetMouseWorldPosition();
-        float flightTime = 1.5f;  // in seconds
+        float flightTime = 3f;  // in seconds
         float g = Mathf.Abs(Physics2D.gravity.y);  // gravity
         float xVel = (targetPos.x - originPos.x) / flightTime;
         float yVel = (targetPos.y + 0.5f * g * flightTime * flightTime - originPos.y) / flightTime;

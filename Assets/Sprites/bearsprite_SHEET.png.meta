@@ -1,0 +1,255 @@
+fileFormatVersion: 2
+guid: 0697f130a3a3b7249b7cdfc0b29842f1
+timeCreated: 1479189064
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bearsprite_SHEET_0
+    21300002: bearsprite_SHEET_1
+    21300004: bearsprite_SHEET_2
+    21300006: bearsprite_SHEET_3
+    21300008: bearsprite_SHEET_4
+    21300010: bearsprite_SHEET_5
+    21300012: bearsprite_SHEET_6
+    21300014: bearsprite_SHEET_7
+    21300016: bearsprite_SHEET_8
+    21300018: bearsprite_SHEET_9
+    21300020: bearsprite_SHEET_10
+    21300022: bearsprite_SHEET_11
+    21300024: bearsprite_SHEET_12
+    21300026: bearsprite_SHEET_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bearsprite_SHEET_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 328
+        width: 90
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bearsprite_SHEET_1
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 329
+        width: 90
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bearsprite_SHEET_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 328
+        width: 90
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bearsprite_SHEET_3
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 328
+        width: 93
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bearsprite_SHEET_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 248
+        width: 90
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bearsprite_SHEET_5
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 248
+        width: 92
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bearsprite_SHEET_6
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 151
+        width: 90
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bearsprite_SHEET_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 151
+        width: 138
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bearsprite_SHEET_8
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 151
+        width: 138
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bearsprite_SHEET_9
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 151
+        width: 141
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bearsprite_SHEET_10
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 35
+        width: 138
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bearsprite_SHEET_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 35
+        width: 138
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bearsprite_SHEET_12
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 35
+        width: 144
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bearsprite_SHEET_13
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 35
+        width: 163
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

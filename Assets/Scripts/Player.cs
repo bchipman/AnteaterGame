@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
     private const float MaxSpeedX = 10f;
     private const float MoveForce = 15f;
     private const float JumpForce = 400f;
+    public float yJumpTarget;
 
     private bool jump = false;
     private bool jumpedRecently = false;
@@ -112,8 +113,18 @@ public class Player : MonoBehaviour {
             StartCoroutine(JumpedRecentlyTimer());
             jump = false;
             animator.SetTrigger("Jump");
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce));
-//            Debug.Log("added jump force!  grounded:" + grounded + "  jump:" + jump + "  realtimeSinceStartup:" + Time.realtimeSinceStartup);
+//            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce));
+
+            Vector3 originPos = transform.position;
+            Vector3 targetPos = GetMouseWorldPosition();
+            yJumpTarget = GetMouseWorldPosition().y;
+            float flightTime = 1.5f;  // in seconds
+            float g = Mathf.Abs(Physics2D.gravity.y);  // gravity
+//            float xVel = (targetPos.x - originPos.x) / flightTime;
+//            float xVel = 0f;
+            float xVel = GetComponent<Rigidbody2D>().velocity.x; // keep x velocity the same
+            float yVel = (targetPos.y + 0.5f * g * flightTime * flightTime - originPos.y) / flightTime;
+            GetComponent<Rigidbody2D>().velocity = new Vector3(xVel, yVel, 0f);
         }
 
 

@@ -11,14 +11,10 @@ public class Enemy : MonoBehaviour {
     private Animator animator;
     public Vector3 spawnPoint;
     private Player player;
-    private GameObject losCheck;
-    public float distToPlayer;
-    private const float DistToPlayerThreshold = 7.0f;
 
 
     void Start() {
         player = transform.Find("/Player").gameObject.GetComponent<Player>();
-        losCheck = transform.Find("LineOfSightCheck").gameObject;
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         spawnPoint = transform.position;
@@ -29,10 +25,9 @@ public class Enemy : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        Debug.Log(losCheck);
         if (gameObject.name.StartsWith("Bear")) {
             float playerX = player.transform.position.x;
-            distToPlayer = Mathf.Abs(playerX - transform.position.x);
+            float distToPlayer = Mathf.Abs(playerX - transform.position.x);
             animator.SetFloat("DistToPlayer", distToPlayer);
 
             float leftX = spriteRenderer.bounds.center.x - spriteRenderer.bounds.extents.x;

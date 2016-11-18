@@ -14,9 +14,12 @@ public class CameraController : MonoBehaviour {
     private float xAdj = 2f;  // Adjustment from center; keeps player at ~40% of horizontal distance of screen instead of dead center
 
     private void Start() {
+        GameObject debugLinesGameObject = new GameObject {name = "DebugLines"};
+        debugLinesGameObject.transform.SetParent(transform.Find("/GameManager"));
         lines = new List<GameObject> { new GameObject(), new GameObject(), new GameObject(), new GameObject() };
 
         foreach (GameObject line in lines) {
+            line.transform.SetParent(transform.Find("/GameManager/DebugLines"));
             line.transform.position = Vector3.zero;
             line.AddComponent<LineRenderer>();
             LineRenderer lr = line.GetComponent<LineRenderer>();

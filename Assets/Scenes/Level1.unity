@@ -5743,6 +5743,7 @@ MonoBehaviour:
   zotBubblePrefab: {fileID: 1000010115226318, guid: 144904e88701f5847a142a6bb72c707b,
     type: 2}
   dirtPrefab: {fileID: 1000012902788102, guid: 261b880c08610c74c8fb16018e52b7fb, type: 2}
+  bookPrefab: {fileID: 1000010786041874, guid: f914c9a6718c4b944a280fa1e2449a46, type: 2}
 --- !u!4 &2097388145
 Transform:
   m_ObjectHideFlags: 0

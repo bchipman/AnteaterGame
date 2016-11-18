@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
     public GameObject bulletPrefab;
     public GameObject zotBubblePrefab;
     public GameObject dirtPrefab;
+    public GameObject bookPrefab;
 
 
     private void Start () {

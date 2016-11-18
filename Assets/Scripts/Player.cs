@@ -6,12 +6,13 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
-    private const float MaxSpeedX = 10f;
+    private float MaxSpeedX = 5f;
     private const float MoveForce = 15f;
     private const float JumpForce = 400f;
     public float yJumpTarget;
     private const float maxJumpHeight = 5f;
 
+	private bool sprint = false;
     private bool jump = false;
     private bool jumpedRecently = false;
     private bool grounded = false;
@@ -85,6 +86,7 @@ public class Player : MonoBehaviour {
 
         // Jumping
         jump = grounded && Input.GetButton("Jump");  // set jump flag from kb input.  this may get overriden in FixedUpdate
+		sprint = grounded && Input.GetKey(KeyCode.LeftShift);
     }
 
     private void FixedUpdate() {
@@ -129,7 +131,12 @@ public class Player : MonoBehaviour {
             }
 
         }
-
+		if (sprint && grounded) {
+			MaxSpeedX = 10f;
+		}
+		if (!sprint && grounded) {
+			MaxSpeedX = 5f;
+		}
         // Respawn if fallen off the world
         if (transform.position.y <= -10) {
             Respawn();
@@ -296,11 +303,17 @@ public class Player : MonoBehaviour {
 	private void OnCollisionEnter2D(Collision2D coll) {
 		if (currentHealth > 0) {
 			if (coll.gameObject.layer == LayerMask.NameToLayer ("EnemyLayer")) {
-				currentHealth--;
-				transform.Find ("/Player/HealthBar/GreenHealthBarBox").localScale = new Vector3 ((float)currentHealth / maxHealth, 0.55f, 0);
-			    if (currentHealth <= 0) {
-                    Respawn();
-			    }
+				if(coll.gameObject.GetComponent<Collider2D>().bounds.max.y <= gameObject.GetComponent<Collider2D>().bounds.min.y){
+					GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce) * 1.5f);
+					Enemy other = (Enemy) coll.gameObject.GetComponent(typeof(Enemy));
+					other.Die();
+				}else{
+					currentHealth--;
+					transform.Find ("/Player/HealthBar/GreenHealthBarBox").localScale = new Vector3 ((float)currentHealth / maxHealth, 0.55f, 0);
+					if (currentHealth <= 0) {
+						Respawn();
+					}	
+				}
 			}
 		}
 	}

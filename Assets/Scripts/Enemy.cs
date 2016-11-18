@@ -79,7 +79,7 @@ public class Enemy : MonoBehaviour {
         Die();
     }
 
-    private void Die() {
+    public void Die() {
         audioSource.Play();
         gameManager.SpawnBookCollectable(transform.position);
         Destroy(GetComponent<BoxCollider2D>());

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
@@ -11,9 +11,13 @@ public class Enemy : MonoBehaviour {
     private Animator animator;
     public Vector3 spawnPoint;
     private Player player;
-
+    private AudioSource audioSource;
+    private GameManager gameManager;
 
     void Start() {
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = Resources.Load("enemyDead") as AudioClip;
+        gameManager = transform.Find("/GameManager").gameObject.GetComponent<GameManager>();
         player = transform.Find("/Player").gameObject.GetComponent<Player>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
@@ -69,6 +73,23 @@ public class Enemy : MonoBehaviour {
             }
         }
         alreadyHitFloor = true;
+    }
+
+    public void TakeDamage() {
+        Die();
+    }
+
+    private void Die() {
+        audioSource.Play();
+        gameManager.SpawnBookCollectable(transform.position);
+        Destroy(GetComponent<BoxCollider2D>());
+        Destroy(GetComponent<CircleCollider2D>());
+        StartCoroutine(DestroyTimer());
+    }
+
+    private IEnumerator DestroyTimer() {
+        yield return new WaitForSeconds(3);
+        Destroy(this);
     }
 
 }

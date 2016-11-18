@@ -6,16 +6,12 @@ using System.Collections.Generic;
 public class Projectile : MonoBehaviour {
 
     public GameObject explosion;
-    public EnemyHandler enemyHandler;
-
     public float projectileForce;
     public float shotDelay;
     public int angleOffset;
 
 
     private void Awake() {
-        enemyHandler = GameObject.Find("EnemyHandler").GetComponent<EnemyHandler>();
-
         if (gameObject.name.StartsWith("Bullet")) {
             projectileForce = 20f;
             shotDelay = 0.08f;
@@ -35,10 +31,8 @@ public class Projectile : MonoBehaviour {
         if (coll.GetComponent<Collider2D>().gameObject.layer == LayerMask.NameToLayer("EnemyLayer") ||
             coll.GetComponent<Collider2D>().gameObject.layer == LayerMask.NameToLayer("ObjectLayer")) {
 //            Debug.Log("Collided with " + coll.gameObject.name);
-            enemyHandler.KillEnemy(coll.gameObject);
+            coll.gameObject.GetComponent<Enemy>().TakeDamage();
 
-
-//            Destroy(coll.gameObject);
             GameObject explosionInstance = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
             explosionInstance.SetActive(true);
             Destroy(explosionInstance, explosionInstance.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0).Length + 0f);

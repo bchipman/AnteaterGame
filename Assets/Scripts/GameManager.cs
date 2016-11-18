@@ -86,4 +86,10 @@ public class GameManager : MonoBehaviour {
             default: return dirtPrefab;
         }
     }
+
+    public void SpawnBookCollectable(Vector3 position) {
+        GameObject book = Instantiate(bookPrefab, position, Quaternion.identity) as GameObject;
+        book.transform.SetParent(transform.Find("/Collectables"));
+    }
+
 }

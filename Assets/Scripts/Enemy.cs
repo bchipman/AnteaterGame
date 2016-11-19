@@ -29,7 +29,6 @@ public class Enemy : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        if (gameObject.name.StartsWith("Bear")) {
             float playerX = player.transform.position.x;
             float distToPlayer = Mathf.Abs(playerX - transform.position.x);
             animator.SetFloat("DistToPlayer", distToPlayer);
@@ -52,14 +51,13 @@ public class Enemy : MonoBehaviour {
             }
             animator.SetBool("CanSeePlayer", bearCanSeePlayer);
 
-        }
         if (direction * GetComponent<Rigidbody2D>().velocity.x < maxSpeed) {
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * direction * moveForce);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D coll) {
-        if (coll.gameObject.layer != LayerMask.NameToLayer("EnemyLayer") && alreadyHitFloor) {
+        if (coll.gameObject.layer != LayerMask.NameToLayer("InvisibleLayer") && alreadyHitFloor) {
             direction *= -1;
             spriteRenderer.flipX = !spriteRenderer.flipX;
             if (direction > 0) {

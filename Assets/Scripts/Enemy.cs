@@ -5,7 +5,7 @@ public class Enemy : MonoBehaviour {
 
     private bool alreadySpawnedCollectable = false;
     private bool stopMoving = false;
-    private int direction = 1;
+    public int direction = 1;
     private bool alreadyHitFloor = false;
     private float maxSpeed = 2f;
     private float moveForce = 10f;
@@ -25,9 +25,6 @@ public class Enemy : MonoBehaviour {
         animator = GetComponent<Animator>();
         spawnPoint = transform.position;
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("EnemyLayer"), LayerMask.NameToLayer("EnemyLayer"), true);
-        if (gameObject.name.StartsWith("Bear")) {
-            direction *= -1;
-        }
     }
 
     void FixedUpdate() {
@@ -61,7 +58,7 @@ public class Enemy : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D coll) {
-        if (coll.gameObject.layer != LayerMask.NameToLayer("EnemyLayer") && alreadyHitFloor) {
+        if (coll.gameObject.layer == LayerMask.NameToLayer("InvisibleWallLayer") && alreadyHitFloor) {
             direction *= -1;
             spriteRenderer.flipX = !spriteRenderer.flipX;
             if (direction > 0) {

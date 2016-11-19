@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
+    private bool alreadySpawnedCollectable = false;
+    private bool stopMoving = false;
     private int direction = 1;
     private bool alreadyHitFloor = false;
     private float maxSpeed = 2f;
@@ -53,7 +55,7 @@ public class Enemy : MonoBehaviour {
             animator.SetBool("CanSeePlayer", bearCanSeePlayer);
 
         }
-        if (direction * GetComponent<Rigidbody2D>().velocity.x < maxSpeed) {
+        if (direction * GetComponent<Rigidbody2D>().velocity.x < maxSpeed && !stopMoving) {
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * direction * moveForce);
         }
     }
@@ -81,7 +83,14 @@ public class Enemy : MonoBehaviour {
 
     public void Die() {
         audioSource.Play();
-        gameManager.SpawnBookCollectable(transform.position);
+        if (!alreadySpawnedCollectable) {
+            gameManager.SpawnBookCollectable(transform.position);
+            alreadySpawnedCollectable = true;
+        }
+        if (gameObject.name.StartsWith("Bear")) {
+            animator.SetBool("GettingEaten", true);
+            stopMoving = true;
+        }
         Destroy(GetComponent<BoxCollider2D>());
         Destroy(GetComponent<CircleCollider2D>());
         StartCoroutine(DestroyTimer());

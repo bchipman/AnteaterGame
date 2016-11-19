@@ -23,9 +23,6 @@ public class Enemy : MonoBehaviour {
         animator = GetComponent<Animator>();
         spawnPoint = transform.position;
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("EnemyLayer"), LayerMask.NameToLayer("EnemyLayer"), true);
-        if (gameObject.name.StartsWith("Bear")) {
-            direction *= -1;
-        }
     }
 
     void FixedUpdate() {
@@ -36,7 +33,7 @@ public class Enemy : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D coll) {
-        if (coll.gameObject.layer == LayerMask.NameToLayer("InvisibleLayer") && alreadyHitFloor) {
+        if (coll.gameObject.layer == LayerMask.NameToLayer("InvisibleWallLayer") && alreadyHitFloor) {
             direction *= -1;
             spriteRenderer.flipX = !spriteRenderer.flipX;
             if (direction > 0) {

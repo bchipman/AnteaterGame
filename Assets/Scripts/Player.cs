@@ -116,19 +116,10 @@ public class Player : MonoBehaviour {
             StartCoroutine(JumpedRecentlyTimer());
             jump = false;
             animator.SetTrigger("Jump");
-//            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce));
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce));
 
             // Nick's jump-to-specific-height-but-no-further code, modified slightly
-            float jumpHeight = GetMouseWorldPosition().y - GetComponent<Rigidbody2D>().position.y;
-            jumpHeight = jumpHeight > maxJumpHeight ? maxJumpHeight : jumpHeight;  // cap the max height player can jump
-            yJumpTarget = transform.position.y + jumpHeight;  // for debug line drawing
-            float jumpForce = Mathf.Sqrt(2f * Physics2D.gravity.magnitude * GetComponent<Rigidbody2D>().gravityScale * jumpHeight) * GetComponent<Rigidbody2D>().mass;
-            if (jumpForce > 0) {
-                //the jumpForce can NaN if negative since Mathf.sqrt is used
-                //check if the force returned is positive otherwise
-                //the program will crash. -Nick
-                GetComponent<Rigidbody2D>().AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-            }
+            
 
         }
 		if (sprint && grounded) {

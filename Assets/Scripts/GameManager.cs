@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour {
         closeButton.onClick.AddListener(LoadTitleScreen);
         StartCoroutine(CheckProjectileTimer());
     }
-	
+
 	private void Update () {
         timeText.text = "Time: " + Time.realtimeSinceStartup.ToString("000.");
         deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
@@ -40,6 +40,14 @@ public class GameManager : MonoBehaviour {
         fpsText.fontSize = h * 5 / 100;  // 5% of screen height
         scoreText.fontSize = h * 5 / 100;  // 5% of screen height
         timeText.fontSize = h * 5 / 100;  // 5% of screen height
+        deathText.fontSize = h * 5 / 100;  // 5% of screen height
+
+        closeButton.GetComponent<RectTransform>().sizeDelta = new Vector2(h * 12 / 100, h * 12 / 100);
+        closeButton.GetComponent<RectTransform>().anchorMin = new Vector2(1f,1f);
+        closeButton.GetComponent<RectTransform>().anchorMax = new Vector2(1f,1f);
+        Vector2 size = closeButton.GetComponent<RectTransform>().sizeDelta;
+        Vector2 halfSize = new Vector2(-1*size.x/2, -1*size.y/2);
+        closeButton.GetComponent<RectTransform>().anchoredPosition = halfSize;
 
         float msec = deltaTime * 1000.0f;
         float fps = 1.0f / deltaTime;

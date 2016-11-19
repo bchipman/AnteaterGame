@@ -1,9 +1,7 @@
 //CameraController with junk debug line drawing code.
 
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 
 public class CameraController : MonoBehaviour {
 

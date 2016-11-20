@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D coll) {
-        if (coll.gameObject.layer == LayerMask.NameToLayer("InvisibleWallLayer") && alreadyHitFloor) {
+        if (alreadyHitFloor && (coll.gameObject.layer == LayerMask.NameToLayer("InvisibleWallLayer") || coll.gameObject.name == "Player")) {
             direction *= -1;
             spriteRenderer.flipX = !spriteRenderer.flipX;
             if (direction > 0) {

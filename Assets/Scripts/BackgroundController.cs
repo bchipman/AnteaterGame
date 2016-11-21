@@ -7,7 +7,8 @@ public class BackgroundController : MonoBehaviour {
     private SpriteRenderer spriteRendererSky0;
     private SpriteRenderer spriteRendererSky1;
     private SpriteRenderer spriteRendererSky2;
-    private const float yVal = 10.1f;
+//    private const float yVal = 10.1f;
+    private const float yVal = 12f;
 
 	void Start () {
         spriteRendererSky0 = transform.Find("/Environment/Sky/Sky0").gameObject.GetComponent<SpriteRenderer>();

@@ -98,7 +98,7 @@ public class Player : MonoBehaviour {
             mousePositionQueue.Enqueue(new List<float> { time, yMousePosNow });
             if (mousePositionQueue.Count >= 5) {  // 5 = 500ms,  10 = 1sec
                 yMouseVelocityInLastSec = yMousePosNow - mousePositionQueue.Dequeue()[1];
-                if (grounded && clickDraggingPlayer && yMouseVelocityInLastSec > 25) {  // some arbitrary threshold
+                if (grounded && clickDraggingPlayer && yMouseVelocityInLastSec > 125) {  // some arbitrary threshold
                         jump = true;
                 }
             }

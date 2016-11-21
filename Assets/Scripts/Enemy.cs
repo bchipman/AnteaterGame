@@ -99,18 +99,8 @@ public class Enemy : MonoBehaviour {
         if (gameObject.name.StartsWith("Bear") || gameObject.name.StartsWith("Bobcat")) {
             animator.SetBool("GettingEaten", true);
         }
-<<<<<<< HEAD
 		RemoveColliders ();
-=======
-        if (gameObject.name.StartsWith("Slug")) {
-            foreach (BoxCollider2D coll in GetComponents<BoxCollider2D>()) {
-                Destroy(coll);
-            }
-            foreach (CircleCollider2D coll in GetComponents<CircleCollider2D>()) {
-                Destroy(coll);
-            }
-        }
->>>>>>> origin/master
+       
         StartCoroutine(DestroyTimer());
     }
 

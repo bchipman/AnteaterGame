@@ -128,6 +128,9 @@ public class Player : MonoBehaviour {
 		if (!sprint && grounded) {
 			MaxSpeedX = 5f;
 		}
+        if (clickDraggingPlayer) {
+            MaxSpeedX = 10f;
+        }
         // Respawn if fallen off the world
         if (transform.position.y <= -10) {
             Respawn();

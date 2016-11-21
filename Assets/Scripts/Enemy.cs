@@ -15,7 +15,6 @@ public class Enemy : MonoBehaviour {
     private Player player;
     private AudioSource audioSource;
     private GameManager gameManager;
-
     private bool debugAnimationToggleOn = false;
 
     void Start() {
@@ -80,18 +79,8 @@ public class Enemy : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D coll) {
         if (alreadyHitFloor && (coll.gameObject.layer == LayerMask.NameToLayer("InvisibleWallLayer") || coll.gameObject.layer == LayerMask.NameToLayer("WallLayer") || coll.gameObject.name == "Player")) {
             direction *= -1;
-//            spriteRenderer.flipX = !spriteRenderer.flipX;
             Vector3 currScale = gameObject.transform.localScale;
             gameObject.transform.localScale = new Vector3(-1 * currScale.x, currScale.y, currScale.z);
-//            if (direction > 0) {
-//                if (GetComponent<CircleCollider2D>() != null) {
-//                    GetComponent<CircleCollider2D>().offset = new Vector2(0.02f, 0f);
-//                }
-//            } else if (direction < 0) {
-//                if (GetComponent<CircleCollider2D>() != null) {
-//                    GetComponent<CircleCollider2D>().offset = new Vector2(-0.02f, 0f);
-//                }
-//            }
         }
         alreadyHitFloor = true;
     }

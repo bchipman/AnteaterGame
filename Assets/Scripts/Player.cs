@@ -294,8 +294,8 @@ public class Player : MonoBehaviour {
 	private void OnCollisionEnter2D(Collision2D coll) {
 		if (currentHealth > 0) {
 			if (coll.gameObject.layer == LayerMask.NameToLayer ("EnemyLayer")) {
-				if(coll.gameObject.GetComponent<Collider2D>().bounds.max.y <= gameObject.GetComponent<Collider2D>().bounds.min.y){
-					GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce) * 1.5f);
+				if(coll.gameObject.GetComponent<BoxCollider2D>().bounds.max.y <= gameObject.GetComponent<Collider2D>().bounds.min.y){
+					GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce));
 					Enemy other = (Enemy) coll.gameObject.GetComponent(typeof(Enemy));
 					other.Die();
 				}else{

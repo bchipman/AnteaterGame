@@ -4,21 +4,61 @@ using UnityEngine.UI;
 
 public class TitleScreenManager: MonoBehaviour {
 
-    private Button playButton;
-	private bool isMuted = false;
-	private Toggle muted;
+    private Toggle mutedToggle;
+    private Text titleText;
+    private RectTransform anteaterImageRectTransform;
 
-	public GameObject mainMenuHolder;
+    public GameObject mainMenuHolder;
 	public GameObject optionsMenuHolder;
 
 	private void Start () {
-        playButton = GameObject.Find("PlayButton").GetComponent<Button>();
-        playButton.onClick.AddListener(LoadLevel1);
-
-		//AudioListener.volume = 0; //works to turn off sound automatically
+        titleText = GameObject.Find("TitleText").GetComponent<Text>();
+	    anteaterImageRectTransform = GameObject.Find("AnteaterImage").GetComponent<RectTransform>();
     }
-	
-    private void LoadLevel1() {
+
+    private void OnGUI() {
+        int w = Screen.width, h = Screen.height;
+        int smallSize = 12;
+        int largeSize = 15;
+
+        titleText.fontSize = h * largeSize / 100;
+        titleText.GetComponent<RectTransform>().sizeDelta = new Vector2(w, h * 20 / 100f);
+        Vector2 titleTextSize = titleText.GetComponent<RectTransform>().sizeDelta;
+        Vector2 titleTextHalfSize = new Vector2(0, -1 * titleTextSize.y / 2);
+        titleText.GetComponent<RectTransform>().anchoredPosition = titleTextHalfSize;
+        titleText.GetComponent<RectTransform>().offsetMin = new Vector2(0, titleText.GetComponent<RectTransform>().offsetMin.y);
+        titleText.GetComponent<RectTransform>().offsetMax = new Vector2(0, titleText.GetComponent<RectTransform>().offsetMax.y);
+
+        anteaterImageRectTransform.localScale = new Vector2(1,1);
+        anteaterImageRectTransform.sizeDelta = new Vector2(w, h * 90/100);
+
+        GameObject playButtonObj = GameObject.Find("PlayButton");
+        if (playButtonObj != null) {
+            Button playButton = playButtonObj.GetComponent<Button>();
+            playButton.GetComponent<RectTransform>().sizeDelta = new Vector2(w * 65 / 100f, h * 15 / 100f);
+            playButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -1 * h * 60 / 100f);
+            playButtonObj.GetComponentInChildren<Text>().fontSize = h * smallSize / 100;
+        }
+
+        GameObject optionsButtonObj = GameObject.Find("OptionsButton");
+        if (optionsButtonObj != null) {
+            Button optionsButton = optionsButtonObj.GetComponent<Button>();
+            optionsButton.GetComponent<RectTransform>().sizeDelta = new Vector2(w * 65 / 100f, h * 15 / 100f);
+            optionsButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -1 * h * 80 / 100f);
+            optionsButtonObj.GetComponentInChildren<Text>().fontSize = h * smallSize / 100;
+        }
+
+        GameObject backButtonObj = GameObject.Find("BackButton");
+        if (backButtonObj != null) {
+            Button backButton = backButtonObj.GetComponent<Button>();
+            backButton.GetComponent<RectTransform>().sizeDelta = new Vector2(w * 65 / 100f, h * 15 / 100f);
+            backButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -1 * h * 80 / 100f);
+            backButtonObj.GetComponentInChildren<Text>().fontSize = h * smallSize / 100;
+        }
+    }
+
+
+    public void LoadLevel1() {
         SceneManager.LoadScene("Level1");
     }
 
@@ -26,9 +66,9 @@ public class TitleScreenManager: MonoBehaviour {
 		mainMenuHolder.SetActive (false);
 		optionsMenuHolder.SetActive (true);
 
-		muted = GameObject.Find ("/Canvas/OptionsMenu/MuteToggle").GetComponent<Toggle> ();
-		muted.enabled = true;
-		muted.onValueChanged.AddListener (ToggleSound);
+		mutedToggle = GameObject.Find ("/Canvas/OptionsMenu/MuteToggle").GetComponent<Toggle> ();
+		mutedToggle.enabled = true;
+		mutedToggle.onValueChanged.AddListener (ToggleSound);
 	}
 
 	public void MainMenu() {

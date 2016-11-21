@@ -37,17 +37,24 @@ public class GameManager : MonoBehaviour {
 
     private void OnGUI() {
         int w = Screen.width, h = Screen.height;
-        fpsText.fontSize = h * 5 / 100;  // 5% of screen height
-        scoreText.fontSize = h * 5 / 100;  // 5% of screen height
-        timeText.fontSize = h * 5 / 100;  // 5% of screen height
-        deathText.fontSize = h * 5 / 100;  // 5% of screen height
+        int smallSize = 7;
+        int largeSize = 20;
+//        int sz = 7;
 
+        fpsText.fontSize = h * smallSize / 100;  // 5% of screen height
+        scoreText.fontSize = h * smallSize / 100;  // 5% of screen height
+        timeText.fontSize = h * smallSize / 100;  // 5% of screen height
+        deathText.fontSize = h * largeSize / 100;  // 5% of screen height
+        
         closeButton.GetComponent<RectTransform>().sizeDelta = new Vector2(h * 12 / 100, h * 12 / 100);
         closeButton.GetComponent<RectTransform>().anchorMin = new Vector2(1f,1f);
         closeButton.GetComponent<RectTransform>().anchorMax = new Vector2(1f,1f);
         Vector2 size = closeButton.GetComponent<RectTransform>().sizeDelta;
         Vector2 halfSize = new Vector2(-1*size.x/2, -1*size.y/2);
         closeButton.GetComponent<RectTransform>().anchoredPosition = halfSize;
+
+        Text closeButtonText = GameObject.Find("CloseButton/Text").GetComponent<Text>();
+        closeButtonText.fontSize = h * 10 / 100;
 
         float msec = deltaTime * 1000.0f;
         float fps = 1.0f / deltaTime;

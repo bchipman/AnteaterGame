@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour {
     private Player player;
     private AudioSource audioSource;
     private GameManager gameManager;
+    private bool debugAnimationToggleOn = false;
 
     void Start() {
         audioSource = gameObject.AddComponent<AudioSource>();
@@ -27,8 +28,26 @@ public class Enemy : MonoBehaviour {
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("EnemyLayer"), LayerMask.NameToLayer("EnemyLayer"), true);
     }
 
+    void Update() {
+        if (gameObject.name.StartsWith("Bobcat") || gameObject.name.StartsWith("Bear")) {
+            if (Input.GetKeyDown(KeyCode.F10)) {
+                Vector3 currScale = gameObject.transform.localScale;
+                gameObject.transform.localScale = new Vector3(-1*currScale.x, currScale.y, currScale.z);
+            }
+
+            if (Input.GetKeyDown(KeyCode.F11)) {
+                stopMoving = !stopMoving;
+            }
+
+            if (Input.GetKeyDown(KeyCode.F12)) {
+                debugAnimationToggleOn = !debugAnimationToggleOn;
+                animator.SetBool("GettingEaten", debugAnimationToggleOn);
+            }
+        }
+    }
+
     void FixedUpdate() {
-        if (gameObject.name.StartsWith("Bear")) {
+        if (gameObject.name.StartsWith("Bear") || gameObject.name.StartsWith("Bobcat")) {
             float playerX = player.transform.position.x;
             float distToPlayer = Mathf.Abs(playerX - transform.position.x);
             animator.SetFloat("DistToPlayer", distToPlayer);
@@ -58,18 +77,10 @@ public class Enemy : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D coll) {
-        if (coll.gameObject.layer == LayerMask.NameToLayer("InvisibleWallLayer") && alreadyHitFloor) {
+        if (alreadyHitFloor && (coll.gameObject.layer == LayerMask.NameToLayer("InvisibleWallLayer") || coll.gameObject.layer == LayerMask.NameToLayer("WallLayer") || coll.gameObject.name == "Player")) {
             direction *= -1;
-            spriteRenderer.flipX = !spriteRenderer.flipX;
-            if (direction > 0) {
-                if (GetComponent<CircleCollider2D>() != null) {
-                    GetComponent<CircleCollider2D>().offset = new Vector2(0.02f, 0f);
-                }
-            } else if (direction < 0) {
-                if (GetComponent<CircleCollider2D>() != null) {
-                    GetComponent<CircleCollider2D>().offset = new Vector2(-0.02f, 0f);
-                }
-            }
+            Vector3 currScale = gameObject.transform.localScale;
+            gameObject.transform.localScale = new Vector3(-1 * currScale.x, currScale.y, currScale.z);
         }
         alreadyHitFloor = true;
     }
@@ -80,15 +91,26 @@ public class Enemy : MonoBehaviour {
 
     public void Die() {
         audioSource.Play();
+        stopMoving = true;
         if (!alreadySpawnedCollectable) {
             gameManager.SpawnBookCollectable(transform.position);
             alreadySpawnedCollectable = true;
         }
-        if (gameObject.name.StartsWith("Bear")) {
+        if (gameObject.name.StartsWith("Bear") || gameObject.name.StartsWith("Bobcat")) {
             animator.SetBool("GettingEaten", true);
-            stopMoving = true;
         }
+<<<<<<< HEAD
 		RemoveColliders ();
+=======
+        if (gameObject.name.StartsWith("Slug")) {
+            foreach (BoxCollider2D coll in GetComponents<BoxCollider2D>()) {
+                Destroy(coll);
+            }
+            foreach (CircleCollider2D coll in GetComponents<CircleCollider2D>()) {
+                Destroy(coll);
+            }
+        }
+>>>>>>> origin/master
         StartCoroutine(DestroyTimer());
     }
 

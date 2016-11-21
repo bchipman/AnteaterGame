@@ -7,8 +7,8 @@ public class CameraController : MonoBehaviour {
 
     public GameObject player;
     public List<GameObject> lines;
-    private float minX = 0f;
-    private float minY = 0f;
+    private float minX = 8.5f;
+    private float minY = 3f;
     private float xAdj = 2f;  // Adjustment from center; keeps player at ~40% of horizontal distance of screen instead of dead center
 
     private void Start() {
@@ -58,7 +58,7 @@ public class CameraController : MonoBehaviour {
 
         Vector3 jumpHeightLineStart = new Vector3(-100, player.GetComponent<Player>().yJumpTarget, -1f);
         Vector3 jumpHeightLineEnd = new Vector3(100, player.GetComponent<Player>().yJumpTarget, -1f);
-        DrawLine(3, jumpHeightLineStart, jumpHeightLineEnd, Color.red);
+//        DrawLine(3, jumpHeightLineStart, jumpHeightLineEnd, Color.red);
 
     }
 

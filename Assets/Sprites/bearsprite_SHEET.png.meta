@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0697f130a3a3b7249b7cdfc0b29842f1
-timeCreated: 1479512995
+timeCreated: 1479722431
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -72,7 +72,7 @@ TextureImporter:
         serializedVersion: 2
         x: 8
         y: 328
-        width: 90
+        width: 93
         height: 61
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -85,8 +85,8 @@ TextureImporter:
         serializedVersion: 2
         x: 104
         y: 329
-        width: 90
-        height: 59
+        width: 93
+        height: 61
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -98,7 +98,7 @@ TextureImporter:
         serializedVersion: 2
         x: 200
         y: 328
-        width: 90
+        width: 93
         height: 61
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -112,7 +112,7 @@ TextureImporter:
         x: 296
         y: 328
         width: 93
-        height: 60
+        height: 61
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,7 +124,7 @@ TextureImporter:
         serializedVersion: 2
         x: 8
         y: 248
-        width: 90
+        width: 93
         height: 61
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -137,8 +137,8 @@ TextureImporter:
         serializedVersion: 2
         x: 118
         y: 248
-        width: 92
-        height: 59
+        width: 93
+        height: 61
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,7 +150,7 @@ TextureImporter:
         serializedVersion: 2
         x: 49
         y: 151
-        width: 90
+        width: 93
         height: 61
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -164,9 +164,9 @@ TextureImporter:
         x: 192
         y: 151
         width: 163
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 61
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -177,9 +177,9 @@ TextureImporter:
         x: 367
         y: 151
         width: 163
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 61
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -190,9 +190,9 @@ TextureImporter:
         x: 542
         y: 151
         width: 163
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 61
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -201,11 +201,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 18
-        y: 35
+        y: 36
         width: 163
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 61
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -214,11 +214,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 191
-        y: 35
+        y: 36
         width: 163
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 61
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -227,11 +227,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 367
-        y: 35
+        y: 36
         width: 163
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 61
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -240,11 +240,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 542
-        y: 35
+        y: 36
         width: 163
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 61
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

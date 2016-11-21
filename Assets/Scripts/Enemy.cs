@@ -30,17 +30,10 @@ public class Enemy : MonoBehaviour {
     }
 
     void Update() {
-        if (gameObject.name.StartsWith("Bobcat")) {
+        if (gameObject.name.StartsWith("Bobcat") || gameObject.name.StartsWith("Bear")) {
             if (Input.GetKeyDown(KeyCode.F10)) {
-//                spriteRenderer.flipX = !spriteRenderer.flipX;
-
-//                Debug.Log(spriteRenderer.bounds.center + "  " + spriteRenderer.bounds.extents);
-//                spriteRenderer.sprite.
                 Vector3 currScale = gameObject.transform.localScale;
                 gameObject.transform.localScale = new Vector3(-1*currScale.x, currScale.y, currScale.z);
-
-
-
             }
 
             if (Input.GetKeyDown(KeyCode.F11)) {
@@ -90,15 +83,15 @@ public class Enemy : MonoBehaviour {
 //            spriteRenderer.flipX = !spriteRenderer.flipX;
             Vector3 currScale = gameObject.transform.localScale;
             gameObject.transform.localScale = new Vector3(-1 * currScale.x, currScale.y, currScale.z);
-            if (direction > 0) {
-                if (GetComponent<CircleCollider2D>() != null) {
-                    GetComponent<CircleCollider2D>().offset = new Vector2(0.02f, 0f);
-                }
-            } else if (direction < 0) {
-                if (GetComponent<CircleCollider2D>() != null) {
-                    GetComponent<CircleCollider2D>().offset = new Vector2(-0.02f, 0f);
-                }
-            }
+//            if (direction > 0) {
+//                if (GetComponent<CircleCollider2D>() != null) {
+//                    GetComponent<CircleCollider2D>().offset = new Vector2(0.02f, 0f);
+//                }
+//            } else if (direction < 0) {
+//                if (GetComponent<CircleCollider2D>() != null) {
+//                    GetComponent<CircleCollider2D>().offset = new Vector2(-0.02f, 0f);
+//                }
+//            }
         }
         alreadyHitFloor = true;
     }

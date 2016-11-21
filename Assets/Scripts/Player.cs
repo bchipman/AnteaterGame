@@ -98,7 +98,7 @@ public class Player : MonoBehaviour {
             mousePositionQueue.Enqueue(new List<float> { time, yMousePosNow });
             if (mousePositionQueue.Count >= 5) {  // 5 = 500ms,  10 = 1sec
                 yMouseVelocityInLastSec = yMousePosNow - mousePositionQueue.Dequeue()[1];
-                if (grounded && clickDraggingPlayer && yMouseVelocityInLastSec > 25) {  // some arbitrary threshold
+                if (grounded && clickDraggingPlayer && yMouseVelocityInLastSec > 125) {  // some arbitrary threshold
                         jump = true;
                 }
             }
@@ -142,13 +142,13 @@ public class Player : MonoBehaviour {
 
     private void OnMouseDown() {
         clickDraggingPlayer = true;
-        spriteRenderer.color = Color.red;
+//        spriteRenderer.color = Color.red;
         mousePositionWhenClickedPlayer = Input.mousePosition;
     }
 
     private void OnMouseUp() {
         clickDraggingPlayer = false;
-        spriteRenderer.color = Color.white;
+//        spriteRenderer.color = Color.white;
     }
 
     private void Move(int h) {
@@ -295,10 +295,13 @@ public class Player : MonoBehaviour {
 		if (currentHealth > 0) {
 			if (coll.gameObject.layer == LayerMask.NameToLayer ("EnemyLayer")) {
 				if(coll.gameObject.GetComponent<Collider2D>().bounds.max.y <= gameObject.GetComponent<Collider2D>().bounds.min.y){
-					GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce) * 1.5f);
+				    if (!jumpedRecently) {
+                        GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce) * 1.25f);
+                        StartCoroutine(JumpedRecentlyTimer());
+                    }
 					Enemy other = (Enemy) coll.gameObject.GetComponent(typeof(Enemy));
 					other.Die();
-				}else{
+				} else{
 					currentHealth--;
 					transform.Find ("/Player/HealthBar/GreenHealthBarBox").localScale = new Vector3 ((float)currentHealth / maxHealth, 0.55f, 0);
 					if (currentHealth <= 0) {

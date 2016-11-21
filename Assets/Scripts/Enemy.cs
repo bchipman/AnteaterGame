@@ -91,16 +91,22 @@ public class Enemy : MonoBehaviour {
 
     public void Die() {
         audioSource.Play();
+        stopMoving = true;
         if (!alreadySpawnedCollectable) {
             gameManager.SpawnBookCollectable(transform.position);
             alreadySpawnedCollectable = true;
         }
         if (gameObject.name.StartsWith("Bear") || gameObject.name.StartsWith("Bobcat")) {
             animator.SetBool("GettingEaten", true);
-            stopMoving = true;
         }
-        Destroy(GetComponent<BoxCollider2D>());
-//        Destroy(GetComponent<CircleCollider2D>());
+        if (gameObject.name.StartsWith("Slug")) {
+            foreach (BoxCollider2D coll in GetComponents<BoxCollider2D>()) {
+                Destroy(coll);
+            }
+            foreach (CircleCollider2D coll in GetComponents<CircleCollider2D>()) {
+                Destroy(coll);
+            }
+        }
         StartCoroutine(DestroyTimer());
     }
 

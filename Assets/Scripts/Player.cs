@@ -142,13 +142,13 @@ public class Player : MonoBehaviour {
 
     private void OnMouseDown() {
         clickDraggingPlayer = true;
-        spriteRenderer.color = Color.red;
+//        spriteRenderer.color = Color.red;
         mousePositionWhenClickedPlayer = Input.mousePosition;
     }
 
     private void OnMouseUp() {
         clickDraggingPlayer = false;
-        spriteRenderer.color = Color.white;
+//        spriteRenderer.color = Color.white;
     }
 
     private void Move(int h) {

@@ -5,32 +5,25 @@ using UnityEngine.UI;
 public class Collectable : MonoBehaviour {
 
     public GameManager gameManager;
-
-	public AudioClip Pickup_Coin3;
-	public AudioClip Xylo_13;
-	private AudioSource playerAS;
+	private AudioSource audioSource;
     private bool collected = false;
+
 
     private void Awake() {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-		playerAS = GetComponent<AudioSource> ();
+		audioSource = GetComponent<AudioSource> ();
     }
 
     private void OnTriggerEnter2D(Collider2D coll) {
-        if (coll.name == "Player" || coll.name == "SideCollisionCheck") {
-			if (gameObject.name.StartsWith ("Coin")) {
-				//playerAS.clip = Pickup_Coin3;
-				//playerAS.PlayOneShot(Pickup_Coin3);
-				playerAS.Play();
-			}
-			if (gameObject.name.StartsWith ("Book")) {
-				playerAS.Play ();
-			}
-			GetComponent<SpriteRenderer>().enabled = false;
-			StartCoroutine (DestroyTimer ());
-            if (!collected) {
-                gameManager.IncrementScore();
-                collected = true;
+        if (!collected) {
+            if (coll.name == "Player" || coll.name == "SideCollisionCheck") {
+                if (gameObject.name.StartsWith("Coin") || gameObject.name.StartsWith("Book")) {
+                    audioSource.Play();
+                    gameManager.IncrementScore();
+                    collected = true;
+                }
+                GetComponent<SpriteRenderer>().enabled = false;
+                StartCoroutine(DestroyTimer());
             }
         }
     }

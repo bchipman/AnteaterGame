@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour {
     private AudioSource audioSource;
     private GameManager gameManager;
 
+    private bool debugAnimationToggleOn = false;
+
     void Start() {
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = Resources.Load("enemyDead") as AudioClip;
@@ -25,6 +27,31 @@ public class Enemy : MonoBehaviour {
         animator = GetComponent<Animator>();
         spawnPoint = transform.position;
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("EnemyLayer"), LayerMask.NameToLayer("EnemyLayer"), true);
+    }
+
+    void Update() {
+        if (gameObject.name.StartsWith("Bobcat")) {
+            if (Input.GetKeyDown(KeyCode.F10)) {
+//                spriteRenderer.flipX = !spriteRenderer.flipX;
+
+//                Debug.Log(spriteRenderer.bounds.center + "  " + spriteRenderer.bounds.extents);
+//                spriteRenderer.sprite.
+                Vector3 currScale = gameObject.transform.localScale;
+                gameObject.transform.localScale = new Vector3(-1*currScale.x, currScale.y, currScale.z);
+
+
+
+            }
+
+            if (Input.GetKeyDown(KeyCode.F11)) {
+                stopMoving = !stopMoving;
+            }
+
+            if (Input.GetKeyDown(KeyCode.F12)) {
+                debugAnimationToggleOn = !debugAnimationToggleOn;
+                animator.SetBool("GettingEaten", debugAnimationToggleOn);
+            }
+        }
     }
 
     void FixedUpdate() {
@@ -58,9 +85,11 @@ public class Enemy : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D coll) {
-        if (alreadyHitFloor && (coll.gameObject.layer == LayerMask.NameToLayer("InvisibleWallLayer") || coll.gameObject.name == "Player")) {
+        if (alreadyHitFloor && (coll.gameObject.layer == LayerMask.NameToLayer("InvisibleWallLayer") || coll.gameObject.layer == LayerMask.NameToLayer("WallLayer") || coll.gameObject.name == "Player")) {
             direction *= -1;
-            spriteRenderer.flipX = !spriteRenderer.flipX;
+//            spriteRenderer.flipX = !spriteRenderer.flipX;
+            Vector3 currScale = gameObject.transform.localScale;
+            gameObject.transform.localScale = new Vector3(-1 * currScale.x, currScale.y, currScale.z);
             if (direction > 0) {
                 if (GetComponent<CircleCollider2D>() != null) {
                     GetComponent<CircleCollider2D>().offset = new Vector2(0.02f, 0f);

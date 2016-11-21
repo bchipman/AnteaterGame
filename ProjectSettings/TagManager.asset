@@ -20,7 +20,7 @@ TagManager:
   - ObjectLayer
   - InvisibleWallLayer
   - CollectablePhysicsLayer
-  - 
+  - WallLayer
   - 
   - 
   - 

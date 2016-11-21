@@ -58,7 +58,7 @@ public class CameraController : MonoBehaviour {
 
         Vector3 jumpHeightLineStart = new Vector3(-100, player.GetComponent<Player>().yJumpTarget, -1f);
         Vector3 jumpHeightLineEnd = new Vector3(100, player.GetComponent<Player>().yJumpTarget, -1f);
-        DrawLine(3, jumpHeightLineStart, jumpHeightLineEnd, Color.red);
+//        DrawLine(3, jumpHeightLineStart, jumpHeightLineEnd, Color.red);
 
     }
 

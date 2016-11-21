@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        if (gameObject.name.StartsWith("Bear")) {
+        if (gameObject.name.StartsWith("Bear") || gameObject.name.StartsWith("Bobcat")) {
             float playerX = player.transform.position.x;
             float distToPlayer = Mathf.Abs(playerX - transform.position.x);
             animator.SetFloat("DistToPlayer", distToPlayer);
@@ -84,12 +84,12 @@ public class Enemy : MonoBehaviour {
             gameManager.SpawnBookCollectable(transform.position);
             alreadySpawnedCollectable = true;
         }
-        if (gameObject.name.StartsWith("Bear")) {
+        if (gameObject.name.StartsWith("Bear") || gameObject.name.StartsWith("Bobcat")) {
             animator.SetBool("GettingEaten", true);
             stopMoving = true;
         }
         Destroy(GetComponent<BoxCollider2D>());
-        Destroy(GetComponent<CircleCollider2D>());
+//        Destroy(GetComponent<CircleCollider2D>());
         StartCoroutine(DestroyTimer());
     }
 

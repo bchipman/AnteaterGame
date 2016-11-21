@@ -1465,7 +1465,7 @@ GameObject:
   - 4: {fileID: 389319341}
   - 212: {fileID: 389319340}
   m_Layer: 0
-  m_Name: Sky1
+  m_Name: Background1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2062,7 +2062,7 @@ GameObject:
   - 4: {fileID: 576334419}
   - 114: {fileID: 576334420}
   m_Layer: 0
-  m_Name: Sky
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5373,7 +5373,7 @@ GameObject:
   - 4: {fileID: 1509038359}
   - 212: {fileID: 1509038360}
   m_Layer: 0
-  m_Name: Sky0
+  m_Name: Background0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7461,7 +7461,7 @@ GameObject:
   - 4: {fileID: 1949334333}
   - 212: {fileID: 1949334334}
   m_Layer: 0
-  m_Name: Sky2
+  m_Name: Background2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

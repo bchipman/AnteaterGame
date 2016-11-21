@@ -88,10 +88,15 @@ public class Enemy : MonoBehaviour {
             animator.SetBool("GettingEaten", true);
             stopMoving = true;
         }
-        Destroy(GetComponent<BoxCollider2D>());
-        Destroy(GetComponent<CircleCollider2D>());
+		RemoveColliders ();
         StartCoroutine(DestroyTimer());
     }
+
+	private void RemoveColliders(){
+		var allcolliders = GetComponentsInChildren<Collider2D> ();
+		foreach (var childCollider in allcolliders)
+			Destroy (childCollider);
+	}
 
     private IEnumerator DestroyTimer() {
         yield return new WaitForSeconds(3);

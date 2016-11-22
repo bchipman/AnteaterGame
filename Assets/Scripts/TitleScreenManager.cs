@@ -20,42 +20,42 @@ public class TitleScreenManager: MonoBehaviour {
 
     private void OnGUI() {
         int w = Screen.width, h = Screen.height;
-        int smallSize = 12;
-        int largeSize = 15;
+        float smallSize = 0.12f;
+        float largeSize = 0.15f;
 
-        titleText.fontSize = h * largeSize / 100;
-        titleText.GetComponent<RectTransform>().sizeDelta = new Vector2(w, h * 20 / 100f);
+        titleText.fontSize = Mathf.RoundToInt(h * largeSize);
+        titleText.GetComponent<RectTransform>().sizeDelta = new Vector2(w, h * 0.2f);
         Vector2 titleTextSize = titleText.GetComponent<RectTransform>().sizeDelta;
         Vector2 titleTextHalfSize = new Vector2(0, -1 * titleTextSize.y / 2);
         titleText.GetComponent<RectTransform>().anchoredPosition = titleTextHalfSize;
         titleText.GetComponent<RectTransform>().offsetMin = new Vector2(0, titleText.GetComponent<RectTransform>().offsetMin.y);
         titleText.GetComponent<RectTransform>().offsetMax = new Vector2(0, titleText.GetComponent<RectTransform>().offsetMax.y);
 
-        anteaterImageRectTransform.localScale = new Vector2(1,1);
-        anteaterImageRectTransform.sizeDelta = new Vector2(w, h * 90/100);
+        anteaterImageRectTransform.localScale = new Vector2(1, 1);
+        anteaterImageRectTransform.sizeDelta = new Vector2(w, h * 0.9f);
 
         GameObject playButtonObj = GameObject.Find("PlayButton");
         if (playButtonObj != null) {
             Button playButton = playButtonObj.GetComponent<Button>();
-            playButton.GetComponent<RectTransform>().sizeDelta = new Vector2(w * 65 / 100f, h * 15 / 100f);
-            playButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -1 * h * 60 / 100f);
-            playButtonObj.GetComponentInChildren<Text>().fontSize = h * smallSize / 100;
+            playButton.GetComponent<RectTransform>().sizeDelta = new Vector2(w * 0.65f, h * 0.15f);
+            playButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -1 * h * 0.6f);
+            playButtonObj.GetComponentInChildren<Text>().fontSize = Mathf.RoundToInt(h * smallSize);
         }
 
         GameObject optionsButtonObj = GameObject.Find("OptionsButton");
         if (optionsButtonObj != null) {
             Button optionsButton = optionsButtonObj.GetComponent<Button>();
-            optionsButton.GetComponent<RectTransform>().sizeDelta = new Vector2(w * 65 / 100f, h * 15 / 100f);
-            optionsButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -1 * h * 80 / 100f);
-            optionsButtonObj.GetComponentInChildren<Text>().fontSize = h * smallSize / 100;
+            optionsButton.GetComponent<RectTransform>().sizeDelta = new Vector2(w * 0.65f, h * 0.15f);
+            optionsButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -1 * h * 0.8f);
+            optionsButtonObj.GetComponentInChildren<Text>().fontSize = Mathf.RoundToInt(h * smallSize);
         }
 
         GameObject backButtonObj = GameObject.Find("BackButton");
         if (backButtonObj != null) {
             Button backButton = backButtonObj.GetComponent<Button>();
-            backButton.GetComponent<RectTransform>().sizeDelta = new Vector2(w * 65 / 100f, h * 15 / 100f);
-            backButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -1 * h * 80 / 100f);
-            backButtonObj.GetComponentInChildren<Text>().fontSize = h * smallSize / 100;
+            backButton.GetComponent<RectTransform>().sizeDelta = new Vector2(w * 0.65f, h * 0.15f);
+            backButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -1 * h * 0.8f);
+            backButtonObj.GetComponentInChildren<Text>().fontSize = Mathf.RoundToInt(h * smallSize);
         }
     }
 

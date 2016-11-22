@@ -21,6 +21,9 @@ public class Collectable : MonoBehaviour {
                     audioSource.Play();
                     gameManager.IncrementScore();
                     collected = true;
+                    if (gameObject.name.StartsWith("Book")) {
+                        gameManager.CollectedBook();
+                    }
                 }
                 GetComponent<SpriteRenderer>().enabled = false;
                 StartCoroutine(DestroyTimer());

@@ -61,6 +61,13 @@ public class GameManager : MonoBehaviour {
 
         //        string text = string.Format("{0:0.0} ms ({1:0.} fps)", msec, fps);
         fpsText.text = string.Format("FPS: {0:0.}", fps);
+
+        RectTransform[] imgRectTransArr = GameObject.Find("/Canvas/Circles").GetComponentsInChildren<RectTransform>();
+        for (int i = 1; i < imgRectTransArr.Length; i++) {
+            RectTransform imgRectTrans = imgRectTransArr[i];
+            imgRectTrans.sizeDelta = new Vector2(h * 0.1f, h * 0.1f);  // radius = 10% of screen height
+            imgRectTrans.anchoredPosition = new Vector2(w * 0.7f + ((i - 1) * imgRectTrans.sizeDelta.x) + ((i - 1) * 0.002f * h), h * -0.05f - 0.005f * h);  // 70% to right, 0.5% from top
+        }
     }
 
     public void IncrementScore() {

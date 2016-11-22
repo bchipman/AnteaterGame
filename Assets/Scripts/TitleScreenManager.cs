@@ -7,6 +7,7 @@ public class TitleScreenManager: MonoBehaviour {
     private Toggle mutedToggle;
     private Text titleText;
     private RectTransform anteaterImageRectTransform;
+    private TitleScreenState titleScreenState;
 
     public GameObject mainMenuHolder;
 	public GameObject optionsMenuHolder;
@@ -14,7 +15,8 @@ public class TitleScreenManager: MonoBehaviour {
 	private void Start () {
         titleText = GameObject.Find("TitleText").GetComponent<Text>();
 	    anteaterImageRectTransform = GameObject.Find("AnteaterImage").GetComponent<RectTransform>();
-    }
+	    titleScreenState = GameObject.Find("TitleScreenState").GetComponent<TitleScreenState>();
+	}
 
     private void OnGUI() {
         int w = Screen.width, h = Screen.height;
@@ -68,6 +70,7 @@ public class TitleScreenManager: MonoBehaviour {
 
 		mutedToggle = GameObject.Find ("/Canvas/OptionsMenu/MuteToggle").GetComponent<Toggle> ();
 		mutedToggle.enabled = true;
+	    mutedToggle.isOn = titleScreenState.isMuted;
 		mutedToggle.onValueChanged.AddListener (ToggleSound);
 	}
 
@@ -77,11 +80,13 @@ public class TitleScreenManager: MonoBehaviour {
 	}
 
 	public void ToggleSound(bool value) {
-		//isMuted = GameObject.Find ("MuteToggle").GetComponent<Toggle> ();
-		if (value)
-			AudioListener.volume = 0;
-		else
+	    if (value) {
+	        AudioListener.volume = 0;
+	        titleScreenState.isMuted = true;
+	    } else {
 			AudioListener.volume = 1;
+	        titleScreenState.isMuted = false;
+	    }
 	}
 
 	/*

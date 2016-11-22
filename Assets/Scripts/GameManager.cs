@@ -1,5 +1,8 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -62,11 +65,20 @@ public class GameManager : MonoBehaviour {
         //        string text = string.Format("{0:0.0} ms ({1:0.} fps)", msec, fps);
         fpsText.text = string.Format("FPS: {0:0.}", fps);
 
-        RectTransform[] imgRectTransArr = GameObject.Find("/Canvas/Circles").GetComponentsInChildren<RectTransform>();
-        for (int i = 1; i < imgRectTransArr.Length; i++) {
-            RectTransform imgRectTrans = imgRectTransArr[i];
-            imgRectTrans.sizeDelta = new Vector2(h * 0.1f, h * 0.1f);  // radius = 10% of screen height
-            imgRectTrans.anchoredPosition = new Vector2(w * 0.7f + ((i - 1) * imgRectTrans.sizeDelta.x) + ((i - 1) * 0.002f * h), h * -0.05f - 0.005f * h);  // 70% to right, 0.5% from top
+
+        int j = 0;
+        List<RectTransform> imgRectTransLi = new List<RectTransform>(GameObject.Find("/Canvas/Circles").GetComponentsInChildren<RectTransform>());
+        foreach (RectTransform imgRectTrans in imgRectTransLi) {
+            if (new Regex(@"Circle\d").IsMatch(imgRectTrans.name)) {
+                imgRectTrans.sizeDelta = new Vector2(h * 0.1f, h * 0.1f); // radius = 10% of screen height
+                imgRectTrans.anchoredPosition = new Vector2(w * 0.7f + (j * imgRectTrans.sizeDelta.x) + (j * 0.002f * h), h * -0.05f - 0.005f * h); // 70% to right, 0.5% from top
+                Transform bookTrans = imgRectTrans.transform.FindChild("Book");
+                if (bookTrans != null) {
+                    RectTransform bookRectTrans = bookTrans.GetComponent<RectTransform>();
+                    bookRectTrans.sizeDelta = new Vector2(w * 0.025f, w * 0.025f * 1.7f);
+                }
+                j++;
+            }
         }
     }
 

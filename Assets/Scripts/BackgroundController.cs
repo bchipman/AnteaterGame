@@ -7,6 +7,7 @@ public class BackgroundController : MonoBehaviour {
     private SpriteRenderer spriteRendererSky0;
     private SpriteRenderer spriteRendererSky1;
     private SpriteRenderer spriteRendererSky2;
+    private SpriteRenderer spriteRendererSky3;
 //    private const float yVal = 10.1f;
     private const float yVal = 12f;
 
@@ -14,12 +15,15 @@ public class BackgroundController : MonoBehaviour {
         spriteRendererSky0 = transform.Find("/Environment/Background/Background0").gameObject.GetComponent<SpriteRenderer>();
         spriteRendererSky1 = transform.Find("/Environment/Background/Background1").gameObject.GetComponent<SpriteRenderer>();
         spriteRendererSky2 = transform.Find("/Environment/Background/Background2").gameObject.GetComponent<SpriteRenderer>();
+        spriteRendererSky3 = transform.Find("/Environment/Background/Background3").gameObject.GetComponent<SpriteRenderer>();
         Bounds boundsSky0 = spriteRendererSky0.bounds;
         Bounds boundsSky1 = spriteRendererSky1.bounds;
         Bounds boundsSky2 = spriteRendererSky2.bounds;
+        Bounds boundsSky3 = spriteRendererSky3.bounds;
 
         // ahead
         spriteRendererSky2.transform.position = new Vector3(boundsSky1.max.x + boundsSky2.extents.x, yVal, 0);
+        spriteRendererSky3.transform.position = new Vector3(boundsSky2.max.x + boundsSky3.extents.x, yVal, 0);
 
         // behind
         boundsSky0 = spriteRendererSky0.bounds;

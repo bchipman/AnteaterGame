@@ -5,8 +5,9 @@ public class Enemy : MonoBehaviour {
 
     private bool alreadySpawnedCollectable = false;
     private bool stopMoving = false;
-    public int direction = 1;
     private bool alreadyHitFloor = false;
+    private bool dying = false;
+    public int direction = 1;
     private float maxSpeed = 2f;
     private float moveForce = 10f;
     private SpriteRenderer spriteRenderer;
@@ -16,8 +17,9 @@ public class Enemy : MonoBehaviour {
     private AudioSource audioSource;
     private GameManager gameManager;
     private bool debugAnimationToggleOn = false;
+    private float gettingEatenClipLength;
 
-    void Start() {
+    private void Start() {
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = Resources.Load("enemyDead") as AudioClip;
         gameManager = transform.Find("/GameManager").gameObject.GetComponent<GameManager>();
@@ -26,13 +28,28 @@ public class Enemy : MonoBehaviour {
         animator = GetComponent<Animator>();
         spawnPoint = transform.position;
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("EnemyLayer"), LayerMask.NameToLayer("EnemyLayer"), true);
+        SetAntsAnimClipLength();
     }
 
-    void Update() {
+    private void SetAntsAnimClipLength() {
+        if (gameObject.name.StartsWith("Bear") || gameObject.name.StartsWith("Bobcat")) {
+            AnimationClip[] animClips = animator.runtimeAnimatorController.animationClips;
+            foreach (var clip in animClips) {
+                if (clip.name.Contains("Eaten")) {
+                    gettingEatenClipLength = clip.length / animator.GetFloat("GettingEatenSpeed");
+                    Debug.Log(gettingEatenClipLength);
+                    break;
+                }
+            }
+        }
+    }
+
+    private void Update() {
         if (gameObject.name.StartsWith("Bobcat") || gameObject.name.StartsWith("Bear")) {
             if (Input.GetKeyDown(KeyCode.F10)) {
                 Vector3 currScale = gameObject.transform.localScale;
-                gameObject.transform.localScale = new Vector3(-1*currScale.x, currScale.y, currScale.z);
+                gameObject.transform.localScale = new Vector3(currScale.x, -1*currScale.y, currScale.z);
+                RemoveColliders();
             }
 
             if (Input.GetKeyDown(KeyCode.F11)) {
@@ -46,7 +63,7 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    void FixedUpdate() {
+    private void FixedUpdate() {
         if (gameObject.name.StartsWith("Bear") || gameObject.name.StartsWith("Bobcat")) {
             float playerX = player.transform.position.x;
             float distToPlayer = Mathf.Abs(playerX - transform.position.x);
@@ -77,7 +94,7 @@ public class Enemy : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D coll) {
-        if (alreadyHitFloor && (coll.gameObject.layer == LayerMask.NameToLayer("InvisibleWallLayer") || coll.gameObject.layer == LayerMask.NameToLayer("WallLayer") || coll.gameObject.name == "Player")) {
+        if (alreadyHitFloor && (coll.gameObject.layer == LayerMask.NameToLayer("InvisibleWallLayer") || coll.gameObject.layer == LayerMask.NameToLayer("WallLayer"))) {
             direction *= -1;
             Vector3 currScale = gameObject.transform.localScale;
             gameObject.transform.localScale = new Vector3(-1 * currScale.x, currScale.y, currScale.z);
@@ -90,17 +107,22 @@ public class Enemy : MonoBehaviour {
     }
 
     public void Die() {
+        if (dying) { return; }  // this method should only be called once
+        dying = true;
         audioSource.Play();
         stopMoving = true;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         if (!alreadySpawnedCollectable) {
             gameManager.SpawnBookCollectable(transform.position);
             alreadySpawnedCollectable = true;
         }
         if (gameObject.name.StartsWith("Bear") || gameObject.name.StartsWith("Bobcat")) {
             animator.SetBool("GettingEaten", true);
+            StartCoroutine(RemoveCollidersTimer());
+        } else {
+            RemoveColliders();
+            StartCoroutine(DestroyTimer());
         }
-        RemoveColliders();
-        StartCoroutine(DestroyTimer());
     }
 
     private void RemoveColliders() {
@@ -109,9 +131,17 @@ public class Enemy : MonoBehaviour {
             Destroy(childCollider);
     }
 
+    private IEnumerator RemoveCollidersTimer() {
+        yield return new WaitForSeconds(gettingEatenClipLength * 3);
+        Vector3 currScale = gameObject.transform.localScale;
+        gameObject.transform.localScale = new Vector3(currScale.x, -1 * currScale.y, currScale.z);
+        RemoveColliders();
+        StartCoroutine(DestroyTimer());
+    }
+
     private IEnumerator DestroyTimer() {
         yield return new WaitForSeconds(3);
-        Destroy(this);
+        Destroy(gameObject);
     }
 
 }

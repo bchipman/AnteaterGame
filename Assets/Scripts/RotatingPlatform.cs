@@ -4,9 +4,9 @@ using System.Collections;
 public class RotatingPlatform : MonoBehaviour {
 
 	private bool stopMoving = false;
-	public int direction = 1;
-	private float maxSpeed = 6f;
-	private float moveForce = 100f;
+	public int direction = -1;
+	public float maxSpeed = 48f;
+	private float moveForce = 1000f;
 
 	void Start() {
 
@@ -19,7 +19,7 @@ public class RotatingPlatform : MonoBehaviour {
 
 	void FixedUpdate() {
 		if (direction * GetComponent<Rigidbody2D>().angularVelocity < maxSpeed && !stopMoving) {
-			GetComponent<Rigidbody2D>().AddTorque(moveForce);
+			GetComponent<Rigidbody2D>().AddTorque(moveForce * direction);
 		}
 	}
 

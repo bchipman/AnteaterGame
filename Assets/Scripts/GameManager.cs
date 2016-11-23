@@ -126,4 +126,9 @@ public class GameManager : MonoBehaviour {
         book.transform.SetParent(transform.Find("/Collectables"));
     }
 
+	public void CheckForGameWin() {
+		Debug.Log ("here");
+		SceneManager.LoadSceneAsync ("EndScreen");
+	}
+
 }

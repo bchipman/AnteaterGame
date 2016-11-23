@@ -18,7 +18,6 @@ public class Enemy : MonoBehaviour {
     private GameManager gameManager;
     private bool alreadyHitFloor = false;
     private bool dying = false;
-    private bool alreadySpawnedCollectable = false;
     private bool debugAnimationToggleOn = false;
     private float gettingEatenClipLength;
 
@@ -41,7 +40,6 @@ public class Enemy : MonoBehaviour {
             foreach (var clip in animClips) {
                 if (clip.name.Contains("Eaten")) {
                     gettingEatenClipLength = clip.length / animator.GetFloat("GettingEatenSpeed");
-                    Debug.Log(gettingEatenClipLength);
                     break;
                 }
             }
@@ -128,20 +126,14 @@ public class Enemy : MonoBehaviour {
     public void Die() {
         if (dying) { return; }  // this method should only be called once
         dying = true;
-        audioSource.Play();
         dontMove = true;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        if (!alreadySpawnedCollectable) {
-            gameManager.SpawnBookCollectable(transform.position);
-            alreadySpawnedCollectable = true;
-        }
+        audioSource.Play();
+        gameManager.SpawnBookCollectable(transform.position);
         if (gameObject.name.StartsWith("Bear") || gameObject.name.StartsWith("Bobcat")) {
             animator.SetBool("GettingEaten", true);
-            if (!CanSeePlayer()) {
-                FlipX();
-            }
+            if (!CanSeePlayer()) { FlipX(); }
             StartCoroutine(RemoveCollidersTimer());
-
         } else {
             RemoveColliders();
             StartCoroutine(DestroyTimer());

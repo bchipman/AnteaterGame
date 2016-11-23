@@ -76,7 +76,6 @@ public class GameManager : MonoBehaviour {
             Transform bookTrans = rectTrans.transform.FindChild("Book");
             if (!bookTrans.gameObject.activeSelf) {
                 bookTrans.gameObject.SetActive(true);
-                Debug.Log("!!");
                 break;
             }
         }

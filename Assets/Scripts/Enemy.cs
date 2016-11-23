@@ -3,19 +3,22 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
-    private bool alreadySpawnedCollectable = false;
-    private bool stopMoving = false;
-    private bool alreadyHitFloor = false;
-    private bool dying = false;
+    public Vector3 spawnPoint;
     public int direction = 1;
+    public bool dontMove = false;
+    public bool flipOnStart = false;
+    public bool forceAttackAnimation = false;
+
     private float maxSpeed = 2f;
     private float moveForce = 10f;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
-    public Vector3 spawnPoint;
     private Player player;
     private AudioSource audioSource;
     private GameManager gameManager;
+    private bool alreadyHitFloor = false;
+    private bool dying = false;
+    private bool alreadySpawnedCollectable = false;
     private bool debugAnimationToggleOn = false;
     private float gettingEatenClipLength;
 
@@ -29,6 +32,7 @@ public class Enemy : MonoBehaviour {
         spawnPoint = transform.position;
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("EnemyLayer"), LayerMask.NameToLayer("EnemyLayer"), true);
         SetAntsAnimClipLength();
+        if (flipOnStart) { FlipX(); }
     }
 
     private void SetAntsAnimClipLength() {
@@ -47,13 +51,12 @@ public class Enemy : MonoBehaviour {
     private void Update() {
         if (gameObject.name.StartsWith("Bobcat") || gameObject.name.StartsWith("Bear")) {
             if (Input.GetKeyDown(KeyCode.F10)) {
-                Vector3 currScale = gameObject.transform.localScale;
-                gameObject.transform.localScale = new Vector3(currScale.x, -1*currScale.y, currScale.z);
+                FlipY();
                 RemoveColliders();
             }
 
             if (Input.GetKeyDown(KeyCode.F11)) {
-                stopMoving = !stopMoving;
+                dontMove = !dontMove;
             }
 
             if (Input.GetKeyDown(KeyCode.F12)) {
@@ -68,38 +71,54 @@ public class Enemy : MonoBehaviour {
             float playerX = player.transform.position.x;
             float distToPlayer = Mathf.Abs(playerX - transform.position.x);
             animator.SetFloat("DistToPlayer", distToPlayer);
-
-            float leftX = spriteRenderer.bounds.center.x - spriteRenderer.bounds.extents.x;
-            float rightX = spriteRenderer.bounds.center.x + spriteRenderer.bounds.extents.x;
-
-            // player is closer to left side of sprite
-            bool closerToLeft = Mathf.Abs(playerX - leftX) < Mathf.Abs(playerX - rightX);
-
-            bool bearCanSeePlayer;
-            if (direction == -1 && closerToLeft) {
-                bearCanSeePlayer = true;
-            } else if (direction == -1 && !closerToLeft) {
-                bearCanSeePlayer = false;
-            } else if (direction == 1 && closerToLeft) {
-                bearCanSeePlayer = false;
-            } else {
-                bearCanSeePlayer = true;
-            }
-            animator.SetBool("CanSeePlayer", bearCanSeePlayer);
-
+            
+            bool attackAnimationOn = forceAttackAnimation ? forceAttackAnimation : CanSeePlayer();
+            animator.SetBool("CanSeePlayer", attackAnimationOn);
         }
-        if (direction * GetComponent<Rigidbody2D>().velocity.x < maxSpeed && !stopMoving) {
+        if (direction * GetComponent<Rigidbody2D>().velocity.x < maxSpeed && !dontMove) {
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * direction * moveForce);
         }
+    }
+
+    private bool CanSeePlayer() {
+        float playerX = player.transform.position.x;
+        float leftX = spriteRenderer.bounds.center.x - spriteRenderer.bounds.extents.x;
+        float rightX = spriteRenderer.bounds.center.x + spriteRenderer.bounds.extents.x;
+        bool closerToLeft = Mathf.Abs(playerX - leftX) < Mathf.Abs(playerX - rightX);
+        bool canSeePlayer;
+        if (direction == -1 && closerToLeft) {
+            canSeePlayer = true;
+        }
+        else if (direction == -1 && !closerToLeft) {
+            canSeePlayer = false;
+        }
+        else if (direction == 1 && closerToLeft) {
+            canSeePlayer = false;
+        }
+        else {
+            canSeePlayer = true;
+        }
+        return canSeePlayer;
     }
 
     private void OnCollisionEnter2D(Collision2D coll) {
         if (alreadyHitFloor && (coll.gameObject.layer == LayerMask.NameToLayer("InvisibleWallLayer") || coll.gameObject.layer == LayerMask.NameToLayer("WallLayer"))) {
             direction *= -1;
-            Vector3 currScale = gameObject.transform.localScale;
-            gameObject.transform.localScale = new Vector3(-1 * currScale.x, currScale.y, currScale.z);
+            FlipX();
         }
         alreadyHitFloor = true;
+    }
+
+    private void FlipX() {
+        // Better than flipping the SpriteRenderer since colliders will not need adjusting
+        Vector3 currScale = gameObject.transform.localScale;
+        gameObject.transform.localScale = new Vector3(-1 * currScale.x, currScale.y, currScale.z);
+    }
+
+    private void FlipY() {
+        // Better than flipping the SpriteRenderer since colliders will not need adjusting
+        Vector3 currScale = gameObject.transform.localScale;
+        gameObject.transform.localScale = new Vector3(currScale.x, -1 * currScale.y, currScale.z);
     }
 
     public void TakeDamage() {
@@ -110,7 +129,7 @@ public class Enemy : MonoBehaviour {
         if (dying) { return; }  // this method should only be called once
         dying = true;
         audioSource.Play();
-        stopMoving = true;
+        dontMove = true;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         if (!alreadySpawnedCollectable) {
             gameManager.SpawnBookCollectable(transform.position);
@@ -118,7 +137,11 @@ public class Enemy : MonoBehaviour {
         }
         if (gameObject.name.StartsWith("Bear") || gameObject.name.StartsWith("Bobcat")) {
             animator.SetBool("GettingEaten", true);
+            if (!CanSeePlayer()) {
+                FlipX();
+            }
             StartCoroutine(RemoveCollidersTimer());
+
         } else {
             RemoveColliders();
             StartCoroutine(DestroyTimer());
@@ -133,8 +156,7 @@ public class Enemy : MonoBehaviour {
 
     private IEnumerator RemoveCollidersTimer() {
         yield return new WaitForSeconds(gettingEatenClipLength * 3);
-        Vector3 currScale = gameObject.transform.localScale;
-        gameObject.transform.localScale = new Vector3(currScale.x, -1 * currScale.y, currScale.z);
+        FlipY();
         RemoveColliders();
         StartCoroutine(DestroyTimer());
     }

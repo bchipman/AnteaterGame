@@ -5,6 +5,14 @@ AnimatorOverrideController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: BobcatNew
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Name: Bobcat
+  m_Controller: {fileID: 9100000, guid: e5d48f83e5518944badb307c2c7bbb86, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 7a13cb7d74c81ac4495b4cd2a8cb9208, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f9512f95332e5f24abcfbbcba3f8773f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ad1da8e1fb5344347b055264e44e017f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 029510f1ada97c34db45431231ce398b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d2ba69f4e0e02fd4db1aa09131baae64, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5c68bf0c3cb23f7449e27c86a886891a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c91f9dd0a1b7fca48877f2625a4ca5c1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0e0e988b614feda4b80b75980b81d256, type: 2}

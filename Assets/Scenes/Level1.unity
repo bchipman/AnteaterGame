@@ -2502,12 +2502,22 @@ Prefab:
     - target: {fileID: 114000012902445516, guid: ec098e2ac49ff6e4db893dc65f1a1319,
         type: 2}
       propertyPath: direction
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 95000011047500948, guid: ec098e2ac49ff6e4db893dc65f1a1319,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012902445516, guid: ec098e2ac49ff6e4db893dc65f1a1319,
+        type: 2}
+      propertyPath: dontMove
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012902445516, guid: ec098e2ac49ff6e4db893dc65f1a1319,
+        type: 2}
+      propertyPath: forceAttackAnimation
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec098e2ac49ff6e4db893dc65f1a1319, type: 2}

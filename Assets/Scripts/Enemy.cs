@@ -147,8 +147,9 @@ public class Enemy : MonoBehaviour {
     }
 
     private IEnumerator RemoveCollidersTimer() {
-        yield return new WaitForSeconds(gettingEatenClipLength * 3);
+        yield return new WaitForSeconds(gettingEatenClipLength * 2.85f);
         FlipY();
+        animator.SetTrigger("EatenSingleFrame");
         RemoveColliders();
         StartCoroutine(DestroyTimer());
     }

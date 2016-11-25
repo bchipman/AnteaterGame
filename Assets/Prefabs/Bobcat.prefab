@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010226715274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.15, y: 4.85, z: 0}
+  m_LocalPosition: {x: 25.15, y: 11.35, z: 0}
   m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -114,7 +114,7 @@ Animator:
   m_GameObject: {fileID: 1000010226715274}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4590b82b6424d75498622b39eab08a9c, type: 2}
+  m_Controller: {fileID: 22100000, guid: 15ee1c61b87d5444cb9aafba726c131b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -133,8 +133,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b766bee1459ef44a23c7a8e9165511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: -1
   spawnPoint: {x: 0, y: 0, z: 0}
+  direction: -1
+  dontMove: 0
+  flipOnStart: 0
+  forceAttackAnimation: 0
 --- !u!212 &212000013015174548
 SpriteRenderer:
   m_ObjectHideFlags: 1

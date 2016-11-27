@@ -145,8 +145,10 @@ public class GameManager : MonoBehaviour {
     }
 
 	public void CheckForGameWin() {
-		Debug.Log ("checking for game win");
-		SceneManager.LoadSceneAsync ("EndScreen");
+		//this method is only called when the professor is collided with
+		if (NumberOfBooksCollected() >= 3) {
+			SceneManager.LoadSceneAsync ("EndScreen");
+		}
 	}
 
 }

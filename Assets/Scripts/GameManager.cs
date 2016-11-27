@@ -37,6 +37,13 @@ public class GameManager : MonoBehaviour {
 	private void Update () {
         timeText.text = "Time: " + Time.realtimeSinceStartup.ToString("000.");
         deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+
+        if (Input.GetKeyDown(KeyCode.F8)) {
+            foreach (var rectTrans in bookCirclesRectTransLi) {
+                Transform bookTrans = rectTrans.transform.FindChild("Book");
+                bookTrans.gameObject.SetActive(true);
+            }
+        }
     }
 
     private void OnGUI() {
@@ -149,6 +156,6 @@ public class GameManager : MonoBehaviour {
 		if (NumberOfBooksCollected() >= 3) {
 			SceneManager.LoadSceneAsync ("EndScreen");
 		}
-	}
+    }
 
 }

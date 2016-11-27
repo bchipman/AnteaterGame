@@ -978,7 +978,7 @@ GameObject:
   - 61: {fileID: 86470143}
   - 95: {fileID: 86470144}
   m_Layer: 0
-  m_Name: professor1
+  m_Name: Professor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1065,7 +1065,7 @@ Animator:
   m_GameObject: {fileID: 86470139}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5420b7605a377a94dbe9eb71c2bea010, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

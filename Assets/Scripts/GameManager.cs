@@ -81,6 +81,13 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public void LostAllBooks() {
+        foreach (var rectTrans in bookCirclesRectTransLi) {
+            Transform bookTrans = rectTrans.transform.FindChild("Book");
+            bookTrans.gameObject.SetActive(false);
+        }
+    }
+
     public void IncrementScore() {
         score++;
         scoreText.text = "Score: " + score.ToString("000");

@@ -298,9 +298,12 @@ public class Player : MonoBehaviour {
 		if (currentHealth > 0) {
 			if (coll.gameObject.layer == LayerMask.NameToLayer ("EnemyLayer")) {
 				if(coll.gameObject.GetComponent<BoxCollider2D>().bounds.max.y <= gameObject.GetComponent<Collider2D>().bounds.min.y){
-					GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce));
-					Enemy other = (Enemy) coll.gameObject.GetComponent(typeof(Enemy));
-					other.Die();
+				    if (!jumpedRecently) {
+				        StartCoroutine(JumpedRecentlyTimer());
+                        GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce));
+					    Enemy other = (Enemy) coll.gameObject.GetComponent(typeof(Enemy));
+					    other.Die();
+				    }
 				}else{
 					currentHealth--;
 					transform.Find ("/Player/HealthBar/GreenHealthBarBox").localScale = new Vector3 ((float)currentHealth / maxHealth, 0.55f, 0);
@@ -313,6 +316,7 @@ public class Player : MonoBehaviour {
 	}
 
     private void Respawn() {
+        gameManager.LostAllBooks();
         gameManager.DisplayDeathText();
         transform.position = spawnPoint;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;

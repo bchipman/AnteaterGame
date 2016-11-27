@@ -302,7 +302,7 @@ public class Player : MonoBehaviour {
 				        StartCoroutine(JumpedRecentlyTimer());
                         GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce));
 					    Enemy other = (Enemy) coll.gameObject.GetComponent(typeof(Enemy));
-					    other.Die();
+					    other.DieByJump();
 				    }
 				}else{
 					currentHealth--;

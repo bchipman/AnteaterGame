@@ -140,6 +140,24 @@ public class Enemy : MonoBehaviour {
         }
     }
 
+    public void DieByJump() {
+        if (dying) { return; }  // this method should only be called once
+        dying = true;
+        dontMove = true;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        audioSource.Play();
+        gameManager.SpawnBookCollectable(transform.position);
+        FlipY();
+        if (gameObject.name.StartsWith("Bear") || gameObject.name.StartsWith("Bobcat")) {
+            animator.SetTrigger("WalkingSingleFrame");
+        }
+        else if (gameObject.name.StartsWith("Slug")) {
+            animator.SetTrigger("SlitherSingleFrame");
+        }
+        RemoveColliders();
+        StartCoroutine(DestroyTimer());
+    }
+
     private void RemoveColliders() {
         var allcolliders = GetComponentsInChildren<Collider2D>();
         foreach (var childCollider in allcolliders)

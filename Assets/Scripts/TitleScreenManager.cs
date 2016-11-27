@@ -14,30 +14,30 @@ public class TitleScreenManager: MonoBehaviour {
 	}
 
     private void OnGUI() {
-        int w = Screen.width;
-        int h = Screen.height;
-//        float smallFontSize = 0.06f;
-        Resolution res = Screen.currentResolution;
-        float ratio = (float) w / (float) h;
-        float newImageHeight = res.width / ratio;
-
-        GameObject mainMenuImageObj = GameObject.Find("MainMenuImage");
-        if (mainMenuImageObj != null) {
-            RectTransform mainMenuImageRectTransform = mainMenuImageObj.GetComponent<RectTransform>();
-            mainMenuImageRectTransform.sizeDelta = new Vector2(res.width, newImageHeight);
-            Vector2 mainMenuImageSize = mainMenuImageRectTransform.sizeDelta;
-            Vector2 mainMenuImageHalfSize = new Vector2(-1 * mainMenuImageSize.x / 2, mainMenuImageSize.y / 2);
-            mainMenuImageRectTransform.anchoredPosition = mainMenuImageHalfSize;
-        }
+//        int w = Screen.width;
+//        int h = Screen.height;
+////        float smallFontSize = 0.06f;
+//        Resolution res = Screen.currentResolution;
+//        float ratio = (float) w / (float) h;
+//        float newImageHeight = res.width / ratio;
 //
-        GameObject optionsMenuImageObj = GameObject.Find("OptionsMenuImage");
-        if (optionsMenuImageObj != null) {
-            RectTransform optionsImageRectTransform = optionsMenuImageObj.GetComponent<RectTransform>();
-            optionsImageRectTransform.sizeDelta = new Vector2(res.width, newImageHeight);
-            Vector2 optionsMenuImageSize = optionsImageRectTransform.sizeDelta;
-            Vector2 optionsMenuImageHalfSize = new Vector2(-1 * optionsMenuImageSize.x / 2, optionsMenuImageSize.y / 2);
-            optionsImageRectTransform.anchoredPosition = optionsMenuImageHalfSize;
-        }
+//        GameObject mainMenuImageObj = GameObject.Find("MainMenuImage");
+//        if (mainMenuImageObj != null) {
+//            RectTransform mainMenuImageRectTransform = mainMenuImageObj.GetComponent<RectTransform>();
+//            mainMenuImageRectTransform.sizeDelta = new Vector2(res.width, newImageHeight);
+//            Vector2 mainMenuImageSize = mainMenuImageRectTransform.sizeDelta;
+//            Vector2 mainMenuImageHalfSize = new Vector2(-1 * mainMenuImageSize.x / 2, mainMenuImageSize.y / 2);
+//            mainMenuImageRectTransform.anchoredPosition = mainMenuImageHalfSize;
+//        }
+////
+//        GameObject optionsMenuImageObj = GameObject.Find("OptionsMenuImage");
+//        if (optionsMenuImageObj != null) {
+//            RectTransform optionsImageRectTransform = optionsMenuImageObj.GetComponent<RectTransform>();
+//            optionsImageRectTransform.sizeDelta = new Vector2(res.width, newImageHeight);
+//            Vector2 optionsMenuImageSize = optionsImageRectTransform.sizeDelta;
+//            Vector2 optionsMenuImageHalfSize = new Vector2(-1 * optionsMenuImageSize.x / 2, optionsMenuImageSize.y / 2);
+//            optionsImageRectTransform.anchoredPosition = optionsMenuImageHalfSize;
+//        }
 
 //        GameObject playButtonObj = GameObject.Find("PlayButton");
 //        if (playButtonObj != null) {

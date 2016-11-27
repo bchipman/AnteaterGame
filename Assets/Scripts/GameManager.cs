@@ -81,6 +81,17 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public int NumberOfBooksCollected() {
+        int numCollected = 0;
+        foreach (var rectTrans in bookCirclesRectTransLi) {
+            Transform bookTrans = rectTrans.transform.FindChild("Book");
+            if (bookTrans.gameObject.activeSelf) {
+                numCollected++;
+            }
+        }
+        return numCollected;
+    }
+
     public void LostAllBooks() {
         foreach (var rectTrans in bookCirclesRectTransLi) {
             Transform bookTrans = rectTrans.transform.FindChild("Book");

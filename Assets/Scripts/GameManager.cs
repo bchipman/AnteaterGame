@@ -127,7 +127,7 @@ public class GameManager : MonoBehaviour {
     }
 
 	public void CheckForGameWin() {
-		Debug.Log ("here");
+		Debug.Log ("checking for game win");
 		SceneManager.LoadSceneAsync ("EndScreen");
 	}
 

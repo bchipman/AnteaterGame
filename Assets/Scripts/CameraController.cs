@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour {
     public GameObject player;
     public List<GameObject> lines;
     private float minX = 8.5f;
+    private float maxX = 213f;
     private float minY = 3f;
     private float xAdj = 2f;  // Adjustment from center; keeps player at ~40% of horizontal distance of screen instead of dead center
 
@@ -27,6 +28,7 @@ public class CameraController : MonoBehaviour {
 
     void Update() {
         float x = player.transform.position.x + xAdj < minX ? minX : player.transform.position.x + xAdj;
+        x = player.transform.position.x + xAdj > maxX ? maxX : player.transform.position.x + xAdj;
         float y = player.transform.position.y < minY ? minY : player.transform.position.y;
         transform.position = new Vector3(x, y, -10f);
 //

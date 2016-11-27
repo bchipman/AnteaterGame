@@ -28,7 +28,7 @@ public class CameraController : MonoBehaviour {
 
     void Update() {
         float x = player.transform.position.x + xAdj < minX ? minX : player.transform.position.x + xAdj;
-        x = player.transform.position.x + xAdj > maxX ? maxX : player.transform.position.x + xAdj;
+        x = player.transform.position.x + xAdj > maxX ? maxX : x;
         float y = player.transform.position.y < minY ? minY : player.transform.position.y;
         transform.position = new Vector3(x, y, -10f);
 //

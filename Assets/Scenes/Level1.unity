@@ -6513,9 +6513,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -11.976196, y: -0.7696686}
+  m_Offset: {x: -11.976196, y: -0.65701866}
   serializedVersion: 2
-  m_Size: {x: 0.04762268, y: 0.90634185}
+  m_Size: {x: 0.04762268, y: 1.1316419}
 --- !u!61 &846584467
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11170,7 +11170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1000014122129650, guid: 46991848219c99b49a27cf45f9425b2f, type: 2}
-  rate: 1.5
+  rate: 2
 --- !u!212 &1392440871
 SpriteRenderer:
   m_ObjectHideFlags: 0

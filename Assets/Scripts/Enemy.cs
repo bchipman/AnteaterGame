@@ -168,8 +168,9 @@ public class Enemy : MonoBehaviour {
         yield return new WaitForSeconds(gettingEatenClipLength * 2.85f);
         FlipY();
         animator.SetTrigger("EatenSingleFrame");
-        RemoveColliders();
-        StartCoroutine(DestroyTimer());
+        Destroy(gameObject);
+//        RemoveColliders();
+//        StartCoroutine(DestroyTimer());
     }
 
     private IEnumerator DestroyTimer() {
